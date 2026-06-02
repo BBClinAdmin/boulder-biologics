@@ -1,0 +1,91 @@
+/* ============================================================================
+   _nav.css — Mobile navigation menu (hamburger)
+   ----------------------------------------------------------------------------
+   Loaded LAST in <head> on every page so it overrides the older per-page header
+   rules that hid the primary nav (index, condition) or wrapped it into cluttered
+   rows (_v2-service.css, _shared.css) on small screens.
+
+   Behaviour:
+     • >1024px  → inline nav as designed; hamburger hidden.
+     • ≤1024px  → inline nav collapses; a hamburger button toggles it open as a
+                  dropdown panel anchored under the header.
+
+   Colors use design-system vars with hard fallbacks so this works on every page
+   regardless of which stylesheet (or inline <style>) it loads.
+   ========================================================================== */
+
+.nav-toggle {
+  display: none;                 /* shown only at <=1024px (rule below) */
+  flex: 0 0 auto;
+  flex-direction: column;        /* stack the three bars vertically */
+  align-items: center;
+  justify-content: center;
+  width: 44px;                   /* 44px min tap target */
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--rule, #e7e3da);
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--ink, #07172a);
+}
+.nav-toggle:hover { background: rgba(7, 23, 42, 0.06); }
+.nav-toggle:focus-visible { outline: 2px solid var(--brand-accent, #0f9aa0); outline-offset: 2px; }
+
+.nav-toggle__bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--ink, #07172a);
+  transition: transform .2s ease, opacity .2s ease;
+}
+.nav-toggle__bar + .nav-toggle__bar { margin-top: 4px; }
+
+/* animate to an X while open */
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+@media (max-width: 1024px) {
+  /* keep the header on one row; anchor it for the absolute dropdown panel */
+  .site-header__inner { flex-wrap: nowrap; row-gap: 0; position: relative; }
+
+  /* reveal the toggle and push it (with the CTA) to the right */
+  .site-header .nav-toggle { display: inline-flex; margin-left: auto; }
+
+  /* collapse the inline nav; it returns as a dropdown when .nav--open is set */
+  .site-header nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    order: 0;
+    min-width: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px;
+    background: var(--paper-2, #fbfaf7);
+    border-top: 1px solid var(--rule, #e7e3da);
+    border-bottom: 1px solid var(--rule, #e7e3da);
+    box-shadow: 0 12px 24px rgba(7, 23, 42, 0.10);
+    max-height: calc(100vh - 100%);
+    overflow-y: auto;
+  }
+  /* higher specificity than the collapse rule above, so order/source-position
+     never matters when the menu is opened */
+  .site-header nav.nav--open { display: flex; }
+
+  .site-header nav a {
+    padding: 12px 14px;
+    font-size: 15px;
+    border-radius: 8px;
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-toggle__bar { transition: none; }
+}

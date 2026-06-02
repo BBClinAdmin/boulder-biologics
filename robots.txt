@@ -1,0 +1,7 @@
+# robots.txt for https://www.boulderbiologics.com
+# Maintained as a deploy-only file (not produced by Claude Design exports).
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.boulderbiologics.com/sitemap.xml

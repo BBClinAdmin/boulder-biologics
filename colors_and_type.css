@@ -1,0 +1,266 @@
+/* ============================================================
+   Boulder Biologics — Colors & Type
+   Foundation tokens for the Boulder Biologics brand system.
+   ============================================================ */
+
+/* -- Fonts ---------------------------------------------------- */
+/* Display: Montserrat — geometric sans, strong personality, broad weight range.
+   Body:   Source Sans 3 — clean, calm, highly readable medical sans.
+   Serif:  Source Serif 4 — editorial accent for science / pull quotes.
+   Mono:   IBM Plex Mono — lab data, dosages, code, identifiers.       */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500;1,8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+:root {
+  /* ---------- Brand palette (from the BBClin logo) ----------- */
+  /* Sampled directly from the stacked logotype gradient.       */
+  --bb-teal-100: #e6f6f6;          /* tint, surfaces, hover halos     */
+  --bb-teal-200: #b9e5e7;
+  --bb-teal-300: #74cdd1;
+  --bb-teal-400: #1cb1b6;
+  --bb-teal-500: #04979d;          /* primary teal – top of gradient */
+  --bb-teal-600: #067e92;          /* aqua-blue mid                   */
+  --bb-teal-700: #0f6387;
+
+  --bb-blue-300: #5a8fc0;
+  --bb-blue-400: #2a6aa3;
+  --bb-blue-500: #15457a;          /* deep brand blue – base of gradient */
+  --bb-blue-600: #103864;
+  --bb-blue-700: #0c2a4d;
+
+  --bb-navy-500: #07172a;          /* logotype color / primary text   */
+  --bb-navy-600: #050f1c;
+  --bb-navy-900: #02080f;
+
+  /* ---------- Neutrals --------------------------------------- */
+  --bb-bone-50:  #fbfaf7;          /* warm off-white, page bg         */
+  --bb-bone-100: #f4f1ea;          /* card alt, section break         */
+  --bb-stone-200: #e7e3da;
+  --bb-stone-300: #d2cec3;
+  --bb-stone-400: #a6a294;
+  --bb-stone-500: #6f6b60;
+  --bb-stone-600: #4a4740;
+  --bb-stone-700: #2c2a25;
+
+  /* ---------- Signature gradient ----------------------------- */
+  /* The brand "regenerate" gradient — teal at top fading to deep
+     blue. Used sparingly: heroes, key art, brand moments.       */
+  --bb-gradient-brand:
+    linear-gradient(180deg, #04979d 0%, #0f6387 38%, #15457a 72%, #0c2a4d 100%);
+  --bb-gradient-brand-soft:
+    linear-gradient(180deg, #e6f6f6 0%, #d6e8f0 50%, #c3d4e6 100%);
+  --bb-gradient-brand-horizontal:
+    linear-gradient(90deg, #04979d 0%, #0f6387 50%, #15457a 100%);
+
+  /* ---------- Semantic – color ------------------------------- */
+  --color-bg:           var(--bb-bone-50);
+  --color-bg-elevated:  #ffffff;
+  --color-bg-muted:     var(--bb-bone-100);
+  --color-bg-inverse:   var(--bb-navy-500);
+
+  --color-fg:           var(--bb-navy-500);
+  --color-fg-muted:     var(--bb-stone-600);
+  --color-fg-subtle:    var(--bb-stone-500);
+  --color-fg-inverse:   var(--bb-bone-50);
+
+  --color-border:       var(--bb-stone-200);
+  --color-border-strong:var(--bb-stone-300);
+  --color-divider:      rgba(7, 23, 42, 0.08);
+
+  --color-accent:       var(--bb-teal-500);
+  --color-accent-hover: var(--bb-teal-600);
+  --color-accent-fg:    #ffffff;
+
+  --color-primary:      var(--bb-blue-500);
+  --color-primary-hover:var(--bb-blue-600);
+  --color-primary-fg:   #ffffff;
+
+  --color-link:         var(--bb-blue-500);
+  --color-link-hover:   var(--bb-teal-600);
+
+  /* Status — kept restrained / clinical, never neon */
+  --color-success:      #2f7a5b;
+  --color-success-bg:   #e6f1ec;
+  --color-warning:      #b9821a;
+  --color-warning-bg:   #fbf3df;
+  --color-danger:       #b3401c;
+  --color-danger-bg:    #f8e7df;
+  --color-info:         var(--bb-blue-500);
+  --color-info-bg:      #e4ecf4;
+
+  /* ---------- Type families ---------------------------------- */
+  --font-display: "Montserrat", "Helvetica Neue", system-ui, sans-serif;
+  --font-body:    "Source Sans 3", "Helvetica Neue", system-ui, sans-serif;
+  --font-serif:   "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ---------- Type scale (modular, 1.250 major third) -------- */
+  --fs-xxs:  12px;
+  --fs-xs:   13px;
+  --fs-sm:   14px;
+  --fs-md:   16px;   /* body default */
+  --fs-lg:   18px;
+  --fs-xl:   22px;
+  --fs-2xl:  28px;
+  --fs-3xl:  36px;
+  --fs-4xl:  48px;
+  --fs-5xl:  64px;
+  --fs-6xl:  88px;
+
+  --lh-tight:   1.08;
+  --lh-snug:    1.2;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.65;
+
+  --tracking-tightest: -0.03em;
+  --tracking-tight:    -0.015em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.04em;
+  --tracking-widest:   0.16em;   /* uppercase eyebrows           */
+
+  /* ---------- Spacing ---------------------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10:128px;
+
+  /* ---------- Radii ------------------------------------------ */
+  --radius-xs:  2px;
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  14px;
+  --radius-xl:  20px;
+  --radius-pill:999px;
+
+  /* ---------- Elevation -------------------------------------- */
+  /* Soft, cool-tinted shadows. Avoid black drop shadows. */
+  --shadow-xs: 0 1px 1px rgba(7, 23, 42, 0.04);
+  --shadow-sm: 0 1px 2px rgba(7, 23, 42, 0.06), 0 1px 3px rgba(7, 23, 42, 0.04);
+  --shadow-md: 0 4px 8px rgba(7, 23, 42, 0.06), 0 2px 4px rgba(7, 23, 42, 0.04);
+  --shadow-lg: 0 12px 28px rgba(7, 23, 42, 0.10), 0 4px 10px rgba(7, 23, 42, 0.06);
+  --shadow-xl: 0 24px 56px rgba(7, 23, 42, 0.16), 0 8px 16px rgba(7, 23, 42, 0.06);
+  --shadow-inset: inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(7,23,42,0.04);
+  --shadow-focus: 0 0 0 3px rgba(4, 151, 157, 0.35);
+
+  /* ---------- Motion ----------------------------------------- */
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-emphasized: cubic-bezier(0.2, 0.9, 0.1, 1);
+  --duration-fast: 140ms;
+  --duration-base: 220ms;
+  --duration-slow: 420ms;
+}
+
+/* ============================================================
+   Semantic typography elements
+   ============================================================ */
+.bb-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--bb-teal-700);
+}
+
+.bb-h1, h1.bb {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(40px, 5.2vw, var(--fs-6xl));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tightest);
+  color: var(--color-fg);
+  text-wrap: balance;
+}
+
+.bb-h2, h2.bb {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(32px, 3.4vw, var(--fs-4xl));
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-fg);
+  text-wrap: balance;
+}
+
+.bb-h3, h3.bb {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-fg);
+}
+
+.bb-h4, h4.bb {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-xl);
+  line-height: var(--lh-snug);
+  color: var(--color-fg);
+}
+
+.bb-lede {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--fs-xl);
+  line-height: var(--lh-relaxed);
+  color: var(--color-fg-muted);
+  text-wrap: pretty;
+}
+
+.bb-body, p.bb {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--fs-md);
+  line-height: var(--lh-relaxed);
+  color: var(--color-fg);
+  text-wrap: pretty;
+}
+
+.bb-small {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+  color: var(--color-fg-muted);
+}
+
+.bb-caption {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-normal);
+  color: var(--color-fg-subtle);
+  letter-spacing: 0.01em;
+}
+
+.bb-mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  letter-spacing: -0.01em;
+}
+
+.bb-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-snug);
+  color: var(--color-fg);
+}
+
+/* Latin medical eyebrow — used for the brand "Regenerate" pattern */
+.bb-etymology {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--fs-md);
+  color: var(--color-fg-muted);
+}
+.bb-etymology > strong {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-fg);
+}

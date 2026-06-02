@@ -1,0 +1,92 @@
+/* ============================================================
+   Boulder Biologics — Learn / Explainer pages shared styles
+   Used by:
+   - is-stem-cell-therapy-fda-approved.html
+   - autologous-vs-donor-derived-stem-cells.html
+   - mesenchymal-stromal-vs-stem-cells.html
+   Loaded AFTER _v2-service.css.
+   ============================================================ */
+
+/* Hero with TOC card */
+.svc-hero { padding: 28px var(--gutter) 56px; }
+.svc-hero__grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: end; }
+.svc-hero h1 { margin-bottom: 18px; }
+.svc-hero .byline { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; margin: 18px 0 0; }
+
+/* Table of contents card */
+.toc-card { background: var(--white); border: 1px solid var(--rule); border-radius: var(--r-lg); padding: 26px 28px; }
+.toc-card .lbl { font-family: var(--font-display); font-weight: 600; font-size: 12.5px; letter-spacing: 0; text-transform: none; color: var(--brand-accent-dim); margin: 0 0 14px; }
+.toc-card ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; }
+.toc-card ol li { counter-increment: toc; border-top: 1px solid var(--rule-soft); padding: 11px 0; font-size: 14px; line-height: 1.45; display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: baseline; }
+.toc-card ol li:first-child { border-top: none; padding-top: 0; }
+.toc-card ol li::before { content: counter(toc, decimal-leading-zero); font-family: var(--font-mono); font-size: 10.5px; color: var(--muted); letter-spacing: 0.06em; }
+.toc-card ol li a { color: var(--ink); text-decoration: none; font-weight: 500; }
+.toc-card ol li a:hover { color: var(--brand-primary); }
+
+/* Body scaffolding */
+.sci section { padding: 64px var(--gutter); }
+.sci .inner { max-width: 880px; margin: 0 auto; }
+.sci h2.h2 { margin-bottom: 18px; }
+.sci .body-lg p { margin: 0 0 18px; }
+.sci .body-lg strong { color: var(--ink); font-weight: 600; }
+.sci .body-lg em { font-style: italic; color: var(--ink-2); }
+.sci .body-lg ul { margin: 0 0 20px; padding-left: 22px; }
+.sci .body-lg ul li { margin: 0 0 10px; line-height: 1.65; }
+.sci .cite-inline { font-family: var(--font-mono); font-size: 10.5px; color: var(--muted); letter-spacing: 0.04em; vertical-align: super; }
+
+/* Direct-answer card */
+.direct { background: var(--bb-navy-500); color: var(--white); border-radius: var(--r-lg); padding: 32px 36px; margin: 0 0 32px; }
+.direct .lbl { font-family: var(--font-display); font-weight: 600; font-size: 12.5px; letter-spacing: 0; text-transform: none; color: var(--bb-teal-300); margin: 0 0 12px; }
+.direct p { font-family: var(--font-serif); font-size: 19px; line-height: 1.55; color: rgba(255,255,255,0.92); margin: 0; }
+.direct p strong { color: var(--white); font-weight: 600; }
+
+/* Definition / pull-quote card */
+.defn { background: var(--paper-2); border: 1px solid var(--rule); border-left: 3px solid var(--brand-accent); border-radius: var(--r-md); padding: 24px 28px; margin: 24px 0; }
+.defn .lbl { font-family: var(--font-display); font-weight: 600; font-size: 12.5px; letter-spacing: 0; text-transform: none; color: var(--brand-accent-dim); margin: 0 0 8px; }
+.defn p { font-family: var(--font-serif); font-size: 17px; line-height: 1.6; color: var(--ink); margin: 0; }
+
+/* Verbatim regulatory framing block */
+.reg-verbatim { background: #fef9ec; border: 1px solid #f0d76a; border-radius: var(--r-md); padding: 20px 24px; margin: 24px 0; }
+.reg-verbatim .lbl { font-family: var(--font-display); font-weight: 600; font-size: 12.5px; letter-spacing: 0; text-transform: none; color: #7a5d00; margin: 0 0 8px; }
+.reg-verbatim p { font-family: var(--font-body); font-size: 14.5px; line-height: 1.6; color: var(--ink); margin: 0 0 8px; font-style: italic; }
+.reg-verbatim p:last-child { margin-bottom: 0; }
+.reg-verbatim strong { font-style: normal; font-weight: 600; color: var(--ink); }
+
+/* Definition rows (e.g. HSCT, CAR-T, autologous, allogeneic) */
+.def-list { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 24px 0; }
+.def-row { background: var(--white); border: 1px solid var(--rule); border-radius: var(--r-md); padding: 18px 22px; display: grid; grid-template-columns: 200px 1fr; gap: 24px; }
+.def-row .term { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--ink); }
+.def-row .desc { font-family: var(--font-body); font-size: 14.5px; line-height: 1.55; color: var(--ink-2); margin: 0; }
+.def-row .desc strong { color: var(--ink); }
+
+/* FAQ accordion */
+.faq-list { margin: 24px 0; }
+.faq-list details { border-bottom: 1px solid var(--rule-soft); padding: 16px 0; }
+.faq-list details:first-of-type { border-top: 1px solid var(--rule-soft); }
+.faq-list summary { font-family: var(--font-display); font-weight: 600; font-size: 16px; color: var(--ink); cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 14px; align-items: baseline; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary .plus { font-family: var(--font-mono); font-size: 14px; color: var(--muted); transition: transform var(--dur) var(--ease); }
+.faq-list details[open] summary .plus { transform: rotate(45deg); }
+.faq-list .a { padding: 12px 0 0; font-size: 14.5px; line-height: 1.65; color: var(--ink-2); }
+.faq-list .a p { margin: 0 0 10px; }
+
+/* References */
+.refs ol { font-family: var(--font-body); font-size: 13px; color: var(--ink-2); line-height: 1.55; padding-left: 22px; margin: 24px 0 0; }
+.refs ol li { margin: 0 0 8px; }
+.refs ol li em { color: var(--muted); }
+
+/* Related cards (shared with service pages — repeated for self-containment) */
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.related-card { background: var(--white); border: 1px solid var(--rule); border-radius: var(--r-md); padding: 22px; display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: inherit; transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
+.related-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.related-card .ic { width: 32px; height: 32px; border-radius: 7px; background: var(--bb-teal-100); color: var(--brand-accent-dim); display: inline-flex; align-items: center; justify-content: center; }
+.related-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin: 4px 0 0; }
+.related-card p { font-size: 13.5px; color: var(--muted); margin: 0; line-height: 1.5; }
+.related-card .more { font-family: var(--font-display); font-weight: 600; font-size: 13.5px; color: var(--brand-primary); margin-top: auto; padding-top: 8px; }
+
+@media (max-width: 960px) {
+  .svc-hero__grid { grid-template-columns: 1fr; gap: 32px; }
+  .related-grid { grid-template-columns: 1fr; }
+  .sci section { padding: 48px var(--gutter); }
+  .def-row { grid-template-columns: 1fr; gap: 6px; }
+}

@@ -1,0 +1,32 @@
+/* ============================================================
+   Boulder Biologics — image slot loader CSS
+   ============================================================
+   Once the loader stamps `.is-loaded` on a slot, hide every
+   placeholder treatment (striped backgrounds, dashed borders,
+   ::after caption labels) and let the <img> fill the box.
+
+   Slots that fail to resolve get `.is-missing` — visually
+   identical to the empty state, useful for audit tooling.
+   ============================================================ */
+
+[data-img-id].is-loaded {
+  background: none !important;
+  border-color: transparent !important;
+  padding: 0 !important;
+  color: transparent;
+}
+[data-img-id].is-loaded::before,
+[data-img-id].is-loaded::after {
+  content: none !important;
+  display: none !important;
+}
+[data-img-id].is-loaded > img {
+  border-radius: inherit;
+}
+
+/* Missing-state hairline (visible only on the inventory page,
+   gated by .show-missing on the document root). */
+.show-missing [data-img-id].is-missing {
+  outline: 1px dashed rgba(207, 102, 102, 0.55);
+  outline-offset: -1px;
+}

@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Our Facilities &amp; Biologics Lab, Boulder CO | Boulder Biologics</title>
+<meta name="description" content="Inside Boulder Biologics' clinic and on-site biologics lab: patient rooms, an ultrasound-guided procedure room, and cleanroom-standard processing." />
+<link rel="canonical" href="https://www.boulderbiologics.com/our-clinic" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#04979d" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.boulderbiologics.com/our-clinic" />
+<meta property="og:site_name" content="Boulder Biologics" />
+<meta property="og:title" content="Our Facilities &amp; Biologics Lab — Boulder, CO" />
+<meta property="og:description" content="Inside our clinic and on-site biologics lab: ultrasound-guided procedure room, cleanroom-standard processing, and QC pipeline." />
+<meta property="og:image" content="https://www.boulderbiologics.com/assets/logo-stacked.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/png" href="../assets/logo-stacked.png" />
+<link rel="stylesheet" href="../assets/image-loader.css" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="_v2-service.css" />
+
+<style>
+  /* ── Hero ─────────────────────────────────────────────────── */
+  .facility-hero { padding: 28px var(--gutter) 0; }
+  .facility-hero__grid {
+    max-width: var(--max); margin: 0 auto;
+    display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: end;
+  }
+  .facility-hero h1 { margin-bottom: 18px; }
+  .facility-hero .meta-row {
+    display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 28px;
+  }
+  .facility-hero .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .facility-hero__media .img-slot { aspect-ratio: 12/5; }
+
+  /* Marquee facts strip beneath hero */
+  .marquee {
+    background: var(--dark); color: rgba(255,255,255,0.92);
+    margin-top: 64px;
+    padding: 18px var(--gutter);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .marquee__inner {
+    max-width: var(--max); margin: 0 auto;
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px;
+  }
+  .marquee__cell {
+    border-left: 1px solid rgba(255,255,255,0.12);
+    padding-left: 18px;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .marquee__cell:first-child { border-left: 0; padding-left: 0; }
+  .marquee__k {
+    font-family: var(--font-display); font-weight: 600; font-size: 12.5px; letter-spacing: 0;
+    text-transform: none; color: var(--bb-teal-300);
+  }
+  .marquee__v {
+    font-family: var(--font-display); font-weight: 600; font-size: 17px;
+    color: var(--white); line-height: 1.25;
+  }
+  .marquee__sub {
+    font-family: var(--font-body); font-size: 12px; color: rgba(255,255,255,0.55);
+  }
+
+  /* ── Visit-flow numbered tour ─────────────────────────────── */
+  .tour-stops { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 36px; }
+  .tour-stop {
+    background: var(--white); border: 1px solid var(--rule);
+    border-radius: var(--r-md); padding: 22px 20px;
+    display: flex; flex-direction: column; gap: 8px;
+    position: relative;
+  }
+  .tour-stop::after {
+    content: '→'; position: absolute; top: 50%; right: -10px;
+    transform: translateY(-50%);
+    color: var(--subtle); font-size: 18px;
+    font-family: var(--font-mono); font-weight: 600;
+    z-index: 2;
+  }
+  .tour-stop:last-child::after { display: none; }
+  .tour-stop .num {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.08em;
+    color: var(--muted); text-transform: uppercase;
+  }
+  .tour-stop h3 { font-family: var(--font-display); font-weight: 700; font-size: 15.5px; margin: 0; letter-spacing: -0.005em; }
+  .tour-stop p { font-size: 13.5px; color: var(--ink-2); line-height: 1.5; margin: 0; }
+  .tour-stop .room {
+    font-family: var(--font-mono); font-size: 10px; color: var(--brand-accent-dim);
+    letter-spacing: 0.08em; text-transform: uppercase; padding-top: 8px;
+    border-top: 1px solid var(--rule-soft); margin-top: auto;
+  }
+
+  /* ── Rooms gallery ────────────────────────────────────────── */
+  .rooms-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 32px; }
+  .room-card {
+    background: var(--white); border: 1px solid var(--rule);
+    border-radius: var(--r-md); overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .room-card .img-slot {
+    aspect-ratio: 4/3; border: 0; border-radius: 0;
+    background: var(--paper-2);
+  }
+  .room-card__body { padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 6px; }
+  .room-card .num {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.08em;
+    color: var(--muted); text-transform: uppercase;
+  }
+  .room-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 15.5px; margin: 0; }
+  .room-card p { font-size: 13.5px; color: var(--ink-2); line-height: 1.5; margin: 0; }
+
+  /* ── Featured room (procedure / lab) ──────────────────────── */
+  .feature-room { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; margin-top: 24px; }
+  .feature-room.flip > :first-child { order: 2; }
+  .feature-room .img-slot { aspect-ratio: 5/4; }
+  .feature-room h2 { margin-bottom: 14px; }
+  .feature-room .specs {
+    font-family: var(--font-mono); font-size: 11px; color: var(--muted);
+    letter-spacing: 0.04em; padding-top: 14px; border-top: 1px solid var(--rule-soft);
+    margin-top: 14px;
+  }
+
+  /* ── Equipment inventory grid ─────────────────────────────── */
+  .equip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 32px; }
+  .equip-card {
+    background: var(--white); border: 1px solid var(--rule);
+    border-radius: var(--r-md); padding: 22px 24px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .equip-card .ic {
+    width: 32px; height: 32px; border-radius: 7px;
+    background: var(--bb-teal-100); color: var(--brand-accent-dim);
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .equip-card .cat {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.08em;
+    color: var(--muted); text-transform: uppercase;
+  }
+  .equip-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 15.5px; margin: 0; letter-spacing: -0.005em; }
+  .equip-card p { font-size: 13.5px; color: var(--ink-2); line-height: 1.5; margin: 0; }
+  .equip-card .role {
+    font-family: var(--font-mono); font-size: 10.5px; color: var(--brand-accent-dim);
+    letter-spacing: 0.04em; padding-top: 8px; border-top: 1px solid var(--rule-soft); margin-top: auto;
+  }
+
+  /* ── Cleanroom callout — the heart of the page ───────────── */
+  .clean {
+    background: var(--bb-navy-500); color: rgba(255,255,255,0.86);
+    border-radius: var(--r-lg);
+    padding: 48px 56px;
+    margin-top: 24px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .clean::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 100% 0%, rgba(4,151,157,0.22) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .clean > * { position: relative; z-index: 1; }
+  .clean .eyebrow { color: var(--bb-teal-300); margin: 0 0 8px; }
+  .clean h2 {
+    font-family: var(--font-display); font-weight: 700; font-size: 32px;
+    line-height: 1.1; letter-spacing: -0.015em; color: var(--white); margin: 0 0 18px;
+    text-wrap: balance;
+  }
+  .clean p { color: rgba(255,255,255,0.82); font-size: 16px; line-height: 1.65; margin: 0 0 14px; }
+  .clean p strong { color: var(--white); font-weight: 600; }
+  .clean .clean-specs {
+    display: grid; grid-template-columns: 1fr; gap: 0;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--r-md); padding: 8px 22px;
+  }
+  .clean .clean-specs .row {
+    display: grid; grid-template-columns: 140px 1fr; gap: 18px;
+    padding: 13px 0; border-top: 1px solid rgba(255,255,255,0.08);
+    font-family: var(--font-mono); font-size: 12.5px;
+  }
+  .clean .clean-specs .row:first-child { border-top: 0; }
+  .clean .clean-specs .k { color: var(--bb-teal-300); letter-spacing: 0.04em; }
+  .clean .clean-specs .v { color: var(--white); }
+
+  /* ── QC pipeline cards (richer than homepage) ─────────────── */
+  .qc-pipe-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 32px; }
+  .qc-pipe {
+    background: var(--white); border: 1px solid var(--rule);
+    border-radius: var(--r-lg); padding: 28px 30px;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .qc-pipe .num {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em;
+    color: var(--muted); text-transform: uppercase;
+  }
+  .qc-pipe h3 {
+    font-family: var(--font-display); font-weight: 700; font-size: 19px;
+    letter-spacing: -0.01em; margin: 0;
+  }
+  .qc-pipe p { font-size: 14.5px; line-height: 1.6; color: var(--ink-2); margin: 0; }
+  .qc-pipe .spec {
+    margin-top: auto; padding-top: 14px; border-top: 1px solid var(--rule-soft);
+    font-family: var(--font-mono); font-size: 11px; color: var(--ink);
+    letter-spacing: 0.04em; line-height: 1.55;
+  }
+  .qc-pipe .spec span { color: var(--muted); }
+  .qc-pipe .ic {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: var(--bb-teal-100); color: var(--brand-accent-dim);
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+
+  /* ── Sample chain of custody (vertical timeline) ──────────── */
+  .custody {
+    background: var(--paper-2); border: 1px solid var(--rule);
+    border-radius: var(--r-lg); padding: 36px 40px;
+    margin-top: 24px;
+  }
+  .custody h3 {
+    font-family: var(--font-display); font-weight: 700; font-size: 22px;
+    margin: 0 0 6px; letter-spacing: -0.01em;
+  }
+  .custody .lede {
+    font-family: var(--font-serif); font-size: 17px; color: var(--ink-2);
+    line-height: 1.6; margin: 0 0 24px; max-width: 60ch;
+  }
+  .custody ol {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 0;
+  }
+  .custody ol li {
+    display: grid; grid-template-columns: 70px 130px 1fr; gap: 18px;
+    padding: 16px 0; border-top: 1px solid var(--rule);
+    align-items: baseline;
+  }
+  .custody ol li:first-child { border-top: 0; }
+  .custody ol .step-no {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em;
+    color: var(--muted); text-transform: uppercase;
+  }
+  .custody ol .room {
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--brand-accent-dim); letter-spacing: 0.04em;
+  }
+  .custody ol .what {
+    font-family: var(--font-body); font-size: 14.5px;
+    color: var(--ink); line-height: 1.55;
+  }
+  .custody ol .what strong { font-weight: 600; }
+
+  /* ── Standards frameworks ─────────────────────────────────── */
+  .std-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
+  .std-card {
+    background: var(--white); border: 1px solid var(--rule);
+    border-radius: var(--r-md); padding: 20px 22px;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .std-card .id {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em;
+    color: var(--brand-accent-dim); text-transform: uppercase;
+  }
+  .std-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 14px; margin: 0; letter-spacing: -0.005em; }
+  .std-card p { font-size: 13px; color: var(--muted); line-height: 1.55; margin: 0; }
+
+  /* ── Location section ─────────────────────────────────────── */
+  .loc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: stretch; }
+  .loc-card {
+    background: var(--white); border: 1px solid var(--rule);
+    border-radius: var(--r-lg); padding: 32px 36px;
+    display: flex; flex-direction: column; gap: 18px;
+  }
+  .loc-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 22px; margin: 0; letter-spacing: -0.01em; }
+  .loc-card .addr {
+    font-family: var(--font-body); font-size: 16.5px; line-height: 1.55; color: var(--ink); margin: 0;
+  }
+  .loc-card .addr a { color: var(--brand-primary); text-decoration: none; font-weight: 500; }
+  .loc-card dl { margin: 0; display: grid; grid-template-columns: 110px 1fr; gap: 12px 18px; }
+  .loc-card dt {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em;
+    color: var(--muted); text-transform: uppercase;
+  }
+  .loc-card dd { margin: 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.5; }
+  .loc-card__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 12px; }
+  .map-slot {
+    background: var(--paper-2); border: 1px solid var(--rule);
+    border-radius: var(--r-lg); min-height: 360px;
+    position: relative; overflow: hidden;
+  }
+  .map-slot iframe {
+    display: block; width: 100%; height: 100%;
+    position: absolute; inset: 0; border: 0;
+  }
+
+  /* Equipment cards · hover to flip and reveal photo */
+  .equip-card {
+    perspective: 1200px; background: transparent; border: 0; padding: 0;
+    min-height: 240px;
+  }
+  .equip-card__inner {
+    position: relative; width: 100%; min-height: 240px;
+    transform-style: preserve-3d; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .equip-card:hover .equip-card__inner,
+  .equip-card:focus-within .equip-card__inner {
+    transform: rotateY(180deg);
+  }
+  .equip-card__face {
+    position: absolute; inset: 0;
+    backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    background: var(--white); border: 1px solid var(--rule);
+    border-radius: var(--r-md);
+    padding: 22px 24px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .equip-card__back {
+    transform: rotateY(180deg);
+    padding: 10px; overflow: hidden;
+  }
+  .equip-card__back .img-slot {
+    width: 100%; height: 100%; aspect-ratio: auto;
+    border-radius: calc(var(--r-md) - 2px);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .equip-card__inner { transition: none; }
+  }
+
+  /* ── Responsive ───────────────────────────────────────────── */
+  @media (max-width: 1100px) {
+    .marquee__inner { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .marquee__cell { border-left: 0; padding-left: 0; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.12); }
+    .marquee__cell:nth-child(-n+2) { border-top: 0; padding-top: 0; }
+    .tour-stops { grid-template-columns: repeat(2, 1fr); }
+    .tour-stop::after { display: none; }
+    .rooms-grid, .equip-grid, .std-grid, .qc-pipe-grid { grid-template-columns: 1fr 1fr; }
+    .clean { grid-template-columns: 1fr; gap: 32px; padding: 36px 40px; }
+  }
+  @media (max-width: 760px) {
+    .facility-hero__grid, .feature-room, .clean, .loc-grid { grid-template-columns: 1fr; gap: 32px; }
+    .feature-room.flip > :first-child { order: 0; }
+    .clean { padding: 32px; }
+    .rooms-grid, .equip-grid, .std-grid, .qc-pipe-grid, .tour-stops { grid-template-columns: 1fr; }
+    .custody ol li { grid-template-columns: 1fr; gap: 6px; }
+  }
+</style>
+  <link rel="stylesheet" href="_nav.css" />
+</head>
+<body data-screen-label="About · Our Facilities">
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="index.html" aria-label="Boulder Biologics home">
+      <img src="../assets/logo-stacked.png" alt="Boulder Biologics" />
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav aria-label="Primary">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#conditions">Conditions</a>
+      <a href="index.html#about">Our Team</a>
+      <a href="facilities.html" aria-current="page">Facilities</a>
+      <a href="fda-guidelines.html">FDA Guidelines</a>
+      <a href="learn.html">Learn</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="site-header__cta">
+      <a class="call-link" href="tel:+17205506175">720-550-6175</a>
+      <a class="btn btn-primary btn-sm" href="contact.html">Contact</a>
+    </div>
+  </div>
+</header>
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="sep">›</span>
+  <a href="index.html#about">About</a>
+  <span class="sep">›</span>
+  <span class="cur">Our Facilities</span>
+</nav>
+
+<main id="main">
+
+  <!-- HERO ─────────────────────────────────────────────────────── -->
+  <section class="facility-hero">
+    <div class="facility-hero__grid">
+      <div>
+        <p class="eyebrow">Inside Boulder Biologics</p>
+        <h1 class="h1">A clinic and an on-site biologics lab in one suite.</h1>
+        <p class="lede">Our clinic is at the Boulder Community Health Foothills Campus and is built for one purpose: same-day, same-visit autologous therapy where your sample never leaves the suite.</p>
+        <div class="meta-row">
+          <span class="chip">Image-guided procedure room</span>
+          <span class="chip">On-site biologics lab</span>
+          <span class="chip">Cleanroom-standard processing</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="contact.html">Schedule a tour →</a>
+          <a class="btn btn-outline" href="#lab">Go straight to the lab</a>
+        </div>
+      </div>
+      <div class="facility-hero__media">
+        <div class="img-slot" data-img-id="facilities-hero" data-label="Exterior · Boulder Biologics · BCH Foothills Campus · 12:5"></div>
+      </div>
+    </div>
+
+    <div class="marquee" role="region" aria-label="At-a-glance facts">
+      <div class="marquee__inner">
+        <div class="marquee__cell">
+          <span class="marquee__k">Location</span>
+          <span class="marquee__v">4745 Arapahoe Ave, Ste 300</span>
+          <span class="marquee__sub">Boulder, CO 80303 · BCH Foothills</span>
+        </div>
+        <div class="marquee__cell">
+          <span class="marquee__k">Patient rooms</span>
+          <span class="marquee__v">Exam rooms</span>
+          <span class="marquee__sub">Consultation · prep · recovery</span>
+        </div>
+        <div class="marquee__cell">
+          <span class="marquee__k">Procedure room</span>
+          <span class="marquee__v">Cleanroom-standard</span>
+          <span class="marquee__sub">Sterile prep · image-guided procedures</span>
+        </div>
+        <div class="marquee__cell">
+          <span class="marquee__k">Biologics lab</span>
+          <span class="marquee__v">Cleanroom-standard</span>
+          <span class="marquee__sub">Built &amp; audited by FDA-regulated partners</span>
+        </div>
+        <div class="marquee__cell">
+          <span class="marquee__k">Sample handling</span>
+          <span class="marquee__v">Never leaves the suite</span>
+          <span class="marquee__sub">Closed-system · single-use kits</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCEDURE ROOM ───────────────────────────────────────── -->
+  <section id="procedure">
+    <div class="inner">
+      <p class="eyebrow">Procedure room</p>
+      <h2 class="h2">Where harvests and image-guided delivery happen.</h2>
+
+      <div class="feature-room">
+        <div>
+          <p class="body-lg">A dedicated procedure room with sterile prep, point-of-care ultrasound, C-arm fluoroscopy, and the working space for both marrow aspiration and image-guided concentrate delivery. This room also features ISO-compliant HEPA filtration, one-way airflow, and robust environmental monitoring systems. </p>
+          <ul class="bullets" style="margin-top: 12px;">
+            <li>Sterile field for marrow aspiration and image-guided injection</li>
+            <li>Point-of-care ultrasound for real-time soft-tissue, joint, and PSIS visualization</li>
+            <li>Local anesthesia only; patients remain awake throughout</li>
+            <li>Co-located with the biologics lab so concentrate returns within the same visit</li>
+          </ul>
+          <p class="specs">Image guidance: musculoskeletal ultrasound · fluoroscopic guidance when indicated · sterile drape &amp; instrument prep · closed-system collection at harvest.</p>
+        </div>
+        <div>
+          <div class="img-slot" data-img-id="facilities-procedure-room" data-label="Procedure room · ultrasound-guided · 5:4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE LAB · centerpiece ─────────────────────────────────── -->
+  <section class="alt" id="lab">
+    <div class="inner">
+      <p class="eyebrow">The biologics lab</p>
+      <h2 class="h2">On-site processing, end to end.</h2>
+      <p class="lede">A biologics laboratory inside the clinic. Density-gradient separation, characterization, and sterility checks happen in the same suite as the procedure — so the sample is processed and returned within a single visit in a space with a highly controlled &amp; monitored environment. </p>
+
+      <div class="feature-room flip">
+        <div>
+          <div class="img-slot" data-img-id="facilities-lab" data-label="On-site biologics lab · processing bay · 5:4"></div>
+        </div>
+        <div>
+          <p class="body-lg">Every clinical preparation — PRP, bone-marrow concentrate, adjunct biologics — moves through a standardized workflow under our processing protocols. The lab is purpose-built for autologous, minimally-manipulated biologics: short residence time, closed-system kits, and characterization that runs alongside the procedure.</p>
+          <p class="specs">Featured throughput: two-spin PRP · density-gradient bone marrow concentrate · selected adipose work · MSC enumeration by flow cytometry where appropriate.</p>
+        </div>
+      </div>
+
+      <p class="eyebrow" style="margin-top: 64px;">Equipment</p>
+      <h2 class="h2">What's in the lab.</h2>
+      <p class="lede">Hover any card to see the equipment behind the role it plays in the workflow.</p>
+
+      <div class="equip-grid">
+        <article class="equip-card">
+          <div class="equip-card__inner">
+            <div class="equip-card__face equip-card__front">
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 4"/></svg></span>
+          <span class="cat">Separation</span>
+          <h3>Density-gradient centrifuges</h3>
+          <p>Validated two-spin protocols for PRP and density-gradient separation for bone-marrow concentrate. Rotor speeds and timing logged per preparation.</p>
+          <span class="role">Step · separation &amp; concentration</span>
+            </div>
+            <div class="equip-card__face equip-card__back">
+              <div class="img-slot" data-img-id="facilities-equip-centrifuge" data-label="Density-gradient centrifuges · 4:3"></div>
+            </div>
+          </div>
+        </article>
+        <article class="equip-card">
+          <div class="equip-card__inner">
+            <div class="equip-card__face equip-card__front">
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 4h18M5 4v16h14V4M9 8h6M9 12h6M9 16h6"/></svg></span>
+          <span class="cat">Containment</span>
+          <h3>Class II biosafety cabinet</h3>
+          <p>HEPA-filtered laminar-flow workspace for sterile processing. Sample exposure to open lab air is avoided by design — biosafety cabinet is the backup, closed-system kits are primary.</p>
+          <span class="role">Step · sterile transfer</span>
+            </div>
+            <div class="equip-card__face equip-card__back">
+              <div class="img-slot" data-img-id="facilities-equip-biosafety" data-img-position="center 75%" data-label="Class II biosafety cabinet · 4:3"></div>
+            </div>
+          </div>
+        </article>
+        <article class="equip-card">
+          <div class="equip-card__inner">
+            <div class="equip-card__face equip-card__front">
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="9" cy="12" r="3"/><circle cx="15" cy="12" r="3"/><path d="M3 12h3M18 12h3"/></svg></span>
+          <span class="cat">Characterization</span>
+          <h3>Flow cytometry</h3>
+          <p>Surface-marker characterization of the MSC-containing fraction. CD73+ / CD90+ / CD105+ confirmation; CD34− / CD45− exclusion — by ISCT minimal criteria.</p>
+          <span class="role">Step · QC validation</span>
+            </div>
+            <div class="equip-card__face equip-card__back">
+              <div class="img-slot" data-img-id="facilities-equip-flow" data-img-fit="contain" data-label="Flow cytometry · 4:3"></div>
+            </div>
+          </div>
+        </article>
+        <article class="equip-card">
+          <div class="equip-card__inner">
+            <div class="equip-card__face equip-card__front">
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 14l2 2 5-5"/></svg></span>
+          <span class="cat">Environmental</span>
+          <h3>Environmental monitoring</h3>
+          <p>Particle counts, temperature, humidity, and surface-contamination checks logged on the lab floor — confirming the room is operating to the cleanroom standard it was qualified to.</p>
+          <span class="role">Step · facility validation</span>
+            </div>
+            <div class="equip-card__face equip-card__back">
+              <div class="img-slot" data-img-id="facilities-equip-monitoring" data-label="Environmental monitoring · 4:3"></div>
+            </div>
+          </div>
+        </article>
+        <article class="equip-card">
+          <div class="equip-card__inner">
+            <div class="equip-card__face equip-card__front">
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+          <span class="cat">Procedure</span>
+          <h3>Fluoroscopy (when indicated)</h3>
+          <p>Real-time fluoroscopic guidance available for joint, subchondral, and spinal procedures where ultrasound alone is insufficient.</p>
+          <span class="role">Step · selected procedures</span>
+            </div>
+            <div class="equip-card__face equip-card__back">
+              <div class="img-slot" data-img-id="facilities-equip-fluoroscopy" data-label="Fluoroscopy (when indicated) · 4:3"></div>
+            </div>
+          </div>
+        </article>
+        <article class="equip-card">
+          <div class="equip-card__inner">
+            <div class="equip-card__face equip-card__front">
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 7l8-4 8 4M4 7v10l8 4 8-4V7M4 7l8 4 8-4M12 11v10"/></svg></span>
+          <span class="cat">Cold chain</span>
+          <h3>Specimen handling &amp; cold-chain</h3>
+          <p>Calibrated temperature-controlled storage for reagents and adjuncts, with same-visit delivery removing the need for long-term sample storage of patient material.</p>
+          <span class="role">Step · supporting infrastructure</span>
+            </div>
+            <div class="equip-card__face equip-card__back">
+              <div class="img-slot" data-img-id="facilities-equip-coldchain" data-img-fit="contain" data-label="Specimen handling & cold-chain · 4:3"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLEANROOM CALLOUT ─────────────────────────────────────── -->
+  <section id="cleanroom">
+    <div class="inner">
+      <div class="clean">
+        <div>
+          <p class="eyebrow">Cleanroom-standard facility</p>
+          <h2>Sterility &amp; Safety are #1</h2>
+          <p>Our laboratory and procedure spaces are built and audited to cleanroom standards. </p>
+          <p>Particle counters and environmental monitoring run constantly throughout our clinical space — but they're just one way we confirm those rooms are operating at our standards. We also re-validate the space to ensure our cleaning protocols are working to prevent any contamination. </p>
+        </div>
+        <div class="clean-specs" aria-label="Cleanroom specifications">
+          <div class="row"><span class="k">Build standard</span><span class="v">ISO-8 Cleanroom</span></div>
+          <div class="row"><span class="k">Qualification</span><span class="v">per FDA regulations</span></div>
+          <div class="row"><span class="k">Re-qualification</span><span class="v">Routine, documented</span></div>
+          <div class="row"><span class="k">Monitoring</span><span class="v">Constantly monitored, logged, and audited </span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QC PIPELINE ──────────────────────────────────────────── -->
+  <section class="alt">
+    <div class="inner">
+      <p class="eyebrow">Quality-control pipeline</p>
+      <h2 class="h2">We test what we deliver.</h2>
+      <p class="lede">Every preparation passes a defined quality-control workflow before it ever reaches a patient. Every component, every step, and every person involved is tracked to a batch record in our Quality Management System.</p>
+
+      <div class="qc-pipe-grid">
+        <article class="qc-pipe">
+          <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="9" cy="12" r="3"/><circle cx="15" cy="12" r="3"/></svg></span>
+          <span class="num">QC · 01</span>
+          <h3>Flow cytometry validates our process.</h3>
+          <p>Our MSC preparation protocol is validated by flow cytometry — confirming the expected stromal-cell surface markers, cell content, and viability profile that our process consistently produces. <strong>Not assumed, measured.</strong></p>
+          <p class="spec">CD73+ / CD90+ / CD105+ <span>confirmation</span><br />CD34− / CD45− <span>exclusion</span><br />ISCT minimal criteria <span>framework</span></p>
+        </article>
+        <article class="qc-pipe">
+          <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M7 6V4h10v2M8 11h8M8 15h5"/></svg></span>
+          <span class="num">QC · 02</span>
+          <h3>Closed-system, single-use processing.</h3>
+          <p>Your tissue moves through a <strong>sealed, single-use processing kit</strong> from harvest to delivery — the sample never touches open lab air. One kit, one patient, one visit; the kit is discarded after.</p>
+          <p class="spec">Closed-system kit <span>harvest → delivery</span><br />Single-use, single-patient<br />No open transfers</p>
+        </article>
+        <article class="qc-pipe">
+          <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M9 2h6a2 2 0 0 1 2 2v0H7v0a2 2 0 0 1 2-2z"/><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 12h6M9 16h6M9 8h6"/></svg></span>
+          <span class="num">QC · 03</span>
+          <h3>Every component, every step, traceable.</h3>
+          <p>Every component that touches your preparation — <strong>syringes, reagents, processing-kit lots, instrument runs, cold-storage temperatures</strong> — is logged to a per-preparation batch record in our Quality Management System. The staff member and timestamp for each process step travels with it.</p>
+          <p class="spec">Per-preparation batch record<br />Component &amp; lot traceability <span>to the syringe</span><br />Personnel + timestamp <span>per step</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAIN OF CUSTODY ─────────────────────────────────────── -->
+  <section>
+    <div class="inner">
+      <p class="eyebrow">Sample chain of custody</p>
+      <h2 class="h2">Your sample never leaves the suite.</h2>
+      <p class="lede">Same-day, same-visit means everything happens on one floor inside one suite. Below: the actual physical path of your tissue from harvest to delivery.</p>
+
+      <div class="custody">
+        <h3>From draw to delivery — one floor, one visit.</h3>
+        <p class="lede">No external shipping. No third-party processing center. No overnight storage of patient material.</p>
+        <ol>
+          <li>
+            <span class="step-no">Step 01</span>
+            <span class="room">Procedure room</span>
+            <span class="what"><strong>Harvest.</strong> Bone marrow aspiration or venous draw under image guidance. Collected into the closed-system kit at the bedside.</span>
+          </li>
+          <li>
+            <span class="step-no">Step 02</span>
+            <span class="room">Hand-off · corridor</span>
+            <span class="what"><strong>Transfer.</strong> Same kit, sealed. Walked directly to the on-site lab by the clinical team. No courier, no transit, no break in custody.</span>
+          </li>
+          <li>
+            <span class="step-no">Step 03</span>
+            <span class="room">Biologics lab</span>
+            <span class="what"><strong>Processing.</strong> Density-gradient centrifugation in the same closed-system kit. Biosafety cabinet is the sterile backup for transfers; the kit is primary.</span>
+          </li>
+          <li>
+            <span class="step-no">Step 04</span>
+            <span class="room">Hand-off · corridor</span>
+            <span class="what"><strong>Return.</strong> Concentrate moves back to the procedure room — sealed, single-use kit, same staff.</span>
+          </li>
+          <li>
+            <span class="step-no">Step 05</span>
+            <span class="room">Procedure room</span>
+            <span class="what"><strong>Delivery.</strong> Image-guided placement to the target tissue. Same room, same staff, same visit — no second appointment.</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- STANDARDS FRAMEWORKS ─────────────────────────────────── -->
+  <section class="alt">
+    <div class="inner">
+      <p class="eyebrow">Standards we work to</p>
+      <h2 class="h2">The frameworks behind the workflow.</h2>
+      <p class="lede">We don't invent quality standards in-house. The workflow above is built on published, externally-defined frameworks — the ones used in regulated biologics environments.</p>
+
+      <div class="std-grid">
+        <div class="std-card">
+          <span class="id">USP &lt;71&gt;</span>
+          <h3>Sterility testing</h3>
+          <p>U.S. Pharmacopeia chapter on sterility testing of biologic products. Our microbial-culture pipeline runs to its framework.</p>
+        </div>
+        <div class="std-card">
+          <span class="id">ISCT 2006</span>
+          <h3>MSC minimal criteria</h3>
+          <p>International Society for Cellular Therapy position paper defining MSC by surface markers (CD73/CD90/CD105+; CD34/CD45/CD14/CD19/HLA-DR−).</p>
+        </div>
+        <div class="std-card">
+          <span class="id">21 CFR 1271</span>
+          <h3>HCT/P framework</h3>
+          <p>FDA regulations covering human cells, tissues, and cellular and tissue-based products. We operate inside the same-day, minimally-manipulated, autologous lane.</p>
+        </div>
+        <div class="std-card">
+          <span class="id">FDA guidance</span>
+          <h3>Regenerative medicine</h3>
+          <p>FDA marketing-and-claims guidance for regenerative medicine. Shapes our terminology — "mesenchymal stromal cells," not "stem cells" — and our outcome framing.</p>
+        </div>
+        <div class="std-card">
+          <span class="id">ISO 13485</span>
+          <h3>Quality Management Systems</h3>
+          <p>ISO standard for quality-management systems specific to medical devices and biologics. Our QMS implements its requirements — document control, batch records, traceability, and personnel-step logging — as the backbone of our preparation workflow.</p>
+        </div>
+        <div class="std-card">
+          <span class="id">ISO 14644</span>
+          <h3>Cleanrooms &amp; controlled environments</h3>
+          <p>ISO standard for cleanrooms and associated controlled environments. Our laboratory and procedure spaces are built and qualified against its framework, with particle, temperature, humidity, and surface-contamination monitoring on-floor.</p>
+        </div>
+      </div>
+
+      <p style="font-family: var(--font-mono); font-size: 11px; color: var(--muted); letter-spacing: 0.04em; margin-top: 24px; max-width: 70ch;">For the full FDA-aligned terminology and regulatory posture, see our <a href="fda-guidelines.html" style="color: var(--brand-primary);">FDA Guidelines</a> page.</p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA ─────────────────────────────────────────────── -->
+  <section id="location">
+    <div class="inner">
+      <p class="eyebrow">Visit us</p>
+      <h2 class="h2">Where to find us.</h2>
+      <p class="lede">Boulder Biologics is on the Boulder Community Health Foothills Campus, just off Arapahoe Avenue. Free surface parking is available at the building.</p>
+
+      <div class="loc-grid">
+        <div class="loc-card">
+          <h3>Boulder Biologics</h3>
+          <p class="addr">
+            4745 Arapahoe Ave, Ste 300<br />
+            Boulder, CO 80303
+          </p>
+          <dl>
+            <dt>Campus</dt>
+            <dd>BCH Foothills Campus</dd>
+            <dt>Phone</dt>
+            <dd><a class="addr" href="tel:+17205506175">720-550-6175</a></dd>
+            <dt>Parking</dt>
+            <dd>Free surface parking on site</dd>
+          </dl>
+          <div class="loc-card__actions">
+            <a class="btn btn-primary btn-sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=4745+Arapahoe+Ave+Suite+300+Boulder+CO+80303" target="_blank" rel="noopener">Get directions →</a>
+            <a class="btn btn-outline btn-sm" href="tel:+17205506175">Call the clinic</a>
+          </div>
+        </div>
+        <div class="map-slot">
+          <iframe
+            title="Map to Boulder Biologics, 4745 Arapahoe Ave Ste 300, Boulder, CO 80303"
+            src="https://www.google.com/maps?q=4745+Arapahoe+Ave+Suite+300+Boulder+CO+80303&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta" id="schedule">
+    <div class="inner">
+      <div>
+        <p class="eyebrow on-dark">Want to see the clinic in person?</p>
+        <h2 class="h2">Schedule a consultation — and a tour.</h2>
+        <p>Most consultations happen in one of our patient rooms; many patients ask to see the lab and procedure room while they're here. We're glad to walk you through.</p>
+        <a class="btn btn-ghost-light" href="tel:+17205506175">Or call 720-550-6175</a>
+      </div>
+      <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Request received ✓'; this.querySelector('button').disabled=true;">
+        <div class="row">
+          <div><label for="fn">First name</label><input id="fn" required placeholder="Lauren" /></div>
+          <div><label for="ln">Last name</label><input id="ln" required placeholder="Whittaker" /></div>
+        </div>
+        <div><label for="em">Email</label><input id="em" type="email" required placeholder="you@example.com" /></div>
+        <div><label for="ph">Phone</label><input id="ph" required placeholder="(303) 555-0140" /></div>
+        <div><label for="reason">Visit reason</label>
+          <select id="reason">
+            <option>Consultation for a specific condition</option>
+            <option>Cellular therapy / BMAC second opinion</option>
+            <option>PRP / orthopedic biologics</option>
+            <option>Tour of the clinic &amp; lab</option>
+            <option>Other — exploring</option>
+          </select>
+        </div>
+        <button class="btn btn-accent" type="submit">Request a consultation</button>
+        <span class="micro">Submitting this form does not establish a patient–physician relationship.</span>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__cols">
+    <div>
+      <img src="../assets/logo-stacked.png" alt="Boulder Biologics" />
+      <p class="site-footer__tag">Autologous orthobiologics in Boulder, Colorado. Patient-derived, physician-led, evidence-informed care.</p>
+    </div>
+    <div>
+      <h4>Orthopedics</h4>
+      <ul>
+        <li><a href="cellular-therapy.html">Bone Marrow Therapy (BMAC)</a></li>
+        <li><a href="prp.html">PRP</a></li>
+        <li><a href="prp-ha.html">PRP + Hyaluronic Acid</a></li>
+        <li><a href="prp-protein.html">PRP + Protein-Rich Plasma</a></li>
+        <li><a href="prolotherapy.html">Prolotherapy</a></li>
+        <li><a href="prp-hydrodissection.html">Nerve Hydrodissection</a></li>
+        <li><a href="epat.html">EPAT</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Clinic</h4>
+      <ul>
+        <li><a href="index.html#about">Our Team</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="contact.html">Location &amp; Contact</a></li>
+        <li><a href="fda-guidelines.html">FDA Guidelines</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="longevity.html">Longevity</a></li>
+        <li><a href="index.html#conditions">Conditions</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>Boulder, Colorado</li>
+        <li><a href="tel:+17205506175">720-550-6175</a></li>
+        <li><a href="mailto:info@boulderbiologics.com">info@boulderbiologics.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer__legal">
+    <span>© 2026 Boulder Biologics. All rights reserved.</span>
+    <span>Privacy · HIPAA · Terms</span>
+  </div>
+</footer>
+
+<script defer src="../assets/image-loader.js"></script>
+  <script src="_nav.js" defer></script>
+</body>
+</html>
