@@ -1,6 +1,21 @@
 # Handoff: Boulder Biologics Marketing Site
 
-> **Latest update — 2026-06-01.** Refreshed from production. Changes in this push:
+> **Latest update — 2026-06-09.** Refreshed from production. Changes in this push:
+> - **New page — PRP Eyedrops** (`pages/prp-eyedrops.html`): autologous PRP eyedrops for
+>   ocular surface disease (dry eye, persistent epithelial defects, recurrent erosion,
+>   neurotrophic keratopathy, Sjögren's, post-LASIK, GVHD). Modeled on the PRP family
+>   service pages — full SEO head + JSON-LD (canonical `/prp-eyedrops`), conditions strip,
+>   PRP-vs-serum-vs-artificial-tears comparison, process steps, a "PRP & orthobiologics
+>   practice, not an eye clinic" positioning note in the procedure section, candidacy CTA,
+>   FAQ, and a **peer-reviewed references** list. Added to the **PRP family subnav** on all
+>   five PRP pages and to the **footer "Orthopedics" column** site-wide. Hero image slot
+>   `data-img-id="prp-eyedrops-hero"` still needs real art in `assets/images/`.
+> - **Homepage** (`pages/index.html`): added an **"Eye & ocular surface"** card to the
+>   "Find care for your condition" grid (→ `prp-eyedrops.html`) and an **"Eye & ocular
+>   surface"** row to the **Medical Applications** service card.
+> - **Deploy note:** add `/prp-eyedrops` to the production `sitemap.xml` when you generate it.
+>
+> _Previous update — 2026-06-01:_
 > - **Prolotherapy** (`pages/prolotherapy.html`): added the SI-joint step-by-step diagram
 >   (`assets/images/prolotherapy-si-steps.png`) in the "What a course of treatment looks like"
 >   section; removed the "Driving home" at-a-glance row. (The diagram art was corrected — the
