@@ -16,25 +16,178 @@
   status = 301
   force = true
 
-# ── 301s preserving SEO equity from the old site (see REDIRECTS.md) ──
+# ─────────────────────────────────────────────────────────────────────────
+# 301s from the OLD live site's URLs (www.boulderbiologics.com sitemap, 45
+# URLs) to the redesigned slugs, to preserve SEO equity / backlinks.
+# Slugs unchanged between old and new (no redirect needed, they just resolve):
+#   /prp  /prolotherapy  /epat  /contact  /our-clinic  /mesenchymal-stem-cells-mscs
+# ─────────────────────────────────────────────────────────────────────────
+
+# ── Core service / condition slug changes ──
 [[redirects]]
-  from = "/stem-cell-therapy"
+  from = "/stem-cell-therapy"            # highest-traffic; was Long COVID indication
   to = "/long-covid"
   status = 301
-
 [[redirects]]
   from = "/stem-cell-therapy-3"
   to = "/tbi-cte"
   status = 301
-
 [[redirects]]
   from = "/stem-cell-therapy-4"
   to = "/medical-applications-other"
   status = 301
-
 [[redirects]]
-  from = "/fda-guidlines"
+  from = "/fda-guidlines"                # typo fix (missing "e")
   to = "/fda-guidelines"
+  status = 301
+[[redirects]]
+  from = "/prp-proteinrich-plasma"
+  to = "/prp-protein"
+  status = 301
+[[redirects]]
+  from = "/prp-1"                        # duplicate PRP slug
+  to = "/prp"
+  status = 301
+[[redirects]]
+  from = "/dr-glowney"
+  to = "/jason-glowney-md"
+  status = 301
+[[redirects]]
+  from = "/home"                         # Squarespace homepage slug
+  to = "/"
+  status = 301
+
+# ── FAQ variants → consolidated /faq ──
+[[redirects]]
+  from = "/general-faq"
+  to = "/faq"
+  status = 301
+[[redirects]]
+  from = "/prp-faq"
+  to = "/faq"
+  status = 301
+[[redirects]]
+  from = "/prp-faq-1"
+  to = "/faq"
+  status = 301
+[[redirects]]
+  from = "/stem-cell-faq"
+  to = "/faq"
+  status = 301
+[[redirects]]
+  from = "/lowdensity-prp-and-ppp-faqs"  # LD-PRP & PPP → hydrodissection page
+  to = "/prp-hydrodissection"
+  status = 301
+
+# ── Longevity: ~18 individual topic pages consolidated into /longevity ──
+[[redirects]]
+  from = "/the-emerging-field-of-longevity-medicine"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/biologics-and-longevity"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/longevity-medications-and-supplements"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/hormone-replacement"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/exercise-and-longevity"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/diet"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/sleep"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/aging"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/epigenetics"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/mitochondrial-dysfunction"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/metabolic-syndrome"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/neurodegeneration"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/modern-environmental-exposures"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/metagenomics"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/cardiac-health-assessment"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/cardiology-biomarkers"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/cancer-prevention"
+  to = "/longevity"
+  status = 301
+[[redirects]]
+  from = "/cancer-diagnosis-and-treatment"
+  to = "/longevity"
+  status = 301
+
+# ── Intake-form pages → most relevant content page (VERIFY: see note — the new
+#    site has no intake forms; if patients still need these, they must be rebuilt) ──
+[[redirects]]
+  from = "/knee-form"
+  to = "/knee-pain-arthritis"             # VERIFY
+  status = 301
+[[redirects]]
+  from = "/shoulder-form"
+  to = "/shoulder-rotator-cuff"           # VERIFY
+  status = 301
+[[redirects]]
+  from = "/pelvis-form"
+  to = "/hip-back-si-pain"                # VERIFY
+  status = 301
+
+# ── Pages with no clear 1:1 equivalent — best guesses, please confirm ──
+[[redirects]]
+  from = "/stem-cell-therapy-2"          # VERIFY which indication this was
+  to = "/cellular-therapy"
+  status = 301
+[[redirects]]
+  from = "/orthobiologics"               # VERIFY (overview → homepage?)
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/patients"                     # VERIFY (patient hub → education hub?)
+  to = "/learn"
+  status = 301
+[[redirects]]
+  from = "/comprehensive-bodywork-1"     # VERIFY (discontinued service?)
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/home-alt-bedford"             # Squarespace template artifact
+  to = "/"
   status = 301
 
 # ── Safety redirects for the two files renamed to their canonical slugs ──
@@ -42,7 +195,6 @@
   from = "/msc"
   to = "/mesenchymal-stem-cells-mscs"
   status = 301
-
 [[redirects]]
   from = "/facilities"
   to = "/our-clinic"
