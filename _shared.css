@@ -4,7 +4,7 @@
    Page-specific layouts (hero variants, condition cards, mechanism
    diagrams, etc.) live inline on each page.
    ============================================================ */
-@import url("../colors_and_type.css");
+@import url("colors_and_type.css");
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
