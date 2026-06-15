@@ -9,7 +9,7 @@
 
 /* Hero with TOC card */
 .svc-hero { padding: 28px var(--gutter) 56px; }
-.svc-hero__grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: end; }
+.svc-hero__grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
 .svc-hero h1 { margin-bottom: 18px; }
 .svc-hero .byline { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; margin: 18px 0 0; }
 

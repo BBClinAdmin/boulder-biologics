@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -101,7 +101,7 @@
 
 <style>
   .svc-hero { padding: 28px var(--gutter) 72px; }
-  .svc-hero__grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: end; }
+  .svc-hero__grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
   .svc-hero .chips-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 28px; }
   .svc-hero .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
   .svc-hero__media { margin: 56px auto 0; max-width: var(--max); }
@@ -140,13 +140,14 @@
   .related-card .more { font-family: var(--font-display); font-weight: 600; font-size: 13.5px; color: var(--brand-primary); margin-top: auto; padding-top: 8px; }
 </style>
   <link rel="stylesheet" href="_nav.css" />
+  <link rel="stylesheet" href="_theme-dark.css" />
 </head>
 <body data-screen-label="Service · PRP + HA">
 
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-header__logo" href="index.html" aria-label="Boulder Biologics home">
-      <img src="../assets/logo-stacked.png" alt="Boulder Biologics" />
+      <img src="../assets/logo-stacked-light.webp" alt="Boulder Biologics" />
     </a>
     <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
       <span class="nav-toggle__bar"></span>
@@ -175,7 +176,6 @@
     <a href="prp.html">Standard PRP</a>
     <a href="prp-ha.html" aria-current="page">PRP + Hyaluronic Acid</a>
     <a href="prp-protein.html">PRP + Protein-Rich Plasma</a>
-    <a href="prp-hydrodissection.html">LD-PRP &amp; Hydrodissection</a>
     <a href="prp-eyedrops.html">PRP Eyedrops</a>
   </div>
 </nav>
@@ -192,11 +192,13 @@
 
   <!-- HERO ─────────────────────────────────────────────────────── -->
   <section class="svc-hero">
+    <div class="svc-hero__cell svc-hero__cell--prp" aria-hidden="true"></div>
+    <div class="svc-hero__scrim" aria-hidden="true"></div>
     <div class="svc-hero__grid">
       <div>
         <p class="eyebrow">Knee osteoarthritis · combination injection</p>
         <h1 class="h1">PRP + Hyaluronic Acid for the knee.</h1>
-        <p class="lede">A two-component intra-articular injection — autologous PRP plus hyaluronic acid — for mild-to-moderate knee osteoarthritis.</p>
+        <p class="lede">A two-component intra-articular injection, autologous PRP plus hyaluronic acid, for mild-to-moderate knee osteoarthritis.</p>
         <div class="chips-row">
           <span class="chip">Mild-to-moderate knee OA</span>
           <span class="chip">Image-guided</span>
@@ -236,7 +238,7 @@
           <h2 class="h2">What is PRP + HA?</h2>
         </div>
         <div class="body-lg">
-          <p>Autologous PRP delivers <strong>concentrated platelets and growth factors</strong> that may modulate inflammation and support local tissue repair. Hyaluronic acid restores the <strong>viscoelastic properties</strong> of synovial fluid — providing lubrication and shock absorption at the joint surface.</p>
+          <p>Autologous PRP delivers <strong>concentrated platelets and growth factors</strong> that may modulate inflammation and support local tissue repair. Hyaluronic acid restores the <strong>viscoelastic properties</strong> of synovial fluid, providing lubrication and shock absorption at the joint surface.</p>
           <p>Combined intra-articular delivery aims to address both the <strong>biological</strong> drivers of OA symptoms (inflammation, signaling) and the <strong>mechanical</strong> ones (lost viscosity, joint surface friction) in a single procedural window.</p>
         </div>
       </div>
@@ -245,7 +247,7 @@
           <span class="ctag">Component 01</span>
           <h3>Autologous PRP</h3>
           <p class="sub">From your blood · two-spin · Lp-PRP</p>
-          <p>Leukocyte-poor PRP, prepared in our on-site lab through controlled centrifugation. Lower-inflammatory profile preferred for intra-articular use — concentrated platelets deliver growth factors and signaling proteins that recruit endogenous repair processes.</p>
+          <p>Leukocyte-poor PRP, prepared in our on-site lab through controlled centrifugation. Lower-inflammatory profile preferred for intra-articular use, concentrated platelets deliver growth factors and signaling proteins that recruit endogenous repair processes.</p>
         </div>
         <div class="component">
           <span class="ctag is-blue">Component 02</span>
@@ -288,7 +290,7 @@
         <div class="step">
           <span class="num">Step 02</span>
           <h3>PRP preparation</h3>
-          <p>Two-spin centrifugation in our on-site lab — Lp-PRP for intra-articular use.</p>
+          <p>Two-spin centrifugation in our on-site lab, Lp-PRP for intra-articular use.</p>
           <span class="meta">~30 min</span>
         </div>
         <div class="step">
@@ -315,19 +317,19 @@
       <p class="lede">PRP + HA has been investigated in multiple RCTs and meta-analyses for symptomatic knee OA. The combination consistently demonstrates a favorable profile vs. either agent alone in mild-to-moderate disease.</p>
       <div class="evlist">
         <div class="evrow">
-          <div class="study">Lana JF et al. — 2016<small>Knee Surg Sports Traumatol Arthrosc</small></div>
+          <div class="study">Lana JF et al., 2016<small>Knee Surg Sports Traumatol Arthrosc</small></div>
           <p>Randomized comparison of PRP+HA vs. PRP alone vs. HA alone in knee OA. The combination demonstrated superior pain reduction at 12 months compared with either monotherapy.</p>
         </div>
         <div class="evrow">
-          <div class="study">Yu W et al. — 2018<small>Drug Des Devel Ther</small></div>
+          <div class="study">Yu W et al., 2018<small>Drug Des Devel Ther</small></div>
           <p>Meta-analysis of RCTs of PRP+HA vs. HA alone in knee OA. The combination showed greater functional improvement at 6 and 12 months.</p>
         </div>
         <div class="evrow">
-          <div class="study">Saturveithan C et al. — 2017<small>Malays Orthop J</small></div>
+          <div class="study">Saturveithan C et al., 2017<small>Malays Orthop J</small></div>
           <p>Prospective study of combined intra-articular PRP+HA. Sustained WOMAC improvement at 6-month follow-up in mild-to-moderate OA.</p>
         </div>
         <div class="evrow">
-          <div class="study">Karasavvidis T et al. — 2021<small>Cartilage</small></div>
+          <div class="study">Karasavvidis T et al., 2021<small>Cartilage</small></div>
           <p>Systematic review and meta-analysis. Combined PRP+HA outperformed HA monotherapy across multiple knee-OA outcome measures.</p>
         </div>
       </div>
@@ -339,7 +341,7 @@
     <div class="inner">
       <p class="eyebrow">Is this you?</p>
       <h2 class="h2">When PRP + HA is the right combination.</h2>
-      <p class="lede">This combination is most appropriate for mild-to-moderate knee OA. For more advanced disease — especially when subchondral bone is involved — cellular therapy is often the better conversation.</p>
+      <p class="lede">This combination is most appropriate for mild-to-moderate knee OA. For more advanced disease, especially when subchondral bone is involved, cellular therapy is often the better conversation.</p>
       <div class="candidacy-grid" style="margin-top: 32px;">
         <div class="cand-col is-yes">
           <h3><span class="pip">✓</span> Likely a fit</h3>
@@ -373,13 +375,13 @@
         <details open>
           <summary>Why combine PRP with hyaluronic acid? <span class="plus">+</span></summary>
           <div class="a">
-            <p>The two agents address different aspects of knee OA. <strong>PRP</strong> contributes biologic signaling — recruiting endogenous repair, modulating inflammation. <strong>HA</strong> restores the viscoelastic properties of synovial fluid that decline with OA, providing mechanical lubrication. Clinical literature consistently shows the combination outperforms either agent alone in mild-to-moderate disease.</p>
+            <p>The two agents address different aspects of knee OA. <strong>PRP</strong> contributes biologic signaling, recruiting endogenous repair, modulating inflammation. <strong>HA</strong> restores the viscoelastic properties of synovial fluid that decline with OA, providing mechanical lubrication. Clinical literature consistently shows the combination outperforms either agent alone in mild-to-moderate disease.</p>
           </div>
         </details>
         <details>
           <summary>How is this different from a single PRP injection? <span class="plus">+</span></summary>
           <div class="a">
-            <p>Standard PRP delivers the biologic component only. PRP+HA adds <strong>immediate viscosupplementation</strong> — restoring joint-surface lubrication while the slower PRP cascade unfolds. For mild-to-moderate knee OA with mechanical symptoms (catching, stiffness), the combination is often the better fit.</p>
+            <p>Standard PRP delivers the biologic component only. PRP+HA adds <strong>immediate viscosupplementation</strong>: restoring joint-surface lubrication while the slower PRP cascade unfolds. For mild-to-moderate knee OA with mechanical symptoms (catching, stiffness), the combination is often the better fit.</p>
           </div>
         </details>
         <details>
@@ -413,7 +415,7 @@
         <a class="related-card" href="prp.html">
           <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></span>
           <h3>Standard PRP</h3>
-          <p>PRP alone — often the right starting point for milder OA without significant mechanical symptoms.</p>
+          <p>PRP alone, often the right starting point for milder OA without significant mechanical symptoms.</p>
           <span class="more">About PRP →</span>
         </a>
         <a class="related-card" href="prp-protein.html">
@@ -425,7 +427,7 @@
         <a class="related-card" href="cellular-therapy.html">
           <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M12 2v6M9 8h6M8 22c0-5 2-8 4-10 2 2 4 5 4 10"/></svg></span>
           <h3>Cellular Therapy (BMAC)</h3>
-          <p>For advanced OA with subchondral involvement — the next step when PRP isn't enough.</p>
+          <p>For advanced OA with subchondral involvement, the next step when PRP isn't enough.</p>
           <span class="more">Compare to BMAC →</span>
         </a>
       </div>
@@ -438,7 +440,7 @@
       <div>
         <p class="eyebrow on-dark">Schedule a knee OA consultation</p>
         <h2 class="h2">Find out if PRP + HA fits your knee.</h2>
-        <p>Dr. Glowney reviews your imaging, prior treatments, and symptom profile — and tells you honestly whether this combination, plain PRP, BMAC, or a different path is the better next step.</p>
+        <p>Dr. Glowney reviews your imaging, prior treatments, and symptom profile, and tells you honestly whether this combination, plain PRP, BMAC, or a different path is the better next step.</p>
         <a class="btn btn-ghost-light" href="tel:+17205506175">Or call 720-550-6175</a>
       </div>
       <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Request received ✓'; this.querySelector('button').disabled=true;">
@@ -450,11 +452,11 @@
         <div><label for="ph">Phone</label><input id="ph" required placeholder="(303) 555-0140" /></div>
         <div><label for="sv">Knee description</label>
           <select id="sv">
-            <option>Mild knee OA — early symptoms</option>
-            <option>Moderate knee OA — daily activities affected</option>
+            <option>Mild knee OA, early symptoms</option>
+            <option>Moderate knee OA, daily activities affected</option>
             <option>Failed prior PRP / HA</option>
             <option>Post-meniscectomy knee</option>
-            <option>Not sure — exploring</option>
+            <option>Not sure, exploring</option>
           </select>
         </div>
         <button class="btn btn-accent" type="submit">Request a consultation</button>
@@ -468,17 +470,19 @@
 <footer class="site-footer">
   <div class="site-footer__cols">
     <div>
-      <img src="../assets/logo-stacked.png" alt="Boulder Biologics" />
+      <img src="../assets/logo-stacked-light.webp" alt="Boulder Biologics" />
       <p class="site-footer__tag">Autologous orthobiologics in Boulder, Colorado. Patient-derived, physician-led, evidence-informed care.</p>
     </div>
     <div>
       <h4>Orthopedics</h4>
       <ul>
         <li><a href="cellular-therapy.html">Bone Marrow Therapy (BMAC)</a></li>
+        <li><a href="mfat.html">Microfragmented Adipose (mFAT)</a></li>
         <li><a href="prp.html">PRP</a></li>
         <li><a href="prp-ha.html">PRP + Hyaluronic Acid</a></li>
         <li><a href="prp-protein.html">PRP + Protein-Rich Plasma</a></li>
         <li><a href="prp-eyedrops.html">PRP Eyedrops</a></li>
+        <li><a href="plasma-eyedrops.html">Plasma Eye Drops</a></li>
         <li><a href="prolotherapy.html">Prolotherapy</a></li>
         <li><a href="prp-hydrodissection.html">Nerve Hydrodissection</a></li>
         <li><a href="epat.html">EPAT</a></li>

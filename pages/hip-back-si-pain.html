@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <title>Hip, Back &amp; SI Joint Pain | Boulder Biologics</title>
-<meta name="description" content="Biologic therapy for hip, low-back &amp; sacroiliac (SI) joint pain in Boulder, CO — PRP, prolotherapy, and nerve hydrodissection, often combined in one visit." />
+<meta name="description" content="Biologic therapy for hip, low-back &amp; sacroiliac (SI) joint pain in Boulder, CO, PRP, prolotherapy, and nerve hydrodissection, often combined in one visit." />
 <meta name="keywords" content="hip pain Boulder, SI joint pain Boulder, sacroiliac dysfunction Colorado, low back pain biologics, hip osteoarthritis Boulder, prolotherapy SI joint" />
 <link rel="canonical" href="https://www.boulderbiologics.com/hip-back-si-pain" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -14,7 +14,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.boulderbiologics.com/hip-back-si-pain" />
 <meta property="og:site_name" content="Boulder Biologics" />
-<meta property="og:title" content="Hip, Back &amp; SI Joint Pain — Boulder, CO" />
+<meta property="og:title" content="Hip, Back &amp; SI Joint Pain, Boulder, CO" />
 <meta property="og:description" content="PRP, prolotherapy, and nerve hydrodissection for hip, low-back, and SI joint pain. Image-guided, led by Dr. Jason Glowney, MD." />
 <meta property="og:image" content="https://www.boulderbiologics.com/assets/logo-stacked.png" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -241,8 +241,8 @@
     gap: 24px; flex-wrap: nowrap;
   }
   .site-header__logo { flex: 0 0 auto; display: inline-flex; align-items: center; text-decoration: none; }
-  .site-header__logo img { height: 44px; width: auto; display: block; }
-  @media (max-width: 1180px) { .site-header__logo img { height: 38px; } }
+  .site-header__logo img { height: 56px; width: auto; display: block; }
+  @media (max-width: 1180px) { .site-header__logo img { height: 48px; } }
   .site-header nav { display: flex; gap: 4px; flex: 1 1 auto; min-width: 0; justify-content: center; flex-wrap: nowrap; }
   .site-header nav a {
     font-family: var(--font-display); font-weight: 600; font-size: 14.5px;
@@ -289,7 +289,7 @@
   .cond-hero { padding: 28px var(--gutter) 64px; }
   .cond-hero__grid {
     max-width: var(--max); margin: 0 auto;
-    display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: end;
+    display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center;
   }
   .cond-hero h1 { margin-bottom: 18px; }
   .cond-hero__diagnoses {
@@ -336,6 +336,7 @@
   .therapies__grid[data-count="1"] { grid-template-columns: minmax(0, 720px); justify-content: center; }
   .therapies__grid[data-count="2"] { grid-template-columns: repeat(2, 1fr); }
   .therapies__grid[data-count="3"] { grid-template-columns: repeat(3, 1fr); }
+  .therapies__grid[data-count="4"] { grid-template-columns: repeat(2, 1fr); }
   .therapy-card {
     background: var(--white); border: 1px solid var(--rule);
     border-radius: var(--r-lg); padding: 28px;
@@ -496,7 +497,7 @@
   /* ── Responsive ───────────────────────────────────────────────────── */
   @media (max-width: 960px) {
     section { padding: 56px var(--gutter); }
-    .cond-hero__grid, .therapies__grid[data-count="3"], .therapies__grid[data-count="2"],
+    .cond-hero__grid, .therapies__grid[data-count="4"], .therapies__grid[data-count="3"], .therapies__grid[data-count="2"],
     .candidacy__grid, .mid-cta__inner, .related__grid {
       grid-template-columns: 1fr;
       gap: 28px;
@@ -506,6 +507,7 @@
   }
 </style>
   <link rel="stylesheet" href="_nav.css" />
+  <link rel="stylesheet" href="_theme-dark.css" />
 </head>
 <body data-screen-label="Condition · Hip, back &amp; SI joint pain">
 
@@ -520,7 +522,7 @@
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-header__logo" href="index.html" aria-label="Boulder Biologics home">
-      <img src="../assets/logo-stacked.png" alt="Boulder Biologics" />
+      <img src="../assets/logo-stacked-light.webp" alt="Boulder Biologics" />
     </a>
     <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
       <span class="nav-toggle__bar"></span>
@@ -559,7 +561,7 @@
       <div>
         <p class="eyebrow">Condition overview · Orthopedics</p>
         <h1 class="h1">Hip, back &amp; SI joint pain</h1>
-        <p class="lede">Pain in the hip, low back, or sacroiliac joint often comes from a combination of joint, ligament, and nerve sources. The therapies below are chosen to address whichever is driving your symptoms — and we frequently combine them in one visit.</p>
+        <p class="lede">Pain in the hip, low back, or sacroiliac joint often comes from a combination of joint, ligament, and nerve sources. The therapies below are chosen to address whichever is driving your symptoms, and we frequently combine them in one visit.</p>
         <div class="cond-hero__diagnoses" aria-label="Common diagnoses"><span class="chip">Hip osteoarthritis</span><span class="chip">Sacroiliac dysfunction</span><span class="chip">Lumbar facet pain</span><span class="chip">Chronic low back pain</span><span class="chip">Greater trochanteric pain syndrome</span></div>
         <div class="cond-hero__cta">
           <a class="btn btn-primary" href="#schedule">Schedule a consultation →</a>
@@ -593,13 +595,14 @@
     <div class="inner">
       <div class="therapies__head">
         <p class="eyebrow">Therapies for this condition</p>
-        <h2 class="h2">Three options, often combined in one visit.</h2>
-        <p class="lede">Most hip / back / SI patients benefit from more than one mechanism — a joint injection plus ligament support, or a joint injection plus nerve decompression. We sequence them in the same visit when appropriate.</p>
+        <h2 class="h2">Four options, often combined in one visit.</h2>
+        <p class="lede">Most hip / back / SI patients benefit from more than one mechanism, a joint injection plus ligament support, or a joint injection plus nerve decompression. We sequence them in the same visit when appropriate.</p>
       </div>
-      <div class="therapies__grid" data-count="3">
+      <div class="therapies__grid" data-count="4">
           <article class="therapy-card"><p class="num">01 · Platelet-rich plasma</p><h3>Platelet-rich plasma (PRP)</h3><p class="therapy-card__sub">Blood-derived · in-office · 60–90 min</p><p>Concentrated platelets and growth factors from your own blood, prepared in our lab and delivered into the target tissue under ultrasound guidance. The most-studied autologous biologic across orthopedic indications.</p><ul class="therapy-card__fit"><li class="fit-label">Best fit when</li><li>Hip OA (mild-to-moderate) with mechanical pain</li><li>Facet joint pain on imaging or diagnostic block</li><li>Anchor therapy when combining with prolo or hydrodissection</li></ul><a class="therapy-card__cta" href="prp.html">Read the full Platelet-rich plasma page →</a></article>
           <article class="therapy-card"><p class="num">02 · Ligament &amp; joint stabilization</p><h3>Prolotherapy</h3><p class="therapy-card__sub">Dextrose-based · stimulates ligament repair</p><p>A series of small injections of a dextrose solution into ligaments and entheses, intended to stimulate a local repair response and improve passive joint stability. Useful where laxity, not cartilage, is the dominant issue.</p><ul class="therapy-card__fit"><li class="fit-label">Best fit when</li><li>SI joint instability or pelvic ligament laxity</li><li>Chronic low-back pain from posterior ligament strain</li><li>Recurrent symptoms after PT and manual therapy</li></ul><a class="therapy-card__cta" href="prolotherapy.html">Read the full Prolotherapy page →</a></article>
           <article class="therapy-card"><p class="num">03 · Peripheral nerve · entrapment relief</p><h3>Nerve hydrodissection</h3><p class="therapy-card__sub">Ultrasound-guided · low-density PRP or D5W</p><p>Fluid is introduced under ultrasound guidance to separate a peripheral nerve from surrounding adhesions, decompressing entrapment and supporting the nerve&#39;s local environment. Often combined with PRP.</p><ul class="therapy-card__fit"><li class="fit-label">Best fit when</li><li>Sciatic, femoral, or pudendal nerve entrapment</li><li>Radicular symptoms with imaging-confirmed compression</li><li>Burning / electric pain in a clear dermatome</li></ul><a class="therapy-card__cta" href="prp-hydrodissection.html">Read the full Nerve hydrodissection page →</a></article>
+          <article class="therapy-card"><p class="num">04 · Cellular therapy · adipose</p><h3>Microfragmented adipose (mFAT)</h3><p class="therapy-card__sub">Adipose-derived · same-day · image-guided</p><p>For the arthritic hip joint specifically, your own fat, microfragmented the same day and delivered into the joint under image guidance. A dense autologous cell source that also adds a cushioning scaffold.</p><ul class="therapy-card__fit"><li class="fit-label">Best fit when</li><li>Hip-joint osteoarthritis (not primarily back/SI)</li><li>Wanting an autologous cell option for the joint</li><li>Looking to delay or avoid hip replacement</li></ul><a class="therapy-card__cta" href="mfat.html">Read the full Microfragmented adipose page →</a></article>
       </div>
     </div>
   </section>
@@ -608,7 +611,7 @@
     <div class="inner">
       <p class="eyebrow">Is this you?</p>
       <h2 class="h2">Find out if biologic therapy is the right next step for you.</h2>
-      <p class="lede">A clear, condition-specific candidacy brief — so you can come to consultation already knowing where you stand and what to ask. If another path will serve you better, we'll point you to it.</p>
+      <p class="lede">A clear, condition-specific candidacy brief, so you can come to consultation already knowing where you stand and what to ask. If another path will serve you better, we'll point you to it.</p>
       <div class="candidacy__grid">
         <div class="candidacy__col is-yes">
           <h3><span class="pip" aria-hidden="true">✓</span> Likely a good fit</h3>
@@ -622,7 +625,7 @@
         <aside class="candidacy__cta">
           <p class="eyebrow">Schedule a consultation</p>
           <h3>Not sure which combination fits your hip, back, or SI pain?</h3>
-          <p>A 45–60 minute consultation with Dr. Glowney sorts that out — history, imaging review, exam, and an honest recommendation. No pressure to proceed.</p>
+          <p>A 45–60 minute consultation with Dr. Glowney sorts that out, history, imaging review, exam, and an honest recommendation. No pressure to proceed.</p>
           <div class="actions">
             <a class="btn btn-primary" href="contact.html">Schedule a consultation →</a>
             <a class="btn btn-outline" href="tel:+17205506175">Call 720-550-6175</a>
@@ -651,13 +654,14 @@
 <footer class="site-footer">
   <div class="site-footer__cols">
     <div>
-      <img src="../assets/logo-stacked.png" alt="Boulder Biologics" style="height: 44px; width: auto; margin-bottom: 16px;" />
+      <img src="../assets/logo-stacked-light.webp" alt="Boulder Biologics" style="height: 44px; width: auto; margin-bottom: 16px;" />
       <p style="color: rgba(255,255,255,0.6); font-size: 14px; max-width: 32ch; margin: 0;">Autologous orthobiologics in Boulder, Colorado. Patient-derived, physician-led, evidence-informed care.</p>
     </div>
     <div>
       <h4>Services</h4>
       <ul>
         <li><a href="cellular-therapy.html">Cellular Therapy</a></li>
+        <li><a href="mfat.html">Microfragmented Adipose (mFAT)</a></li>
         <li><a href="prp.html">PRP</a></li>
         <li><a href="prolotherapy.html">Prolotherapy</a></li>
         <li><a href="epat.html">EPAT</a></li>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -101,7 +101,7 @@
 
 <style>
   .svc-hero { padding: 28px var(--gutter) 72px; }
-  .svc-hero__grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: end; }
+  .svc-hero__grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
   .svc-hero .chips-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 28px; }
   .svc-hero .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
   .svc-hero__media { margin: 56px auto 0; max-width: var(--max); }
@@ -133,13 +133,14 @@
   .related-card .more { font-family: var(--font-display); font-weight: 600; font-size: 13.5px; color: var(--brand-primary); margin-top: auto; padding-top: 8px; }
 </style>
   <link rel="stylesheet" href="_nav.css" />
+  <link rel="stylesheet" href="_theme-dark.css" />
 </head>
 <body data-screen-label="Service · PRP + Protein-Rich Plasma">
 
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-header__logo" href="index.html" aria-label="Boulder Biologics home">
-      <img src="../assets/logo-stacked.png" alt="Boulder Biologics" />
+      <img src="../assets/logo-stacked-light.webp" alt="Boulder Biologics" />
     </a>
     <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
       <span class="nav-toggle__bar"></span>
@@ -168,7 +169,6 @@
     <a href="prp.html">Standard PRP</a>
     <a href="prp-ha.html">PRP + Hyaluronic Acid</a>
     <a href="prp-protein.html" aria-current="page">PRP + Protein-Rich Plasma</a>
-    <a href="prp-hydrodissection.html">LD-PRP &amp; Hydrodissection</a>
     <a href="prp-eyedrops.html">PRP Eyedrops</a>
   </div>
 </nav>
@@ -185,11 +185,13 @@
 
   <!-- HERO ─────────────────────────────────────────────────────── -->
   <section class="svc-hero">
+    <div class="svc-hero__cell svc-hero__cell--prp" aria-hidden="true"></div>
+    <div class="svc-hero__scrim" aria-hidden="true"></div>
     <div class="svc-hero__grid">
       <div>
         <p class="eyebrow">Knee OA · high-inflammatory phenotype</p>
         <h1 class="h1">PRP + Protein-Rich Plasma.</h1>
-        <p class="lede">An autologous combination protocol — concentrated PRP plus a plasma-protein fraction enriched for <strong style="color: var(--ink);">α2-macroglobulin (A2M)</strong> and fibrinogen — for selected mild-to-moderate knee OA patients with a high-inflammatory profile.</p>
+        <p class="lede">An autologous combination protocol, concentrated PRP plus a plasma-protein fraction enriched for <strong style="color: var(--ink);">α2-macroglobulin (A2M)</strong> and fibrinogen, for selected mild-to-moderate knee OA patients with a high-inflammatory profile.</p>
         <div class="chips-row">
           <span class="chip">Mild-to-moderate knee OA</span>
           <span class="chip">High-inflammatory phenotype</span>
@@ -230,7 +232,7 @@
         </div>
         <div class="body-lg">
           <p>Standard PRP delivers concentrated platelets and growth factors. The protein-rich plasma (PRP-PRP) fraction is concentrated from your own plasma to enrich for α2-macroglobulin, fibrinogen, and other plasma proteins.</p>
-          <p>The combined injectate aims to address both the <strong>biologic signaling</strong> side of OA (PRP component) and the <strong>protease-driven cartilage degradation</strong> side (A2M-rich PPP) — particularly in patients whose OA phenotype is more inflammatory than mechanical.</p>
+          <p>The combined injectate aims to address both the <strong>biologic signaling</strong> side of OA (PRP component) and the <strong>protease-driven cartilage degradation</strong> side (A2M-rich PPP), particularly in patients whose OA phenotype is more inflammatory than mechanical.</p>
         </div>
       </div>
       <div class="components">
@@ -251,7 +253,7 @@
           <span class="ctag is-blue">Component 02</span>
           <h3>Protein-Rich Plasma fraction</h3>
           <p class="sub">From your PPP · ultrafiltration · A2M-concentrated</p>
-          <p>Platelet-poor plasma processed through ultrafiltration to concentrate large-molecular-weight plasma proteins — most notably alpha-2-macroglobulin, a broad-spectrum protease inhibitor relevant to cartilage breakdown in OA.</p>
+          <p>Platelet-poor plasma processed through ultrafiltration to concentrate large-molecular-weight plasma proteins, most notably alpha-2-macroglobulin, a broad-spectrum protease inhibitor relevant to cartilage breakdown in OA.</p>
           <div class="proteins">
             <span class="chip">α2-Macroglobulin</span>
             <span class="chip">Fibrinogen</span>
@@ -324,13 +326,13 @@
       <h2 class="h2">How α2-macroglobulin protects cartilage.</h2>
       <div class="body-lg" style="max-width: 760px; margin-top: 32px;">
         <p>In OA, the cartilage extracellular matrix is degraded by <strong>matrix metalloproteinases (MMPs)</strong> and <strong>ADAMTS proteases</strong> activated by local inflammation. The catabolic environment outpaces the chondrocytes' anabolic response and the joint surface progressively loses material.</p>
-        <p><strong>α2-Macroglobulin</strong> is a 720 kDa plasma protein that acts as a <strong>broad-spectrum protease inhibitor</strong>, trapping and neutralizing MMPs, ADAMTS-4, ADAMTS-5, and other catabolic enzymes implicated in cartilage breakdown. Concentrating it from your own plasma may shift the local balance away from net catabolism — especially in inflammatory OA phenotypes.</p>
+        <p><strong>α2-Macroglobulin</strong> is a 720 kDa plasma protein that acts as a <strong>broad-spectrum protease inhibitor</strong>, trapping and neutralizing MMPs, ADAMTS-4, ADAMTS-5, and other catabolic enzymes implicated in cartilage breakdown. Concentrating it from your own plasma may shift the local balance away from net catabolism, especially in inflammatory OA phenotypes.</p>
         <p style="font-size: 14px; color: var(--muted); margin-top: 18px;">Wang et al. (2014) demonstrated A2M's protective effect against cartilage degradation in rat OA models. Clinical evidence in humans is emerging.</p>
       </div>
       <figure style="margin: 40px 0 0;">
-        <div class="img-slot" data-img-id="prp-protein-a2m-schematic" data-img-fit="contain" style="aspect-ratio: 2200 / 1200; background: var(--white); border: 1px solid var(--rule); border-radius: var(--r-lg);" data-label="Schematic — how α2-macroglobulin traps matrix metalloproteinases (MMPs)"></div>
+        <div class="img-slot" data-img-id="prp-protein-a2m-schematic" data-img-fit="contain" style="aspect-ratio: 2200 / 1200; background: var(--white); border: 1px solid var(--rule); border-radius: var(--r-lg);" data-label="Schematic, how α2-macroglobulin traps matrix metalloproteinases (MMPs)"></div>
         <figcaption style="font-family: var(--font-body); font-size: 13.5px; color: var(--muted); margin: 14px 0 0; line-height: 1.55; font-style: italic;">
-          Schematic — α2-macroglobulin entraps active MMPs through bait-region cleavage and a conformational change, then the A2M–MMP complex is cleared by receptor-mediated endocytosis. Mechanism extrapolated from preclinical models.
+          Schematic, α2-macroglobulin entraps active MMPs through bait-region cleavage and a conformational change, then the A2M–MMP complex is cleared by receptor-mediated endocytosis. Mechanism extrapolated from preclinical models.
         </figcaption>
       </figure>
     </div>
@@ -341,7 +343,7 @@
     <div class="inner">
       <p class="eyebrow">Is this you?</p>
       <h2 class="h2">When PRP + Protein is the right protocol.</h2>
-      <p class="lede">This isn't a default OA protocol — patient selection is deliberate. We screen for autoimmune arthritis and lean toward this approach when the OA phenotype reads as inflammatory rather than mechanical.</p>
+      <p class="lede">This isn't a default OA protocol, patient selection is deliberate. We screen for autoimmune arthritis and lean toward this approach when the OA phenotype reads as inflammatory rather than mechanical.</p>
       <div class="candidacy-grid" style="margin-top: 32px;">
         <div class="cand-col is-yes">
           <h3><span class="pip">✓</span> Likely a fit</h3>
@@ -375,19 +377,19 @@
         <details open>
           <summary>How is this different from PRP alone or PRP + HA? <span class="plus">+</span></summary>
           <div class="a">
-            <p><strong>Standard PRP</strong> delivers biologic signaling. <strong>PRP+HA</strong> adds mechanical viscosupplementation. <strong>PRP+Protein</strong> adds a <em>protease-inhibition</em> mechanism via concentrated α2-macroglobulin — targeting the enzymatic side of cartilage breakdown. Each is appropriate for a different OA phenotype.</p>
+            <p><strong>Standard PRP</strong> delivers biologic signaling. <strong>PRP+HA</strong> adds mechanical viscosupplementation. <strong>PRP+Protein</strong> adds a <em>protease-inhibition</em> mechanism via concentrated α2-macroglobulin, targeting the enzymatic side of cartilage breakdown. Each is appropriate for a different OA phenotype.</p>
           </div>
         </details>
         <details>
           <summary>Why screen for autoimmune arthritis first? <span class="plus">+</span></summary>
           <div class="a">
-            <p>Autoimmune arthritides (rheumatoid, psoriatic, gout) are <em>not</em> osteoarthritis — they have different pathophysiology and require different management. Misidentifying them as OA can delay appropriate disease-modifying therapy. Screening with appropriate labs and clinical assessment is a deliberate guard-rail in our protocol.</p>
+            <p>Autoimmune arthritides (rheumatoid, psoriatic, gout) are <em>not</em> osteoarthritis: they have different pathophysiology and require different management. Misidentifying them as OA can delay appropriate disease-modifying therapy. Screening with appropriate labs and clinical assessment is a deliberate guard-rail in our protocol.</p>
           </div>
         </details>
         <details>
           <summary>What does α2-macroglobulin actually do? <span class="plus">+</span></summary>
           <div class="a">
-            <p>A2M is a 720 kDa plasma protein that acts as a <strong>broad-spectrum protease inhibitor</strong> — it traps and neutralizes MMPs, ADAMTSs, and other enzymes that break down cartilage in OA. By concentrating it from your own plasma and delivering it intra-articularly, we aim to shift the local balance toward less net cartilage degradation.</p>
+            <p>A2M is a 720 kDa plasma protein that acts as a <strong>broad-spectrum protease inhibitor</strong>: it traps and neutralizes MMPs, ADAMTSs, and other enzymes that break down cartilage in OA. By concentrating it from your own plasma and delivering it intra-articularly, we aim to shift the local balance toward less net cartilage degradation.</p>
           </div>
         </details>
         <details>
@@ -421,7 +423,7 @@
         <a class="related-card" href="prp.html">
           <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></span>
           <h3>Standard PRP</h3>
-          <p>PRP alone — often the right starting point for less inflammatory OA phenotypes.</p>
+          <p>PRP alone, often the right starting point for less inflammatory OA phenotypes.</p>
           <span class="more">About PRP →</span>
         </a>
         <a class="related-card" href="cellular-therapy.html">
@@ -440,7 +442,7 @@
       <div>
         <p class="eyebrow on-dark">Schedule a knee OA consultation</p>
         <h2 class="h2">Find out if this combination fits your knee.</h2>
-        <p>Dr. Glowney reviews your imaging, labs, and OA phenotype — and recommends the protocol most likely to help. Sometimes that's this combination; sometimes it's plain PRP, BMAC, or a different path entirely.</p>
+        <p>Dr. Glowney reviews your imaging, labs, and OA phenotype, and recommends the protocol most likely to help. Sometimes that's this combination; sometimes it's plain PRP, BMAC, or a different path entirely.</p>
         <a class="btn btn-ghost-light" href="tel:+17205506175">Or call 720-550-6175</a>
       </div>
       <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Request received ✓'; this.querySelector('button').disabled=true;">
@@ -455,7 +457,7 @@
             <option>Inflammatory-feeling knee OA</option>
             <option>Failed prior PRP or PRP+HA</option>
             <option>Synovitis on MRI</option>
-            <option>Not sure — exploring</option>
+            <option>Not sure, exploring</option>
           </select>
         </div>
         <button class="btn btn-accent" type="submit">Request a consultation</button>
@@ -469,17 +471,19 @@
 <footer class="site-footer">
   <div class="site-footer__cols">
     <div>
-      <img src="../assets/logo-stacked.png" alt="Boulder Biologics" />
+      <img src="../assets/logo-stacked-light.webp" alt="Boulder Biologics" />
       <p class="site-footer__tag">Autologous orthobiologics in Boulder, Colorado. Patient-derived, physician-led, evidence-informed care.</p>
     </div>
     <div>
       <h4>Orthopedics</h4>
       <ul>
         <li><a href="cellular-therapy.html">Bone Marrow Therapy (BMAC)</a></li>
+        <li><a href="mfat.html">Microfragmented Adipose (mFAT)</a></li>
         <li><a href="prp.html">PRP</a></li>
         <li><a href="prp-ha.html">PRP + Hyaluronic Acid</a></li>
         <li><a href="prp-protein.html">PRP + Protein-Rich Plasma</a></li>
         <li><a href="prp-eyedrops.html">PRP Eyedrops</a></li>
+        <li><a href="plasma-eyedrops.html">Plasma Eye Drops</a></li>
         <li><a href="prolotherapy.html">Prolotherapy</a></li>
         <li><a href="prp-hydrodissection.html">Nerve Hydrodissection</a></li>
         <li><a href="epat.html">EPAT</a></li>

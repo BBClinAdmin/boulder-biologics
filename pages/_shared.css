@@ -41,7 +41,7 @@ img { max-width: 100%; display: block; }
   display: flex; align-items: center; justify-content: space-between;
   gap: 24px;
 }
-.site-header__logo img { height: 42px; width: auto; display: block; }
+.site-header__logo img { height: 56px; width: auto; display: block; }
 .site-header nav { display: flex; gap: 1px; flex: 1 1 auto; min-width: 0; justify-content: center; flex-wrap: nowrap; }
 .site-header nav a {
   font-family: var(--font-display); font-weight: 600; font-size: 13.5px;
@@ -61,8 +61,8 @@ img { max-width: 100%; display: block; }
 .call-link svg { color: var(--bb-teal-700); }
 .site-header__cta .call-link { color: #5b6877; }
 .site-header__cta .call-link:hover { color: var(--bb-teal-700); }
-.site-header__cta .btn-primary { background: var(--bb-teal-500); color: #fff; box-shadow: none; }
-.site-header__cta .btn-primary:hover { background: var(--bb-teal-600); }
+.site-header__cta .btn-primary { background: var(--brand-accent); color: #fff; box-shadow: none; }
+.site-header__cta .btn-primary:hover { background: var(--brand-accent-hover); }
 
 /* Responsive — match _v2-service.css behavior */
 @media (max-width: 1180px) {

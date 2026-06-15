@@ -1,6 +1,24 @@
 # Handoff: Boulder Biologics Marketing Site
 
-> **Latest update — 2026-06-09.** Refreshed from production. Changes in this push:
+> **Latest update — 2026-06-15.** Refreshed from production for GitHub Pages deploy.
+> - **The site now ships a DARK THEME as its production look.** Every page sets
+>   `<html data-theme="dark">` and loads `pages/_theme-dark.css` LAST in `<head>`. That layer
+>   remaps the design tokens, paints the cell-image hero/card backgrounds
+>   (`assets/cell-glow.png`, `cell-orange.jpg`, `cell-platelet.jpg`, `cell-network.jpg`), and
+>   fixes on-dark CTA/link colors. **All of those CSS + image files MUST ship** or pages render
+>   broken/light. The light-theme base tokens still live inline per page, so removing
+>   `_theme-dark.css` cleanly reverts to the old light look if ever needed.
+> - **LD-PRP & Hydrodissection** (`prp-hydrodissection.html`) was moved out of the PRP family —
+>   removed from the PRP subnav, relisted under **Additional Treatments / Orthopedics** on the
+>   homepage, and its breadcrumb + JSON-LD now route Home › Orthopedics (not Home › PRP).
+> - **fda-guidelines.html** hero eyebrow + breadcrumb: "science" → "regulations".
+> - **learn.html**: MSC deep-clinical article renumbered to Article 04; BMAC "coming soon" → 05.
+> - **Header "Contact" button** color unified site-wide via `--brand-accent` (the faq/legal
+>   pages previously hardcoded teal).
+> - **Deploy note:** when you generate `sitemap.xml`, include `/prp-eyedrops` and the four
+>   orthopedic condition URLs; the dark theme does not change any URLs.
+>
+> _Previous update — 2026-06-09._ Refreshed from production. Changes in that push:
 > - **New page — PRP Eyedrops** (`pages/prp-eyedrops.html`): autologous PRP eyedrops for
 >   ocular surface disease (dry eye, persistent epithelial defects, recurrent erosion,
 >   neurotrophic keratopathy, Sjögren's, post-LASIK, GVHD). Modeled on the PRP family
@@ -95,19 +113,28 @@ claude_code_handoff/
 ├── REDIRECTS.md              ← 301 redirect map + deploy checklist (CRITICAL for SEO)
 ├── colors_and_type.css       ← all design tokens (CSS variables + semantic classes)
 ├── assets/
-│   ├── logo-stacked.png       ← master logotype
-│   ├── image-loader.css/.js   ← design-time image placeholder helper
-│   └── images/                ← real photography (hero, team, facilities, MRI/microscopy)
+│   ├── logo-stacked.png        ← master logotype (favicon / OG)
+│   ├── logo-stacked-light.webp ← light gradient mark for the dark header + footer
+│   ├── cell-glow.png           ← homepage hero cell glow (screen-blended)
+│   ├── cell-orange.jpg         ← service hero / pillar-card cell background
+│   ├── cell-platelet.jpg       ← PRP-family cell background variant
+│   ├── cell-network.jpg        ← "additional treatments" cell background variant
+│   ├── image-loader.css/.js    ← design-time image placeholder helper
+│   └── images/                 ← real photography (hero, team, facilities, MRI/microscopy)
 └── pages/
-    ├── _shared.css            ← shared header/footer/base partial
+    ├── _shared.css            ← shared header/footer/base partial (faq + legal pages)
     ├── _v2-service.css        ← service-page template styles (incl. candidacy CTA card)
     ├── _learn-explainer.css   ← education/explainer article styles
+    ├── _theme-dark.css        ← DARK THEME layer — loaded LAST on every page (html[data-theme="dark"]); remaps tokens, cell backgrounds, on-dark CTA colors
+    ├── _nav.css / _nav.js      ← centralized responsive header / mobile nav drawer
     ├── index.html             ← Homepage
     ├── cellular-therapy.html  ← Bone Marrow Cellular Therapy (BMAC) service page
     ├── prp.html               ← Platelet-Rich Plasma
     ├── prp-ha.html            ← PRP + Hyaluronic Acid (knee OA)
     ├── prp-protein.html       ← PRP + Protein-Rich Plasma
-    ├── prp-hydrodissection.html ← Low-density PRP / nerve hydrodissection
+    ├── prp-hydrodissection.html ← LD-PRP / nerve hydrodissection (under Orthopedics, not PRP)
+    ├── prp-eyedrops.html      ← PRP eyedrops (ocular surface)
+    ├── plasma-eyedrops.html   ← Plasma eye drops (ocular surface)
     ├── prolotherapy.html      ← Prolotherapy
     ├── epat.html              ← EPAT (pulse activation)
     ├── longevity.html         ← Longevity medicine

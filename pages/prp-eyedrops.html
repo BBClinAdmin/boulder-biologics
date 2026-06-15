@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -143,13 +143,14 @@
   .related-card .more { font-family: var(--font-display); font-weight: 600; font-size: 13.5px; color: var(--brand-primary); margin-top: auto; padding-top: 8px; }
 </style>
   <link rel="stylesheet" href="_nav.css" />
+  <link rel="stylesheet" href="_theme-dark.css" />
 </head>
 <body data-screen-label="Service · PRP Eyedrops">
 
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-header__logo" href="index.html" aria-label="Boulder Biologics home">
-      <img src="../assets/logo-stacked.png" alt="Boulder Biologics" />
+      <img src="../assets/logo-stacked-light.webp" alt="Boulder Biologics" />
     </a>
     <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
       <span class="nav-toggle__bar"></span>
@@ -178,7 +179,6 @@
     <a href="prp.html">Standard PRP</a>
     <a href="prp-ha.html">PRP + Hyaluronic Acid</a>
     <a href="prp-protein.html">PRP + Protein-Rich Plasma</a>
-    <a href="prp-hydrodissection.html">LD-PRP &amp; Hydrodissection</a>
     <a href="prp-eyedrops.html" aria-current="page">PRP Eyedrops</a>
   </div>
 </nav>
@@ -195,11 +195,13 @@
 
   <!-- HERO ─────────────────────────────────────────────────────── -->
   <section class="svc-hero">
+    <div class="svc-hero__cell svc-hero__cell--prp" aria-hidden="true"></div>
+    <div class="svc-hero__scrim" aria-hidden="true"></div>
     <div class="svc-hero__grid">
       <div>
         <p class="eyebrow">Ocular surface · autologous biologic</p>
         <h1 class="h1">PRP Eyedrops.</h1>
-        <p class="lede">Autologous platelet-rich plasma — prepared from your own blood and formulated as <strong style="color: var(--ink);">topical eyedrops</strong> — for moderate-to-severe dry eye and ocular surface disease that hasn't responded to standard care.</p>
+        <p class="lede">Autologous platelet-rich plasma, prepared from your own blood and formulated as <strong style="color: var(--ink);">topical eyedrops</strong>, for moderate-to-severe dry eye and ocular surface disease that hasn't responded to standard care.</p>
         <div class="chips-row">
           <span class="chip">Dry eye disease</span>
           <span class="chip">Corneal epithelial defects</span>
@@ -293,7 +295,7 @@
         </div>
         <div class="body-lg">
           <p>PRP eyedrops are a topical, autologous therapy made from a small sample of your own blood. The blood is centrifuged to concentrate platelets, and that platelet-rich fraction is formulated into sterile dropper bottles you use at home.</p>
-          <p>Platelets are tiny blood cells that store a concentrated mix of <strong>growth factors</strong> — signaling proteins that prompt the surface cells of your eye to grow, migrate, and repair (the best-studied are EGF, PDGF, TGF-β, and FGF) — along with vitamin A and other tear-like proteins. Delivered to the ocular surface as a drop, they're intended to support the eye's own repair processes and calm inflammation — the same biologic principle behind injectable PRP, adapted for the cornea and tear film.</p>
+          <p>Platelets are tiny blood cells that store a concentrated mix of <strong>growth factors</strong>: signaling proteins that prompt the surface cells of your eye to grow, migrate, and repair (the best-studied are EGF, PDGF, TGF-β, and FGF), along with vitamin A and other tear-like proteins. Delivered to the ocular surface as a drop, they're intended to support the eye's own repair processes and calm inflammation, the same biologic principle behind injectable PRP, adapted for the cornea and tear film.</p>
           <p>Because the drops are derived from your own blood, they more closely resemble natural tears than artificial tears do, and carry no risk of an allergic reaction to a foreign product.</p>
         </div>
       </div>
@@ -324,7 +326,7 @@
         <div class="step">
           <span class="num">Step 02</span>
           <h3>Blood collection</h3>
-          <p>A single venous draw into anticoagulated tubes — volume sized for your dosing supply.</p>
+          <p>A single venous draw into anticoagulated tubes, volume sized for your dosing supply.</p>
           <span class="meta">~10 min</span>
         </div>
         <div class="step">
@@ -348,7 +350,7 @@
       </div>
 
       <div style="margin-top: 36px; background: var(--bb-teal-100); border: 1px solid var(--bb-teal-200); border-radius: var(--r-lg); padding: 24px 28px;">
-        <p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--ink-2); margin: 0; max-width: 78ch;">Preparing, characterizing, and safely delivering your own platelets is our core craft — the same biologics work behind our orthopedic care. <strong style="color: var(--ink);">We're a PRP and orthobiologics practice, not an eye clinic</strong>, so we co-manage with the ophthalmologist or optometrist who diagnoses and follows your ocular surface disease.</p>
+        <p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--ink-2); margin: 0; max-width: 78ch;">Preparing, characterizing, and safely delivering your own platelets is our core craft, the same biologics work behind our orthopedic care. <strong style="color: var(--ink);">We're a PRP and orthobiologics practice, not an eye clinic</strong>, so we co-manage with the ophthalmologist or optometrist who diagnoses and follows your ocular surface disease.</p>
       </div>
     </div>
   </section>
@@ -358,7 +360,7 @@
     <div class="inner">
       <p class="eyebrow">How it compares</p>
       <h2 class="h2">PRP eyedrops, serum drops, and artificial tears.</h2>
-      <p class="lede">All three address dryness — but they differ in what they actually deliver to the ocular surface. The right choice depends on your diagnosis.</p>
+      <p class="lede">All three address dryness, but they differ in what they actually deliver to the ocular surface. The right choice depends on your diagnosis.</p>
       <div class="compare-grid">
         <div class="compare-card">
           <span class="ctag">Baseline</span>
@@ -379,7 +381,7 @@
           <p class="gf">Concentrated platelet growth factors + tear proteins</p>
         </div>
       </div>
-      <p style="font-family: var(--font-mono); font-size: 11px; color: var(--muted); letter-spacing: 0.04em; margin: 24px 0 0;">Comparative differences are based on the published ocular-surface literature. Which preparation is appropriate is an individualized clinical decision.</p>
+      <p style="font-family: var(--font-mono); font-size: 11px; color: var(--muted); letter-spacing: 0.04em; margin: 24px 0 0;">Comparative differences are based on the published ocular-surface literature. Which preparation is appropriate is an individualized clinical decision. <a href="plasma-eyedrops.html" style="color: var(--brand-primary);">See plasma &amp; serum eye drops →</a></p>
     </div>
   </section>
 
@@ -388,7 +390,7 @@
     <div class="inner">
       <p class="eyebrow">Is this you?</p>
       <h2 class="h2">When PRP eyedrops are worth considering.</h2>
-      <p class="lede">PRP eyedrops are generally a step considered after standard therapies — and they work best alongside, not instead of, the care your eye-care provider directs.</p>
+      <p class="lede">PRP eyedrops are generally a step considered after standard therapies, and they work best alongside, not instead of, the care your eye-care provider directs.</p>
       <div class="candidacy-grid" style="margin-top: 32px;">
         <div class="cand-col is-yes">
           <h3><span class="pip">✓</span> Likely a fit</h3>
@@ -403,7 +405,7 @@
         <aside class="cand-col is-cta">
           <p class="eyebrow">Schedule a consultation</p>
           <h3>Let's figure it out together.</h3>
-          <p>A consultation is how we determine whether PRP eyedrops fit your case — often in co-management with your eye-care provider.</p>
+          <p>A consultation is how we determine whether PRP eyedrops fit your case, often in co-management with your eye-care provider.</p>
           <div class="actions">
             <a class="btn btn-primary" href="#schedule">Schedule a consultation →</a>
             <a class="btn btn-outline" href="tel:+17205506175">Call 720-550-6175</a>
@@ -422,7 +424,7 @@
         <details open>
           <summary>How are PRP eyedrops different from artificial tears? <span class="plus">+</span></summary>
           <div class="a">
-            <p>Artificial tears lubricate the eye but contain none of the biologic signaling proteins found in natural tears. PRP eyedrops are made from your own blood and carry a concentrated mix of <strong>platelet-derived growth factors</strong> and tear-like proteins — intended to support the ocular surface biologically, not simply to lubricate it.</p>
+            <p>Artificial tears lubricate the eye but contain none of the biologic signaling proteins found in natural tears. PRP eyedrops are made from your own blood and carry a concentrated mix of <strong>platelet-derived growth factors</strong> and tear-like proteins, intended to support the ocular surface biologically, not simply to lubricate it.</p>
           </div>
         </details>
         <details>
@@ -434,7 +436,7 @@
         <details>
           <summary>What conditions are PRP eyedrops used for? <span class="plus">+</span></summary>
           <div class="a">
-            <p>Most often <strong>moderate-to-severe dry eye disease</strong>, persistent corneal epithelial defects, recurrent corneal erosion, neurotrophic keratopathy, ocular graft-versus-host disease, and ocular surface disease in conditions such as Sjögren's syndrome — typically after standard therapies have not been enough.</p>
+            <p>Most often <strong>moderate-to-severe dry eye disease</strong>, persistent corneal epithelial defects, recurrent corneal erosion, neurotrophic keratopathy, ocular graft-versus-host disease, and ocular surface disease in conditions such as Sjögren's syndrome, typically after standard therapies have not been enough.</p>
           </div>
         </details>
         <details>
@@ -458,7 +460,7 @@
     <div class="inner">
       <p class="eyebrow">Selected references</p>
       <h2 class="h2">What the peer-reviewed literature says.</h2>
-      <p style="font-family: var(--font-body); font-size: 15px; color: var(--muted); max-width: 64ch; margin: 0;">Peer-reviewed studies our PRP eyedrops framing draws from — spanning dry eye, Sjögren's, persistent epithelial defects, and post-surgical ocular surface disease. Full PDFs available at consultation.</p>
+      <p style="font-family: var(--font-body); font-size: 15px; color: var(--muted); max-width: 64ch; margin: 0;">Peer-reviewed studies our PRP eyedrops framing draws from, spanning dry eye, Sjögren's, persistent epithelial defects, and post-surgical ocular surface disease. Full PDFs available at consultation.</p>
       <ol>
         <li>Zhang Y, Li N, Ge Z, Li F. Blood component therapy for dry eye disease: a systematic review and network meta-analysis. <em>Front Med (Lausanne).</em> 2024;11:1500160.</li>
         <li>Kang MJ, Lee JH, Hwang J, Chung SH. Efficacy and safety of platelet-rich plasma and autologous-serum eye drops for dry eye in primary Sjögren's syndrome: a randomized trial. <em>Sci Rep.</em> 2023;13:19279.</li>
@@ -506,7 +508,7 @@
       <div>
         <p class="eyebrow on-dark">Schedule a PRP eyedrops consultation</p>
         <h2 class="h2">Find out if PRP eyedrops fit your case.</h2>
-        <p>Dr. Glowney reviews your diagnosis, prior treatments, and imaging, and co-ordinates with your eye-care provider — then gives an honest recommendation on whether PRP eyedrops are the right next step.</p>
+        <p>Dr. Glowney reviews your diagnosis, prior treatments, and imaging, and co-ordinates with your eye-care provider, then gives an honest recommendation on whether PRP eyedrops are the right next step.</p>
         <a class="btn btn-ghost-light" href="tel:+17205506175">Or call 720-550-6175</a>
       </div>
       <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Request received ✓'; this.querySelector('button').disabled=true;">
@@ -524,7 +526,7 @@
             <option>Neurotrophic keratopathy</option>
             <option>Sjögren's / autoimmune dry eye</option>
             <option>Post-surgical ocular surface</option>
-            <option>Not sure — exploring</option>
+            <option>Not sure, exploring</option>
           </select>
         </div>
         <button class="btn btn-accent" type="submit">Request a consultation</button>
@@ -538,17 +540,19 @@
 <footer class="site-footer">
   <div class="site-footer__cols">
     <div>
-      <img src="../assets/logo-stacked.png" alt="Boulder Biologics" />
+      <img src="../assets/logo-stacked-light.webp" alt="Boulder Biologics" />
       <p class="site-footer__tag">Autologous orthobiologics in Boulder, Colorado. Patient-derived, physician-led, evidence-informed care.</p>
     </div>
     <div>
       <h4>Orthopedics</h4>
       <ul>
         <li><a href="cellular-therapy.html">Bone Marrow Therapy (BMAC)</a></li>
+        <li><a href="mfat.html">Microfragmented Adipose (mFAT)</a></li>
         <li><a href="prp.html">PRP</a></li>
         <li><a href="prp-ha.html">PRP + Hyaluronic Acid</a></li>
         <li><a href="prp-protein.html">PRP + Protein-Rich Plasma</a></li>
         <li><a href="prp-eyedrops.html">PRP Eyedrops</a></li>
+        <li><a href="plasma-eyedrops.html">Plasma Eye Drops</a></li>
         <li><a href="prolotherapy.html">Prolotherapy</a></li>
         <li><a href="prp-hydrodissection.html">Nerve Hydrodissection</a></li>
         <li><a href="epat.html">EPAT</a></li>

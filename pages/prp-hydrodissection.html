@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -46,8 +46,7 @@
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.boulderbiologics.com/" },
         { "@type": "ListItem", "position": 2, "name": "Orthopedics", "item": "https://www.boulderbiologics.com/#services" },
-        { "@type": "ListItem", "position": 3, "name": "PRP", "item": "https://www.boulderbiologics.com/prp" },
-        { "@type": "ListItem", "position": 4, "name": "LD-PRP and PPP Hydrodissection", "item": "https://www.boulderbiologics.com/prp-hydrodissection" }
+        { "@type": "ListItem", "position": 3, "name": "LD-PRP and PPP Hydrodissection", "item": "https://www.boulderbiologics.com/prp-hydrodissection" }
       ]
     },
     {
@@ -106,7 +105,7 @@
 
 <style>
   .svc-hero { padding: 28px var(--gutter) 72px; }
-  .svc-hero__grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: end; }
+  .svc-hero__grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
   .svc-hero .chips-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 28px; }
   .svc-hero .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
   .svc-hero__media { margin: 56px auto 0; max-width: var(--max); }
@@ -136,13 +135,14 @@
   .related-card .more { font-family: var(--font-display); font-weight: 600; font-size: 13.5px; color: var(--brand-primary); margin-top: auto; padding-top: 8px; }
 </style>
   <link rel="stylesheet" href="_nav.css" />
+  <link rel="stylesheet" href="_theme-dark.css" />
 </head>
 <body data-screen-label="Service · LD-PRP & PPP Hydrodissection">
 
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-header__logo" href="index.html" aria-label="Boulder Biologics home">
-      <img src="../assets/logo-stacked.png" alt="Boulder Biologics" />
+      <img src="../assets/logo-stacked-light.webp" alt="Boulder Biologics" />
     </a>
     <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
       <span class="nav-toggle__bar"></span>
@@ -171,7 +171,6 @@
     <a href="prp.html">Standard PRP</a>
     <a href="prp-ha.html">PRP + Hyaluronic Acid</a>
     <a href="prp-protein.html">PRP + Protein-Rich Plasma</a>
-    <a href="prp-hydrodissection.html" aria-current="page">LD-PRP &amp; Hydrodissection</a>
     <a href="prp-eyedrops.html">PRP Eyedrops</a>
   </div>
 </nav>
@@ -179,7 +178,7 @@
 <nav class="crumbs" aria-label="Breadcrumb">
   <a href="index.html">Home</a>
   <span class="sep">›</span>
-  <a href="prp.html">PRP</a>
+  <a href="index.html#services">Orthopedics</a>
   <span class="sep">›</span>
   <span class="cur">LD-PRP &amp; PPP Hydrodissection</span>
 </nav>
@@ -188,11 +187,13 @@
 
   <!-- HERO ─────────────────────────────────────────────────────── -->
   <section class="svc-hero">
+    <div class="svc-hero__cell svc-hero__cell--net" aria-hidden="true"></div>
+    <div class="svc-hero__scrim" aria-hidden="true"></div>
     <div class="svc-hero__grid">
       <div>
         <p class="eyebrow">Nerve hydrodissection · perineural therapy</p>
         <h1 class="h1">Low-density PRP &amp; PPP hydrodissection.</h1>
-        <p class="lede">Autologous, low-inflammatory plasma-based injectates delivered under ultrasound guidance to <strong style="color: var(--ink);">free entrapped nerves</strong> from surrounding fascia and scar — for carpal tunnel, peripheral entrapment, and perineural pain syndromes.</p>
+        <p class="lede">Autologous, low-inflammatory plasma-based injectates delivered under ultrasound guidance to <strong style="color: var(--ink);">free entrapped nerves</strong> from surrounding fascia and scar, for carpal tunnel, peripheral entrapment, and perineural pain syndromes.</p>
         <div class="chips-row">
           <span class="chip">Carpal tunnel</span>
           <span class="chip">Nerve entrapment</span>
@@ -231,8 +232,8 @@
           <h2 class="h2">What is hydrodissection?</h2>
         </div>
         <div class="body-lg">
-          <p>Nerve <strong>hydrodissection</strong> is the technique of using fluid pressure — delivered through a needle under real-time ultrasound — to separate a peripheral nerve from the surrounding fascia, scar, or compressing structure. The mechanical release alone can relieve entrapment-related pain and improve nerve gliding.</p>
-          <p>Using an <strong>autologous plasma fraction</strong> as the dissection fluid — either low-density PRP or platelet-poor plasma — adds a biologic signaling component: trophic factors that may support nerve health beyond the mechanical effect of release.</p>
+          <p>Nerve <strong>hydrodissection</strong> is the technique of using fluid pressure, delivered through a needle under real-time ultrasound, to separate a peripheral nerve from the surrounding fascia, scar, or compressing structure. The mechanical release alone can relieve entrapment-related pain and improve nerve gliding.</p>
+          <p>Using an <strong>autologous plasma fraction</strong> as the dissection fluid, either low-density PRP or platelet-poor plasma, adds a biologic signaling component: trophic factors that may support nerve health beyond the mechanical effect of release.</p>
         </div>
       </div>
       <div class="components">
@@ -240,7 +241,7 @@
           <span class="ctag">Low-density PRP</span>
           <h3>LD-PRP</h3>
           <p class="sub">Reduced platelet concentration · neurotrophic profile</p>
-          <p>Lower-concentration PRP prepared specifically for perineural use. The platelet concentration is below the level that drives a strong inflammatory cascade — well-tolerated around sensitive neural tissue while still delivering growth-factor signaling.</p>
+          <p>Lower-concentration PRP prepared specifically for perineural use. The platelet concentration is below the level that drives a strong inflammatory cascade, well-tolerated around sensitive neural tissue while still delivering growth-factor signaling.</p>
         </div>
         <div class="component">
           <span class="ctag is-blue">Platelet-poor plasma</span>
@@ -270,7 +271,7 @@
     <div class="inner">
       <p class="eyebrow">What we treat</p>
       <h2 class="h2">Nerve entrapment and perineural pain syndromes.</h2>
-      <p class="lede">Hydrodissection is most useful where a peripheral nerve is mechanically restricted — by fascia, scar, post-surgical adhesion, or repetitive-use thickening — and the entrapment can be confirmed by ultrasound.</p>
+      <p class="lede">Hydrodissection is most useful where a peripheral nerve is mechanically restricted, by fascia, scar, post-surgical adhesion, or repetitive-use thickening, and the entrapment can be confirmed by ultrasound.</p>
       <div class="cond-strip is-7" style="margin-top: 32px;">
         <div class="cond-card">
           <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M6 18h12M6 14h12M4 10h16"/></svg></span>
@@ -338,7 +339,7 @@
         <div class="step">
           <span class="num">Step 03</span>
           <h3>Preparation</h3>
-          <p>Centrifugation in our on-site lab — LD-PRP or PPP depending on indication and nerve sensitivity.</p>
+          <p>Centrifugation in our on-site lab, LD-PRP or PPP depending on indication and nerve sensitivity.</p>
           <span class="meta">~15 min · parallel</span>
         </div>
         <div class="step">
@@ -355,9 +356,9 @@
         </div>
       </div>
       <figure style="margin: 44px 0 0;">
-        <div class="img-slot" data-img-id="prp-hydrodissection-procedure" data-img-fit="contain" style="aspect-ratio: 2200 / 1200; background: var(--white); border: 1px solid var(--rule); border-radius: var(--r-lg);" data-label="Step-by-step diagram — hydrodissection for nerve entrapment release"></div>
+        <div class="img-slot" data-img-id="prp-hydrodissection-procedure" data-img-fit="contain" style="aspect-ratio: 2200 / 1200; background: var(--white); border: 1px solid var(--rule); border-radius: var(--r-lg);" data-label="Step-by-step diagram, hydrodissection for nerve entrapment release"></div>
         <figcaption style="font-family: var(--font-body); font-size: 13.5px; color: var(--muted); margin: 14px 0 0; line-height: 1.55; font-style: italic;">
-          Step-by-step — fluid is delivered alongside the entrapped nerve under ultrasound guidance, creating a buffer space that separates the nerve from compressing tissue and restores its normal morphology. Illustrative; anatomy shown is the median nerve at the wrist.
+          Step-by-step, fluid is delivered alongside the entrapped nerve under ultrasound guidance, creating a buffer space that separates the nerve from compressing tissue and restores its normal morphology. Illustrative; anatomy shown is the median nerve at the wrist.
         </figcaption>
       </figure>
     </div>
@@ -368,12 +369,12 @@
     <div class="inner">
       <p class="eyebrow">Is this you?</p>
       <h2 class="h2">When hydrodissection is the right tool.</h2>
-      <p class="lede">Hydrodissection works best when the entrapment can be confirmed by exam, EMG/NCS, or ultrasound — and when surgical release isn't yet warranted or hasn't fully resolved symptoms.</p>
+      <p class="lede">Hydrodissection works best when the entrapment can be confirmed by exam, EMG/NCS, or ultrasound, and when surgical release isn't yet warranted or hasn't fully resolved symptoms.</p>
       <div class="candidacy-grid" style="margin-top: 32px;">
         <div class="cand-col is-yes">
           <h3><span class="pip">✓</span> Likely a fit</h3>
           <ul>
-            <li>Carpal tunnel, cubital, tarsal, or other peripheral entrapment — mild-to-moderate</li>
+            <li>Carpal tunnel, cubital, tarsal, or other peripheral entrapment, mild-to-moderate</li>
             <li>Post-surgical perineural scarring with persistent symptoms</li>
             <li>EMG/NCS or ultrasound confirms entrapment</li>
             <li>Failed splinting, PT, or activity modification</li>
@@ -402,13 +403,13 @@
         <details open>
           <summary>Why use plasma rather than saline or steroid? <span class="plus">+</span></summary>
           <div class="a">
-            <p><strong>Saline</strong> dissects mechanically but offers no biologic signal — the effect can be transient. <strong>Steroid</strong> is anti-inflammatory but is locally toxic to nerve tissue with repeat exposure. <strong>Autologous LD-PRP/PPP</strong> combines mechanical release with a neurotrophic signaling profile and is well-tolerated for repeat treatment if needed.</p>
+            <p><strong>Saline</strong> dissects mechanically but offers no biologic signal, the effect can be transient. <strong>Steroid</strong> is anti-inflammatory but is locally toxic to nerve tissue with repeat exposure. <strong>Autologous LD-PRP/PPP</strong> combines mechanical release with a neurotrophic signaling profile and is well-tolerated for repeat treatment if needed.</p>
           </div>
         </details>
         <details>
           <summary>Why LD-PRP rather than standard PRP? <span class="plus">+</span></summary>
           <div class="a">
-            <p>Standard PRP delivers a higher platelet concentration and a stronger inflammatory cascade — appropriate for joints and tendons, but can be irritating around sensitive perineural tissue. <strong>LD-PRP</strong> uses a deliberately reduced concentration that's well-tolerated near nerves. Even lower-sensitivity targets (severe entrapments, post-surgical scarring) often do better with <strong>PPP</strong>, which removes platelets entirely.</p>
+            <p>Standard PRP delivers a higher platelet concentration and a stronger inflammatory cascade, appropriate for joints and tendons, but can be irritating around sensitive perineural tissue. <strong>LD-PRP</strong> uses a deliberately reduced concentration that's well-tolerated near nerves. Even lower-sensitivity targets (severe entrapments, post-surgical scarring) often do better with <strong>PPP</strong>, which removes platelets entirely.</p>
           </div>
         </details>
         <details>
@@ -420,7 +421,7 @@
         <details>
           <summary>How long until I feel a difference? <span class="plus">+</span></summary>
           <div class="a">
-            <p>Many patients report <strong>immediate relief</strong> from the mechanical release portion — the nerve glides better as soon as it's separated from compressing tissue. Sustained improvement typically develops over <strong>2–6 weeks</strong> as the biologic signaling effects unfold. Some cases need a repeat treatment at 6–8 weeks.</p>
+            <p>Many patients report <strong>immediate relief</strong> from the mechanical release portion: the nerve glides better as soon as it's separated from compressing tissue. Sustained improvement typically develops over <strong>2–6 weeks</strong> as the biologic signaling effects unfold. Some cases need a repeat treatment at 6–8 weeks.</p>
           </div>
         </details>
         <details>
@@ -448,13 +449,13 @@
         <a class="related-card" href="prolotherapy.html">
           <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 12c4-6 14-6 18 0"/></svg></span>
           <h3>Prolotherapy</h3>
-          <p>Dextrose prolotherapy for ligamentous laxity and SI dysfunction — also benefits from image guidance.</p>
+          <p>Dextrose prolotherapy for ligamentous laxity and SI dysfunction, also benefits from image guidance.</p>
           <span class="more">About prolotherapy →</span>
         </a>
         <a class="related-card" href="epat.html">
           <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 12c2-4 6-4 8 0s6 4 8 0"/></svg></span>
           <h3>EPAT Shockwave</h3>
-          <p>Non-invasive shockwave for chronic tendinopathy — non-perineural cases.</p>
+          <p>Non-invasive shockwave for chronic tendinopathy, non-perineural cases.</p>
           <span class="more">About EPAT →</span>
         </a>
       </div>
@@ -467,7 +468,7 @@
       <div>
         <p class="eyebrow on-dark">Schedule a hydrodissection consultation</p>
         <h2 class="h2">Find out if hydrodissection fits your case.</h2>
-        <p>Dr. Glowney reviews your EMG/NCS, imaging, and exam — then confirms entrapment with point-of-care ultrasound. Honest assessment of whether hydrodissection, surgical release, or another path is the right next step.</p>
+        <p>Dr. Glowney reviews your EMG/NCS, imaging, and exam, then confirms entrapment with point-of-care ultrasound. Honest assessment of whether hydrodissection, surgical release, or another path is the right next step.</p>
         <a class="btn btn-ghost-light" href="tel:+17205506175">Or call 720-550-6175</a>
       </div>
       <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Request received ✓'; this.querySelector('button').disabled=true;">
@@ -484,7 +485,7 @@
             <option>Tarsal tunnel (ankle)</option>
             <option>Common peroneal (knee/leg)</option>
             <option>Post-surgical scar nerve pain</option>
-            <option>Not sure — exploring</option>
+            <option>Not sure, exploring</option>
           </select>
         </div>
         <button class="btn btn-accent" type="submit">Request a consultation</button>
@@ -498,17 +499,19 @@
 <footer class="site-footer">
   <div class="site-footer__cols">
     <div>
-      <img src="../assets/logo-stacked.png" alt="Boulder Biologics" />
+      <img src="../assets/logo-stacked-light.webp" alt="Boulder Biologics" />
       <p class="site-footer__tag">Autologous orthobiologics in Boulder, Colorado. Patient-derived, physician-led, evidence-informed care.</p>
     </div>
     <div>
       <h4>Orthopedics</h4>
       <ul>
         <li><a href="cellular-therapy.html">Bone Marrow Therapy (BMAC)</a></li>
+        <li><a href="mfat.html">Microfragmented Adipose (mFAT)</a></li>
         <li><a href="prp.html">PRP</a></li>
         <li><a href="prp-ha.html">PRP + Hyaluronic Acid</a></li>
         <li><a href="prp-protein.html">PRP + Protein-Rich Plasma</a></li>
         <li><a href="prp-eyedrops.html">PRP Eyedrops</a></li>
+        <li><a href="plasma-eyedrops.html">Plasma Eye Drops</a></li>
         <li><a href="prolotherapy.html">Prolotherapy</a></li>
         <li><a href="prp-hydrodissection.html">Nerve Hydrodissection</a></li>
         <li><a href="epat.html">EPAT</a></li>

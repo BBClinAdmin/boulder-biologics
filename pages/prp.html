@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -74,7 +74,7 @@
 
 <style>
   .svc-hero { padding: 28px var(--gutter) 72px; }
-  .svc-hero__grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: end; }
+  .svc-hero__grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
   .svc-hero .chips-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 28px; }
   .svc-hero .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
   .svc-hero__media { margin: 0 auto; max-width: 620px; padding-top: 44px; border-top: 1px solid var(--rule-soft); }
@@ -123,13 +123,14 @@
   .related-card .more { font-family: var(--font-display); font-weight: 600; font-size: 13.5px; color: var(--brand-primary); margin-top: auto; padding-top: 8px; }
 </style>
   <link rel="stylesheet" href="_nav.css" />
+  <link rel="stylesheet" href="_theme-dark.css" />
 </head>
 <body data-screen-label="Service · PRP">
 
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-header__logo" href="index.html" aria-label="Boulder Biologics home">
-      <img src="../assets/logo-stacked.png" alt="Boulder Biologics" />
+      <img src="../assets/logo-stacked-light.webp" alt="Boulder Biologics" />
     </a>
     <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
       <span class="nav-toggle__bar"></span>
@@ -158,7 +159,6 @@
     <a href="prp.html" aria-current="page">Standard PRP</a>
     <a href="prp-ha.html">PRP + Hyaluronic Acid</a>
     <a href="prp-protein.html">PRP + Protein-Rich Plasma</a>
-    <a href="prp-hydrodissection.html">LD-PRP &amp; Hydrodissection</a>
     <a href="prp-eyedrops.html">PRP Eyedrops</a>
   </div>
 </nav>
@@ -175,11 +175,13 @@
 
   <!-- HERO ─────────────────────────────────────────────────────── -->
   <section class="svc-hero">
+    <div class="svc-hero__cell svc-hero__cell--prp" aria-hidden="true"></div>
+    <div class="svc-hero__scrim" aria-hidden="true"></div>
     <div class="svc-hero__grid">
       <div>
         <p class="eyebrow">Orthopedics · Autologous biologic therapy</p>
         <h1 class="h1">Platelet-Rich Plasma (PRP).</h1>
-        <p class="lede">An autologous biologic therapy derived from your own blood with— a concentrated platelet fraction, associated growth factors, signaling proteins, and delivered with image guidance to support endogenous repair of musculoskeletal tissues.</p>
+        <p class="lede">An autologous biologic therapy derived from your own blood with, a concentrated platelet fraction, associated growth factors, signaling proteins, and delivered with image guidance to support endogenous repair of musculoskeletal tissues.</p>
         <div class="chips-row">
           <span class="chip">Knee OA</span>
           <span class="chip">Rotator cuff</span>
@@ -252,7 +254,7 @@
         <div class="cond-card" style="background: transparent; border-style: dashed;">
           <span class="ic" style="background: transparent;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></span>
           <h3>Other joint &amp; tendon</h3>
-          <p>Hand, wrist, ankle — discussed case-by-case.</p>
+          <p>Hand, wrist, ankle, discussed case-by-case.</p>
         </div>
       </div>
       <figure class="svc-hero__media">
@@ -272,8 +274,8 @@
         </div>
         <div class="body-lg">
           <p>PRP is prepared from your own blood via a controlled, multi-step centrifugation process which increases platelet concentration along with associated growth factors and signaling proteins.</p>
-          <p>The clinical effect is mediated by <strong>local biologic signaling</strong> — recruiting endogenous repair cascades, modulating inflammation, and supporting tissue remodeling. PRP is intended to modulate the local environment, not to replace damaged tissue or guarantee regeneration.</p>
-          <p>PRP isn't a single product — it's a category. The relevant variables are platelet concentration, leukocyte content, red blood cell content, total volume, and any adjuncts. Each preparation is <strong>characterized in our lab</strong> so we know what we're delivering — and the recipe is tailored to your indication.</p>
+          <p>The clinical effect is mediated by <strong>local biologic signaling</strong>: recruiting endogenous repair cascades, modulating inflammation, and supporting tissue remodeling. PRP is intended to modulate the local environment, not to replace damaged tissue or guarantee regeneration.</p>
+          <p>PRP isn't a single product: it's a category. The relevant variables are platelet concentration, leukocyte content, red blood cell content, total volume, and any adjuncts. Each preparation is <strong>characterized in our lab</strong> so we know what we're delivering, and the recipe is tailored to your indication.</p>
         </div>
       </div>
 
@@ -339,14 +341,14 @@
             <div class="img-slot" data-img-id="prp-spin-01" data-label="First spin · separated layers (plasma / buffy coat / red cells) · 4:3"></div>
             <figcaption>
               <span class="lab-photos__num">01</span>
-              First spin — density-gradient separation. Platelet-poor plasma sits above the buffy coat and below the red-cell layer.
+              First spin, density-gradient separation. Platelet-poor plasma sits above the buffy coat and below the red-cell layer.
             </figcaption>
           </figure>
           <figure>
             <div class="img-slot" data-img-id="prp-spin-02" data-label="Second spin · PRP pellet at base of tube · 4:3"></div>
             <figcaption>
               <span class="lab-photos__num">02</span>
-              Second spin — the platelet pellet collects at the base of the tube. PPP is removed and the pellet resuspended to the target concentration.
+              Second spin, the platelet pellet collects at the base of the tube. PPP is removed and the pellet resuspended to the target concentration.
             </figcaption>
           </figure>
       </div>
@@ -359,7 +361,7 @@
     <div class="inner">
       <p class="eyebrow">Is this you?</p>
       <h2 class="h2">When PRP is the right starting point.</h2>
-      <p class="lede">PRP is best understood as a <strong style="color: var(--ink);">supporting intervention</strong> that complements rehabilitation and activity modification — not a standalone cure.</p>
+      <p class="lede">PRP is best understood as a <strong style="color: var(--ink);">supporting intervention</strong> that complements rehabilitation and activity modification, not a standalone cure.</p>
       <div class="candidacy-grid" style="margin-top: 32px;">
         <div class="cand-col is-yes">
           <h3><span class="pip">✓</span> Likely a fit</h3>
@@ -394,7 +396,7 @@
           <summary>How much does PRP cost in Boulder? <span class="plus">+</span></summary>
           <div class="a">
             <p>PRP pricing depends on the joint, the number of sites, and whether it's combined with hyaluronic acid or other agents. We provide transparent pricing during consultation and supply documentation for HSA/FSA reimbursement where applicable.</p>
-            <p>In most cases PRP is not covered by commercial insurance, Medicare, or Medicaid — it's typically an out-of-pocket expense.</p>
+            <p>In most cases PRP is not covered by commercial insurance, Medicare, or Medicaid: it's typically an out-of-pocket expense.</p>
           </div>
         </details>
         <details>
@@ -412,7 +414,7 @@
         <details>
           <summary>What conditions does PRP treat? <span class="plus">+</span></summary>
           <div class="a">
-            <p>PRP is most often considered for <strong>mild-to-moderate osteoarthritis</strong>, partial tendon tears, ligament sprains, and chronic enthesopathies — including tennis elbow, plantar fasciitis, and Achilles tendinopathy.</p>
+            <p>PRP is most often considered for <strong>mild-to-moderate osteoarthritis</strong>, partial tendon tears, ligament sprains, and chronic enthesopathies, including tennis elbow, plantar fasciitis, and Achilles tendinopathy.</p>
           </div>
         </details>
         <details>
@@ -432,10 +434,10 @@
       <h2 class="h2">What the literature says.</h2>
       <p style="font-family: var(--font-body); font-size: 15px; color: var(--muted); max-width: 60ch; margin: 0;">Some studies our PRP framing draws from. Full PDFs available at consultation.</p>
       <ol>
-        <li>Bansal H, et al. Intra-articular injection in knee OA: PRP vs hyaluronic acid — meta-analysis. <em>Bone Joint Res.</em> 2021.</li>
+        <li>Bansal H, et al. Intra-articular injection in knee OA: PRP vs hyaluronic acid, meta-analysis. <em>Bone Joint Res.</em> 2021.</li>
         <li>Filardo G, et al. PRP intra-articular knee injections: long-term outcomes. <em>Am J Sports Med.</em> 2021;49(13):3681–3690.</li>
-        <li>Bennell KL, et al. PRP vs saline for knee OA — RCT, 12-month outcomes. <em>JAMA.</em> 2021;326(20):2021–2030.</li>
-        <li>Mishra A, et al. PRP for tennis elbow — RCT. <em>Am J Sports Med.</em> 2014;42(2):463–471.</li>
+        <li>Bennell KL, et al. PRP vs saline for knee OA, RCT, 12-month outcomes. <em>JAMA.</em> 2021;326(20):2021–2030.</li>
+        <li>Mishra A, et al. PRP for tennis elbow, RCT. <em>Am J Sports Med.</em> 2014;42(2):463–471.</li>
         <li>DeLong JM, et al. PAW classification system for PRP. <em>Arthroscopy.</em> 2012;28(7):998–1009.</li>
         <li>Magalon J, et al. DEPA classification for PRP preparations. <em>BMJ Open Sport Exerc Med.</em> 2016.</li>
       </ol>
@@ -463,7 +465,7 @@
         <a class="related-card" href="epat.html">
           <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 12c2-4 6-4 8 0s6 4 8 0"/><path d="M3 18c2-2 6-2 8 0s6 2 8 0"/></svg></span>
           <h3>EPAT Shockwave</h3>
-          <p>Non-invasive shockwave for chronic tendinopathy — often combined with PRP.</p>
+          <p>Non-invasive shockwave for chronic tendinopathy, often combined with PRP.</p>
           <span class="more">About EPAT →</span>
         </a>
       </div>
@@ -476,7 +478,7 @@
       <div>
         <p class="eyebrow on-dark">Schedule a PRP consultation</p>
         <h2 class="h2">Find out if PRP is the right next step.</h2>
-        <p>Dr. Glowney reviews your imaging, history, and prior treatments. Honest recommendation — PRP, a different biologic, or another path entirely.</p>
+        <p>Dr. Glowney reviews your imaging, history, and prior treatments. Honest recommendation, PRP, a different biologic, or another path entirely.</p>
         <a class="btn btn-ghost-light" href="tel:+17205506175">Or call 720-550-6175</a>
       </div>
       <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Request received ✓'; this.querySelector('button').disabled=true;">
@@ -495,7 +497,7 @@
             <option>Plantar fasciitis</option>
             <option>Hip / SI joint</option>
             <option>Hamstring injury</option>
-            <option>Not sure — exploring</option>
+            <option>Not sure, exploring</option>
           </select>
         </div>
         <button class="btn btn-accent" type="submit">Request a consultation</button>
@@ -509,17 +511,19 @@
 <footer class="site-footer">
   <div class="site-footer__cols">
     <div>
-      <img src="../assets/logo-stacked.png" alt="Boulder Biologics" />
+      <img src="../assets/logo-stacked-light.webp" alt="Boulder Biologics" />
       <p class="site-footer__tag">Autologous orthobiologics in Boulder, Colorado. Patient-derived, physician-led, evidence-informed care.</p>
     </div>
     <div>
       <h4>Orthopedics</h4>
       <ul>
         <li><a href="cellular-therapy.html">Bone Marrow Therapy (BMAC)</a></li>
+        <li><a href="mfat.html">Microfragmented Adipose (mFAT)</a></li>
         <li><a href="prp.html">PRP</a></li>
         <li><a href="prp-ha.html">PRP + Hyaluronic Acid</a></li>
         <li><a href="prp-protein.html">PRP + Protein-Rich Plasma</a></li>
         <li><a href="prp-eyedrops.html">PRP Eyedrops</a></li>
+        <li><a href="plasma-eyedrops.html">Plasma Eye Drops</a></li>
         <li><a href="prolotherapy.html">Prolotherapy</a></li>
         <li><a href="prp-hydrodissection.html">Nerve Hydrodissection</a></li>
         <li><a href="epat.html">EPAT</a></li>

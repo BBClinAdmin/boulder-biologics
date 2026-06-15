@@ -45,11 +45,11 @@
   /* The brand "regenerate" gradient — teal at top fading to deep
      blue. Used sparingly: heroes, key art, brand moments.       */
   --bb-gradient-brand:
-    linear-gradient(180deg, #04979d 0%, #0f6387 38%, #15457a 72%, #0c2a4d 100%);
+    linear-gradient(180deg, #04979d 0%, #0f6387 38%, #15457a 72%, #0c2a4d 100%); /* @kind color */
   --bb-gradient-brand-soft:
-    linear-gradient(180deg, #e6f6f6 0%, #d6e8f0 50%, #c3d4e6 100%);
+    linear-gradient(180deg, #e6f6f6 0%, #d6e8f0 50%, #c3d4e6 100%); /* @kind color */
   --bb-gradient-brand-horizontal:
-    linear-gradient(90deg, #04979d 0%, #0f6387 50%, #15457a 100%);
+    linear-gradient(90deg, #04979d 0%, #0f6387 50%, #15457a 100%); /* @kind color */
 
   /* ---------- Semantic – color ------------------------------- */
   --color-bg:           var(--bb-bone-50);
@@ -106,16 +106,16 @@
   --fs-5xl:  64px;
   --fs-6xl:  88px;
 
-  --lh-tight:   1.08;
-  --lh-snug:    1.2;
-  --lh-normal:  1.5;
-  --lh-relaxed: 1.65;
+  --lh-tight:   1.08;  /* @kind font */
+  --lh-snug:    1.2;   /* @kind font */
+  --lh-normal:  1.5;   /* @kind font */
+  --lh-relaxed: 1.65;  /* @kind font */
 
-  --tracking-tightest: -0.03em;
-  --tracking-tight:    -0.015em;
-  --tracking-normal:   0;
-  --tracking-wide:     0.04em;
-  --tracking-widest:   0.16em;   /* uppercase eyebrows           */
+  --tracking-tightest: -0.03em; /* @kind font */
+  --tracking-tight:    -0.015em; /* @kind font */
+  --tracking-normal:   0; /* @kind font */
+  --tracking-wide:     0.04em; /* @kind font */
+  --tracking-widest:   0.16em; /* @kind font */
 
   /* ---------- Spacing ---------------------------------------- */
   --space-1: 4px;
@@ -148,11 +148,11 @@
   --shadow-focus: 0 0 0 3px rgba(4, 151, 157, 0.35);
 
   /* ---------- Motion ----------------------------------------- */
-  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
-  --ease-emphasized: cubic-bezier(0.2, 0.9, 0.1, 1);
-  --duration-fast: 140ms;
-  --duration-base: 220ms;
-  --duration-slow: 420ms;
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1); /* @kind other */
+  --ease-emphasized: cubic-bezier(0.2, 0.9, 0.1, 1); /* @kind other */
+  --duration-fast: 140ms; /* @kind other */
+  --duration-base: 220ms; /* @kind other */
+  --duration-slow: 420ms; /* @kind other */
 }
 
 /* ============================================================

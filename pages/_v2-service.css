@@ -58,8 +58,8 @@
   --r-lg: 14px;
   --r-xl: 20px;
 
-  --ease:   cubic-bezier(0.2, 0.7, 0.2, 1);
-  --dur:    220ms;
+  --ease:   cubic-bezier(0.2, 0.7, 0.2, 1); /* @kind other */
+  --dur:    220ms; /* @kind other */
 
   --shadow-xs: 0 1px 2px rgba(7, 23, 42, 0.06);
   --shadow-sm: 0 2px 6px rgba(7, 23, 42, 0.07);
@@ -185,7 +185,7 @@ p { margin: 0 0 14px; color: var(--ink-2); }
   display: flex; align-items: center; justify-content: space-between;
   gap: 24px;
 }
-.site-header__logo img { height: 42px; width: auto; display: block; }
+.site-header__logo img { height: 56px; width: auto; display: block; }
 .site-header nav { display: flex; gap: 1px; flex: 1 1 auto; min-width: 0; justify-content: center; flex-wrap: nowrap; }
 .site-header nav a {
   font-family: var(--font-display); font-weight: 600; font-size: 13.5px;
