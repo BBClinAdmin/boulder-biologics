@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Learn, Patient Education on Stem Cell &amp; Cellular Therapy | Boulder Biologics</title>
+<meta name="description" content="Patient explainers on stem cell therapy, FDA regulation, autologous vs. donor-derived cells, and MSC biology, the questions patients ask most." />
+<meta name="keywords" content="stem cell therapy learn, regenerative medicine patient education, FDA stem cell guide, mesenchymal stromal cells explainer" />
+<link rel="canonical" href="https://boulderbiologics.com/learn" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#04979d" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://boulderbiologics.com/learn" />
+<meta property="og:site_name" content="Boulder Biologics" />
+<meta property="og:title" content="Learn, Patient Education on Stem Cell &amp; Cellular Therapy" />
+<meta property="og:description" content="Plainspoken patient explainers on the questions patients ask most about stem cell therapy and regenerative medicine." />
+<meta property="og:image" content="https://boulderbiologics.com/assets/logo-stacked.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/png" href="/assets/logo-stacked.png" />
+<link rel="apple-touch-icon" href="/assets/logo-stacked.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://boulderbiologics.com/learn#hub",
+      "name": "Boulder Biologics Learn — Patient Education Hub",
+      "description": "A collection of plainspoken patient explainers on stem cell therapy, FDA regulation, autologous vs. donor-derived cells, and mesenchymal stromal cell biology.",
+      "publisher": { "@type": "MedicalBusiness", "name": "Boulder Biologics" },
+      "hasPart": [
+        { "@type": "MedicalScholarlyArticle", "name": "Is stem cell therapy FDA-approved?", "url": "https://boulderbiologics.com/is-stem-cell-therapy-fda-approved" },
+        { "@type": "MedicalScholarlyArticle", "name": "Autologous vs. donor-derived stem cells", "url": "https://boulderbiologics.com/autologous-vs-donor-derived-stem-cells" },
+        { "@type": "MedicalScholarlyArticle", "name": "Mesenchymal stromal vs. mesenchymal stem cells", "url": "https://boulderbiologics.com/mesenchymal-stromal-vs-stem-cells" },
+        { "@type": "MedicalScholarlyArticle", "name": "Mesenchymal Stromal Cells — the science", "url": "https://boulderbiologics.com/mesenchymal-stem-cells-mscs" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://boulderbiologics.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Learn", "item": "https://boulderbiologics.com/learn" }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/_v2-service.css" />
+
+<style>
+  /* Hero */
+  .learn-hero { padding: 64px var(--gutter) 56px; }
+  .learn-hero__inner { max-width: 880px; margin: 0 auto; text-align: center; }
+  .learn-hero h1.h1 { margin: 14px 0 18px; font-size: clamp(40px, 5.4vw, 60px); }
+  .learn-hero .lede { font-family: var(--font-serif); font-size: 19px; max-width: 60ch; margin: 0 auto 24px; }
+  .learn-hero .byline { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; margin: 18px 0 0; }
+
+  /* Article grid */
+  .articles-section { padding: 24px var(--gutter) 72px; }
+  .articles-grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .article-card {
+    background: var(--white); border: 1px solid var(--rule); border-radius: var(--r-lg);
+    padding: 32px 36px; display: flex; flex-direction: column; gap: 14px;
+    text-decoration: none; color: inherit;
+    transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+  }
+  .article-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--bb-teal-300); }
+  .article-card .num {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.16em;
+    color: var(--muted); text-transform: uppercase;
+  }
+  .article-card h3 {
+    font-family: var(--font-display); font-weight: 700; font-size: 22px;
+    line-height: 1.18; letter-spacing: -0.012em; margin: 0;
+    color: var(--ink); text-wrap: balance;
+  }
+  .article-card .preview {
+    font-family: var(--font-serif); font-size: 16px; line-height: 1.55;
+    color: var(--ink-2); margin: 0;
+  }
+  .article-card .meta {
+    margin-top: auto; padding-top: 16px;
+    border-top: 1px solid var(--rule-soft);
+    display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+  .article-card .meta .read {
+    font-family: var(--font-display); font-weight: 600; font-size: 13.5px;
+    color: var(--brand-primary); letter-spacing: 0;
+  }
+
+  /* Placeholder card (no link) */
+  .article-card.is-placeholder {
+    border-style: dashed; background: var(--paper-2); cursor: default;
+  }
+  .article-card.is-placeholder:hover { transform: none; box-shadow: none; border-color: var(--rule); }
+  .article-card.is-placeholder h3 { color: var(--muted); }
+  .article-card.is-placeholder .preview { color: var(--muted); font-style: italic; }
+  .article-card.is-placeholder .meta .read { color: var(--muted); }
+
+  /* About-this-section note */
+  .about-note {
+    max-width: 720px; margin: 56px auto 0;
+    background: var(--paper-2); border: 1px solid var(--rule);
+    border-left: 3px solid var(--brand-accent);
+    border-radius: var(--r-md); padding: 24px 28px;
+  }
+  .about-note .lbl {
+    font-family: var(--font-mono); font-size: 10.5px;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--brand-accent-dim); margin: 0 0 8px;
+  }
+  .about-note p {
+    font-family: var(--font-body); font-size: 14.5px; line-height: 1.65;
+    color: var(--ink-2); margin: 0;
+  }
+  .about-note strong { color: var(--ink); font-weight: 600; }
+
+  @media (max-width: 820px) {
+    .articles-grid { grid-template-columns: 1fr; }
+    .article-card { padding: 28px 26px; }
+  }
+</style>
+  <link rel="stylesheet" href="/_nav.css" />
+  <link rel="stylesheet" href="/_theme-dark.css" />
+</head>
+<body data-screen-label="Learn · Patient Education Hub">
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="/" aria-label="Boulder Biologics home">
+      <img src="/assets/logo-stacked-light.webp" alt="Boulder Biologics" />
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav aria-label="Primary">
+      <a href="/#services">Services</a>
+      <a href="/#conditions">Conditions</a>
+      <a href="/#about">Our Team</a>
+      <a href="/our-clinic">Facilities</a>
+      <a href="/fda-guidelines">FDA Guidelines</a>
+      <a href="/learn" aria-current="page">Learn</a>
+      <a href="/faq">FAQ</a>
+    </nav>
+    <div class="site-header__cta">
+      <a class="call-link" href="tel:+17205506175">720-550-6175</a>
+      <a class="btn btn-primary btn-sm" href="/contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="/">Home</a>
+  <span class="sep">›</span>
+  <span class="cur">Learn</span>
+</nav>
+
+<main id="main">
+
+  <!-- HERO ─────────────────────────────────────────────────────── -->
+  <section class="learn-hero">
+    <div class="learn-hero__inner">
+      <p class="eyebrow">Patient education</p>
+      <h1 class="h1">In-depth answers to the questions patients ask most.</h1>
+      <p class="lede">"Is this FDA-approved?" "Are these donor cells?" "What's the difference between 'stem' and 'stromal'?" The most useful answers are also the ones most clinics either misuse or duck. These explainers say what we say to our patients, in the same language we use in clinical letters and research papers.</p>
+      <p class="byline">Written by <a href="/jason-glowney-md" style="color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor;">Jason Glowney, MD</a> · Boulder Biologics</p>
+    </div>
+  </section>
+
+  <!-- ARTICLES ────────────────────────────────────────────────── -->
+  <section class="articles-section">
+    <div class="articles-grid">
+
+      <a class="article-card" href="/is-stem-cell-therapy-fda-approved">
+        <span class="num">Article 01 · Regulatory</span>
+        <h3>Is stem cell therapy FDA-approved?</h3>
+        <p class="preview">No, with one important exception. The FDA has approved certain hematopoietic stem cell transplants for specific blood and immune disorders, but no stem cell or cellular therapy is approved for the conditions most patients are searching about.</p>
+        <div class="meta">
+          <span>~9 min read</span>
+          <span class="read">Read article →</span>
+        </div>
+      </a>
+
+      <a class="article-card" href="/autologous-vs-donor-derived-stem-cells">
+        <span class="num">Article 02 · Regulatory + clinical</span>
+        <h3>Autologous vs. donor-derived stem cells.</h3>
+        <p class="preview">Your own cells, harvested and used in the same procedure, or cells from a different person, often manufactured at scale. The FDA treats these very differently. So do we.</p>
+        <div class="meta">
+          <span>~8 min read</span>
+          <span class="read">Read article →</span>
+        </div>
+      </a>
+
+      <a class="article-card" href="/mesenchymal-stromal-vs-stem-cells">
+        <span class="num">Article 03 · Terminology + science</span>
+        <h3>"Stromal" vs. "stem" cells.</h3>
+        <p class="preview">A subtle word change with a real meaning. Why most peer-reviewed work now says "mesenchymal stromal cells", and why the change matters when you're evaluating a clinic.</p>
+        <div class="meta">
+          <span>~7 min read</span>
+          <span class="read">Read article →</span>
+        </div>
+      </a>
+
+      <a class="article-card" href="/mesenchymal-stem-cells-mscs">
+        <span class="num">Article 04 · Deep clinical</span>
+        <h3>Mesenchymal Stromal Cells, the science.</h3>
+        <p class="preview">A clinician-leaning deep dive: ISCT definitions, cell-size and the first-pass effect, allogeneic immunogenicity, extracellular vesicles, senescence, and the blood–brain barrier. Heavier read than the other articles.</p>
+        <div class="meta">
+          <span>~15 min read</span>
+          <span class="read">Read article →</span>
+        </div>
+      </a>
+
+      <div class="article-card is-placeholder" aria-label="Coming soon: What is BMAC?">
+        <span class="num">Article 05 · Coming soon</span>
+        <h3>What is BMAC? Bone marrow aspirate concentrate, explained.</h3>
+        <p class="preview">A patient-friendly walkthrough of the most common cellular-therapy procedure performed at our clinic, what BMAC is, what the harvesting and processing look like, and where the evidence is strongest.</p>
+        <div class="meta">
+          <span>Coming soon</span>
+          <span class="read">In progress</span>
+        </div>
+      </div>
+
+    </div>
+
+    <aside class="about-note">
+      <p class="lbl">About these explainers</p>
+      <p>These pages exist because <strong>most patient-facing material on stem cell therapy is either overpromised marketing or impenetrable technical writing</strong>. We write what we say to patients at consultation. Where we use a regulatory passage verbatim from the FDA or from our own clinical disclosures, we mark it clearly. Where the evidence is preliminary, we say so. Where a claim doesn't survive peer review, we don't make it.</p>
+    </aside>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__cols">
+    <div>
+      <img src="/assets/logo-stacked-light.webp" alt="Boulder Biologics" />
+      <p class="site-footer__tag">Autologous orthobiologics in Boulder, Colorado. Patient-derived, physician-led, evidence-informed care.</p>
+    </div>
+    <div>
+      <h4>Learn</h4>
+      <ul>
+        <li><a href="/is-stem-cell-therapy-fda-approved">Is stem cell therapy FDA-approved?</a></li>
+        <li><a href="/autologous-vs-donor-derived-stem-cells">Autologous vs. donor-derived</a></li>
+        <li><a href="/mesenchymal-stromal-vs-stem-cells">Stromal vs. stem cells</a></li>
+        <li><a href="/mesenchymal-stem-cells-mscs">Mesenchymal Stromal Cells (the science)</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Clinic</h4>
+      <ul>
+        <li><a href="/#about">Our Team</a></li>
+        <li><a href="/our-clinic">Facilities</a></li>
+        <li><a href="/contact">Location &amp; Contact</a></li>
+        <li><a href="/fda-guidelines">FDA Guidelines</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/longevity">Longevity</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>Boulder, Colorado</li>
+        <li><a href="tel:+17205506175">720-550-6175</a></li>
+        <li><a href="mailto:info@boulderbiologics.com">info@boulderbiologics.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <aside class="footer-disclaimer" aria-label="Regulatory disclaimer">
+    <p class="footer-disclaimer__label">Important regulatory information</p>
+    <p class="footer-disclaimer__body">Autologous bone marrow– and adipose-derived cellular therapy is not approved by the U.S. Food and Drug Administration (FDA) as a drug or biologic for the treatment of specific musculoskeletal or systemic conditions. The approaches described are experimental, grounded in evolving translational and early clinical research, and offered only following comprehensive evaluation and informed consent. At Boulder Biologics, we use <strong>autologous biologic material only</strong>: no donor-derived, umbilical cord, placental, or amniotic products. See our <a href="/fda-guidelines">FDA Guidelines page</a> for full regulatory context.</p>
+  </aside>
+  <div class="site-footer__legal">
+    <span>© 2026 Boulder Biologics. All rights reserved.</span>
+    <span>Privacy · HIPAA · Terms</span>
+  </div>
+</footer>
+
+  <script src="/_nav.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+# Netlify configuration — Boulder Biologics marketing site
+# Static site, no build step. Files are served from the repo root.
+
+[build]
+  publish = "."
+
+# Pretty/clean URLs: serve /cellular-therapy from cellular-therapy.html and
+# 301 the .html form to the clean URL.
+[build.processing.html]
+  pretty_urls = true
+
+# ── Canonical host: force apex (boulderbiologics.com), redirect www → apex ──
+[[redirects]]
+  from = "https://www.boulderbiologics.com/*"
+  to = "https://boulderbiologics.com/:splat"
+  status = 301
+  force = true
+
+# ── 301s preserving SEO equity from the old site (see REDIRECTS.md) ──
+[[redirects]]
+  from = "/stem-cell-therapy"
+  to = "/long-covid"
+  status = 301
+
+[[redirects]]
+  from = "/stem-cell-therapy-3"
+  to = "/tbi-cte"
+  status = 301
+
+[[redirects]]
+  from = "/stem-cell-therapy-4"
+  to = "/medical-applications-other"
+  status = 301
+
+[[redirects]]
+  from = "/fda-guidlines"
+  to = "/fda-guidelines"
+  status = 301
+
+# ── Safety redirects for the two files renamed to their canonical slugs ──
+[[redirects]]
+  from = "/msc"
+  to = "/mesenchymal-stem-cells-mscs"
+  status = 301
+
+[[redirects]]
+  from = "/facilities"
+  to = "/our-clinic"
+  status = 301

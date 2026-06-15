@@ -1,53 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Sitemap for https://www.boulderbiologics.com
+  Sitemap for https://boulderbiologics.com
   URLs match the rel="canonical" of each page (clean slugs).
   Condition pages are now individual static pages (no client-side template).
   Maintained as a deploy-only file — see PROJECT_GUIDELINES.md / project memory.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.boulderbiologics.com/</loc><lastmod>2026-06-02</lastmod><priority>1.0</priority></url>
+  <url><loc>https://boulderbiologics.com/</loc><lastmod>2026-06-02</lastmod><priority>1.0</priority></url>
 
   <!-- Core treatments -->
-  <url><loc>https://www.boulderbiologics.com/cellular-therapy</loc><lastmod>2026-06-02</lastmod><priority>0.9</priority></url>
-  <url><loc>https://www.boulderbiologics.com/prp</loc><lastmod>2026-06-02</lastmod><priority>0.9</priority></url>
-  <url><loc>https://www.boulderbiologics.com/prp-ha</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.boulderbiologics.com/prp-protein</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.boulderbiologics.com/prp-hydrodissection</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.boulderbiologics.com/prp-eyedrops</loc><lastmod>2026-06-09</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.boulderbiologics.com/plasma-eyedrops</loc><lastmod>2026-06-15</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.boulderbiologics.com/mfat</loc><lastmod>2026-06-15</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.boulderbiologics.com/prolotherapy</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.boulderbiologics.com/epat</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.boulderbiologics.com/longevity</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://boulderbiologics.com/cellular-therapy</loc><lastmod>2026-06-02</lastmod><priority>0.9</priority></url>
+  <url><loc>https://boulderbiologics.com/prp</loc><lastmod>2026-06-02</lastmod><priority>0.9</priority></url>
+  <url><loc>https://boulderbiologics.com/prp-ha</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://boulderbiologics.com/prp-protein</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://boulderbiologics.com/prp-hydrodissection</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://boulderbiologics.com/prp-eyedrops</loc><lastmod>2026-06-09</lastmod><priority>0.8</priority></url>
+  <url><loc>https://boulderbiologics.com/plasma-eyedrops</loc><lastmod>2026-06-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://boulderbiologics.com/mfat</loc><lastmod>2026-06-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://boulderbiologics.com/prolotherapy</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://boulderbiologics.com/epat</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://boulderbiologics.com/longevity</loc><lastmod>2026-06-02</lastmod><priority>0.8</priority></url>
 
   <!-- Indications / conditions -->
-  <url><loc>https://www.boulderbiologics.com/knee-pain-arthritis</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.boulderbiologics.com/hip-back-si-pain</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.boulderbiologics.com/shoulder-rotator-cuff</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.boulderbiologics.com/tendon-ligament-injuries</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.boulderbiologics.com/long-covid</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.boulderbiologics.com/tbi-cte</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.boulderbiologics.com/medical-applications-other</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://boulderbiologics.com/knee-pain-arthritis</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://boulderbiologics.com/hip-back-si-pain</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://boulderbiologics.com/shoulder-rotator-cuff</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://boulderbiologics.com/tendon-ligament-injuries</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://boulderbiologics.com/long-covid</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://boulderbiologics.com/tbi-cte</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://boulderbiologics.com/medical-applications-other</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
 
   <!-- Science / education -->
-  <url><loc>https://www.boulderbiologics.com/mesenchymal-stem-cells-mscs</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.boulderbiologics.com/learn</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.boulderbiologics.com/is-stem-cell-therapy-fda-approved</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.boulderbiologics.com/autologous-vs-donor-derived-stem-cells</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.boulderbiologics.com/mesenchymal-stromal-vs-stem-cells</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://boulderbiologics.com/mesenchymal-stem-cells-mscs</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://boulderbiologics.com/learn</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://boulderbiologics.com/is-stem-cell-therapy-fda-approved</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://boulderbiologics.com/autologous-vs-donor-derived-stem-cells</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://boulderbiologics.com/mesenchymal-stromal-vs-stem-cells</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority></url>
 
   <!-- Trust / E-E-A-T -->
-  <url><loc>https://www.boulderbiologics.com/jason-glowney-md</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
-  <url><loc>https://www.boulderbiologics.com/our-clinic</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.boulderbiologics.com/fda-guidelines</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://boulderbiologics.com/jason-glowney-md</loc><lastmod>2026-06-02</lastmod><priority>0.7</priority></url>
+  <url><loc>https://boulderbiologics.com/our-clinic</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://boulderbiologics.com/fda-guidelines</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority></url>
 
   <!-- Utility -->
-  <url><loc>https://www.boulderbiologics.com/faq</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.boulderbiologics.com/contact</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://boulderbiologics.com/faq</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://boulderbiologics.com/contact</loc><lastmod>2026-06-02</lastmod><priority>0.6</priority></url>
 
   <!-- Legal -->
-  <url><loc>https://www.boulderbiologics.com/privacy</loc><lastmod>2026-06-02</lastmod><priority>0.3</priority></url>
-  <url><loc>https://www.boulderbiologics.com/terms</loc><lastmod>2026-06-02</lastmod><priority>0.3</priority></url>
-  <url><loc>https://www.boulderbiologics.com/hipaa</loc><lastmod>2026-06-02</lastmod><priority>0.3</priority></url>
 </urlset>

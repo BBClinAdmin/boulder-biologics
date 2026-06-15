@@ -1,0 +1,422 @@
+/* ============================================================
+   Boulder Biologics — Dark theme
+   Re-skins the existing light pages by remapping the shared
+   semantic tokens (and a few brand-scale tints) under
+   <html data-theme="dark">. Load LAST, after every other
+   stylesheet, so its equal-specificity rules win.
+
+   Derived from the approved "Spotlight · Azure" dark direction
+   (pages/dark-direction/spotlight.html).
+
+   To convert a page: add data-theme="dark" to <html>, link this
+   file last in <head>, and point the header/footer logos at the
+   light marks (logo-stacked-light.webp / logo-white.png).
+   ============================================================ */
+
+html[data-theme="dark"] {
+  /* ── Neutral scale → dark field ───────────────────────────── */
+  --bb-bone-50:   #0a1726;   /* page background          */
+  --bb-bone-100:  #0c1d30;   /* alt bands / soft tints   */
+  --bb-stone-200: rgba(255,255,255,0.12);
+  --bb-stone-300: rgba(255,255,255,0.20);
+  --bb-stone-400: rgba(255,255,255,0.32);
+
+  /* Light teal-tint surfaces (icon chips) + their glyph color  */
+  --bb-teal-100:  rgba(42,159,214,0.16);
+  --bb-teal-700:  #74c2ee;
+
+  /* ── Semantic tokens (index inline + _v2-service + _shared) ─ */
+  --ink:        #eef4f8;
+  --ink-2:      rgba(221,232,241,0.82);
+  --muted:      rgba(180,198,214,0.62);
+  --subtle:     rgba(180,198,214,0.44);
+  --rule:       rgba(255,255,255,0.12);
+  --rule-soft:  rgba(255,255,255,0.08);
+  --paper:      #0a1726;
+  --paper-2:    #0c1d30;
+  --dark:       #060f1c;     /* dark sections sink below the page */
+  --dark-deep:  #03080f;
+
+  /* Accents — brightened so CTAs and links read on a dark field */
+  --brand-primary:       #2a9fd6;
+  --brand-primary-hover: #3fb0e4;
+  --brand-accent:        #15b8be;
+  --brand-accent-hover:  #3fcace;
+  --brand-accent-dim:    #74c2ee;   /* eyebrows, links, footer h4, "more" */
+
+  /* colors_and_type.css semantic layer */
+  --color-bg:            #0a1726;
+  --color-bg-elevated:   #0e2438;
+  --color-bg-muted:      #0c1d30;
+  --color-fg:            #eef4f8;
+  --color-fg-muted:      rgba(221,232,241,0.72);
+  --color-fg-subtle:     rgba(180,198,214,0.50);
+  --color-border:        rgba(255,255,255,0.12);
+  --color-border-strong: rgba(255,255,255,0.20);
+  --color-divider:       rgba(255,255,255,0.08);
+  --color-link:          #74c2ee;
+  --color-link-hover:    #9ad2f3;
+
+  /* Dark-only helpers */
+  --d-card:   #0e2438;
+  --d-card-2: #102941;
+  --d-border: rgba(255,255,255,0.12);
+
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.35);
+
+  background: var(--paper);
+  color-scheme: dark;
+}
+
+/* ── Elevated card surfaces ───────────────────────────────────
+   Everything that was a flat white card in light mode becomes the
+   dark card surface. Variants with their own dark treatment
+   (.is-cta navy cards, accent chips) are excluded / re-asserted. */
+html[data-theme="dark"] :is(
+  .pillar-card, .team-card, .condition-card, .review-card,
+  .lng-card:not(.is-cta), .qc-card, .cost-card, .facts, .cond-card,
+  .callout, .step, .lab-box, .footer-disclaimer, .simple-card,
+  .related-card, .svc-hero__quick, .faq details, .faq-list details,
+  .v-spec .stat-strip > div, .chip:not(.is-solid):not(.is-teal)
+) {
+  background: var(--d-card);
+  border-color: var(--d-border);
+}
+
+/* Lift card surfaces a touch on hover instead of relying on the
+   light-mode rgba(0,0,0,.06) shadow (invisible on dark). */
+html[data-theme="dark"] :is(
+  .pillar-card, .team-card, .condition-card, .review-card,
+  .lng-card:not(.is-cta), .cond-card
+):hover {
+  border-color: color-mix(in srgb, var(--brand-accent) 55%, transparent);
+  box-shadow: 0 18px 40px -24px rgba(0,0,0,0.8);
+}
+
+/* Keep the special chip + CTA variants intact */
+html[data-theme="dark"] .chip.is-solid { background: var(--brand-accent); color: #04222b; border-color: transparent; }
+html[data-theme="dark"] .chip.is-teal  { background: var(--bb-teal-100); border-color: color-mix(in srgb, var(--brand-accent) 40%, transparent); color: var(--brand-accent-dim); }
+html[data-theme="dark"] .lng-card.is-cta { background: var(--bb-navy-500); border-color: var(--bb-navy-500); }
+html[data-theme="dark"] .callout { border-left-color: var(--brand-accent); }
+
+/* Accent-tinted icon chips: tighten their hairline for the dark field */
+html[data-theme="dark"] :is(
+  .trust-mark__ic, .condition-card__ic, .lng-card .k, .cond-card .ic,
+  .simple-card .ic, .related-card .ic, .refs li::before
+) {
+  border-color: color-mix(in srgb, var(--brand-accent-dim) 32%, transparent);
+}
+
+/* ── Header / nav ─────────────────────────────────────────────
+   Header background flips via --paper-2; fix the hover wash and the
+   teal nav hover (light-mode used a near-black tint). */
+html[data-theme="dark"] .site-header {
+  background: rgba(10,23,38,0.82);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  backdrop-filter: blur(14px) saturate(1.2);
+  border-bottom-color: rgba(255,255,255,0.10);
+}
+html[data-theme="dark"] .site-header nav a { color: rgba(231,240,248,0.82); }
+html[data-theme="dark"] .site-header nav a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+html[data-theme="dark"] .site-header nav a[aria-current="page"] { color: var(--brand-accent-dim); }
+html[data-theme="dark"] .site-header__cta .call-link { color: rgba(231,240,248,0.72); }
+html[data-theme="dark"] .site-header__cta .call-link:hover { color: var(--brand-accent-dim); }
+
+/* Mobile nav drawer (from _nav.css) sits on a light panel by default */
+html[data-theme="dark"] .site-header nav { background: transparent; }
+
+/* ── Buttons ──────────────────────────────────────────────────
+   .btn-primary / .btn-accent inherit the brightened tokens. Fix the
+   outline + on-dark variants so they read against the dark field. */
+html[data-theme="dark"] .btn-primary { color: #02131f; }
+html[data-theme="dark"] .btn-accent  { color: #04222b; }
+html[data-theme="dark"] .btn-outline {
+  color: #cfe6f5; border-color: rgba(255,255,255,0.28); background: transparent;
+}
+html[data-theme="dark"] .btn-outline:hover {
+  background: rgba(255,255,255,0.08); color: #fff; border-color: rgba(255,255,255,0.5);
+}
+html[data-theme="dark"] .btn-white { background: #fff; color: var(--bb-navy-500); }
+html[data-theme="dark"] .btn-white:hover { background: #e8eef3; }
+
+/* ── Hero: add a soft azure spotlight behind the grid ─────────── */
+html[data-theme="dark"] .hero { position: relative; overflow: hidden; }
+html[data-theme="dark"] .hero::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(ellipse 52% 62% at 86% -4%, rgba(21,99,135,0.50), transparent 60%),
+    radial-gradient(ellipse 44% 52% at 4% 8%, rgba(42,159,214,0.20), transparent 62%);
+}
+html[data-theme="dark"] .hero__grid { position: relative; z-index: 1; }
+
+/* Live cell imagery behind the hero (screen-blended so only the glow reads),
+   plus a soft left-to-right scrim that keeps the headline legible. */
+html[data-theme="dark"] .hero__cell {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url(../assets/cell-glow.png) no-repeat;
+  background-position: 14% 42%; background-size: 60% auto;
+  mix-blend-mode: screen; opacity: 0.42;
+}
+html[data-theme="dark"] .hero__scrim {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(100deg, rgba(7,17,38,0.66) 0%, rgba(7,17,38,0.34) 32%, rgba(7,17,38,0) 58%);
+}
+
+/* ── Placeholder media labels: dark chip instead of bright white ── */
+html[data-theme="dark"] :is(
+  .featured__media, .team-card__photo, .doc__photo, .ba__plate, .micro, .img-slot
+)::after {
+  background: rgba(7,17,30,0.82);
+  color: var(--muted);
+  border: 1px solid var(--rule-soft);
+}
+
+/* ── Reviews band stars + score ───────────────────────────────── */
+html[data-theme="dark"] .reviews-band__score { color: #fff; }
+
+/* ── Final-CTA / dark sections: deepen + dark form fields ──────── */
+html[data-theme="dark"] section.dark { background: var(--dark); }
+html[data-theme="dark"] .intake-field input,
+html[data-theme="dark"] .intake-field select {
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  border-color: rgba(255,255,255,0.16);
+}
+html[data-theme="dark"] .intake-field input::placeholder { color: rgba(255,255,255,0.42); }
+html[data-theme="dark"] .intake-form button { background: var(--brand-accent); color: #04222b; }
+html[data-theme="dark"] .intake-form button:hover { background: var(--brand-accent-hover); }
+
+/* ── Accordion (homepage "Questions") ─────────────────────────── */
+html[data-theme="dark"] .accordion details { border-bottom-color: var(--rule); }
+html[data-theme="dark"] .accordion summary .plus { color: var(--muted); }
+html[data-theme="dark"] .accordion details[open] summary .plus { color: #fff; }
+
+/* ── FAQ accordion (faq.html / _shared) ───────────────────────── */
+html[data-theme="dark"] .faq { background: var(--paper-2); }
+html[data-theme="dark"] .faq details[open] { border-color: color-mix(in srgb, var(--brand-accent) 45%, transparent); }
+html[data-theme="dark"] .faq summary .plus { background: var(--bb-teal-100); color: var(--brand-accent-dim); }
+html[data-theme="dark"] .faq details[open] summary .plus { background: var(--brand-accent); color: #04222b; }
+
+/* ── Candidacy good/warn columns (service pages) ──────────────── */
+html[data-theme="dark"] .candidacy__col.good { background: rgba(21,184,142,0.10); border-color: rgba(21,184,142,0.28); }
+html[data-theme="dark"] .candidacy__col.warn { background: rgba(214,168,42,0.10); border-color: rgba(214,168,42,0.26); }
+
+/* ── Generic links inside body copy ───────────────────────────── */
+html[data-theme="dark"] .footer-disclaimer__body a { color: var(--color-link); }
+html[data-theme="dark"] .footer-disclaimer__body a:hover { color: var(--color-link-hover); }
+
+
+/* ============================================================
+   Bespoke white-surface sweep (auto-collected from production
+   page inline styles + _shared.css). Every per-page card/box
+   that painted a white surface in light mode flips to the dark
+   card surface here. Background only — borders ride the remapped
+   --rule token; foreground --white (button/heading text) stays white.
+   Intake form fields/button are excluded (styled explicitly above).
+   ============================================================ */
+html[data-theme="dark"] .article-card,
+html[data-theme="dark"] .cadence,
+html[data-theme="dark"] .chip,
+html[data-theme="dark"] .compare-card,
+html[data-theme="dark"] .component,
+html[data-theme="dark"] .condition-card,
+html[data-theme="dark"] .contact-card,
+html[data-theme="dark"] .cost-card,
+html[data-theme="dark"] .cred-table,
+html[data-theme="dark"] .def,
+html[data-theme="dark"] .directions-card,
+html[data-theme="dark"] .disease-grid li,
+html[data-theme="dark"] .domain,
+html[data-theme="dark"] .domain__num,
+html[data-theme="dark"] .equip-card,
+html[data-theme="dark"] .equip-card__face,
+html[data-theme="dark"] .evlist,
+html[data-theme="dark"] .facts-card,
+html[data-theme="dark"] .faq details,
+html[data-theme="dark"] .faq-block details,
+html[data-theme="dark"] .faq-jump a:hover,
+html[data-theme="dark"] .final-cta__form input:focus,
+html[data-theme="dark"] .final-cta__form select:focus,
+html[data-theme="dark"] .footer-disclaimer,
+html[data-theme="dark"] .formulation-card,
+html[data-theme="dark"] .glance-strip,
+html[data-theme="dark"] .hours-card,
+html[data-theme="dark"] .isct-crit li,
+html[data-theme="dark"] .journey,
+html[data-theme="dark"] .legal-notice,
+html[data-theme="dark"] .lng-card,
+html[data-theme="dark"] .loc-card,
+html[data-theme="dark"] .mech-card,
+html[data-theme="dark"] .mid-cta,
+html[data-theme="dark"] .pillar-card,
+html[data-theme="dark"] .qc-card,
+html[data-theme="dark"] .qc-pipe,
+html[data-theme="dark"] .related-card,
+html[data-theme="dark"] .review-card,
+html[data-theme="dark"] .room-card,
+html[data-theme="dark"] .simple-card,
+html[data-theme="dark"] .std-card,
+html[data-theme="dark"] .step,
+html[data-theme="dark"] .svc-hero__quick,
+html[data-theme="dark"] .sys-card,
+html[data-theme="dark"] .team-card,
+html[data-theme="dark"] .tech-specs,
+html[data-theme="dark"] .therapy-card,
+html[data-theme="dark"] .toc-card,
+html[data-theme="dark"] .tour-stop,
+html[data-theme="dark"] .variant-subnav a:hover,
+html[data-theme="dark"] .variant-subnav a[aria-current="page"],
+html[data-theme="dark"] .visit-card {
+  background: var(--d-card);
+}
+
+
+/* ── Legal pages (hipaa / terms / privacy): lift navy text off the
+      now-dark surfaces (these use the literal --bb-navy-500 ink). ── */
+html[data-theme="dark"] .legal-notice { color: var(--ink-2); }
+html[data-theme="dark"] .legal-body h2,
+html[data-theme="dark"] .legal-body h3 { color: var(--ink); }
+
+/* ── FAQ bespoke accordion (faq.html .faq-block) polish ── */
+html[data-theme="dark"] .faq-block details[open] { border-color: color-mix(in srgb, var(--brand-accent) 45%, transparent); }
+html[data-theme="dark"] .faq-block summary .plus { background: var(--bb-teal-100); color: var(--brand-accent-dim); }
+html[data-theme="dark"] .faq-block details[open] summary .plus { background: var(--brand-accent); color: #04222b; }
+
+
+/* ============================================================
+   Spotlight elevated-card system
+   Ports the approved Spotlight·Azure card treatment onto every
+   production card: azure top-sheen + inset highlight + soft drop
+   shadow, accent-gradient icon chips, pillar-number accent tick,
+   frosted approach/intake panels, and the footer accent keyline.
+   The :is(...):not(.is-cta) wrapper matches the specificity of the
+   flat surface group above so this (later) rule wins.
+   ============================================================ */
+html[data-theme="dark"] {
+  --accent: #2a9fd6;
+  --accent-2: #74c2ee;
+  --brand-accent: #2a9fd6;
+  --brand-accent-hover: #3fb0e4;
+}
+
+html[data-theme="dark"] :is(.pillar-card, .condition-card, .review-card, .qc-card, .qc-pipe, .lng-card, .team-card, .facts-card, .therapy-card, .compare-card, .formulation-card, .component, .sys-card, .mech-card, .toc-card, .related-card, .def, .equip-card, .room-card, .tour-stop, .hours-card, .loc-card, .contact-card, .directions-card, .std-card, .article-card, .visit-card, .cred-table, .tech-specs, .glance-strip, .journey, .cadence, .svc-hero__quick, .cost-card, .simple-card, .step, .domain):not(.is-cta):not(.theme-light):not(.no-elev) {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), transparent 58%),
+    var(--d-card);
+  border-color: rgba(255,255,255,0.11);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 16px 36px -22px rgba(0,0,0,0.8);
+}
+html[data-theme="dark"] :is(.pillar-card, .condition-card, .review-card, .qc-card, .qc-pipe, .lng-card, .team-card, .facts-card, .therapy-card, .compare-card, .formulation-card, .component, .sys-card, .mech-card, .toc-card, .related-card, .def, .equip-card, .room-card, .tour-stop, .hours-card, .loc-card, .contact-card, .directions-card, .std-card, .article-card, .visit-card, .cred-table, .tech-specs, .glance-strip, .journey, .cadence, .svc-hero__quick, .cost-card, .simple-card, .step, .domain):not(.is-cta):not(.theme-light):not(.no-elev):hover {
+  border-color: var(--accent);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.09), 0 24px 50px -20px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+/* Frosted approach + intake panels (replaces the bold brand gradient) */
+html[data-theme="dark"] .approach-card,
+html[data-theme="dark"] .intake-form {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--accent) 8%, transparent), transparent 52%),
+    var(--d-card);
+  border: 1px solid rgba(255,255,255,0.11);
+}
+
+/* Accent tick on the pillar numbers */
+html[data-theme="dark"] .pillar-card .num { display: inline-flex; align-items: center; gap: 9px; color: var(--accent-2); }
+html[data-theme="dark"] .pillar-card .num::before { content: ''; width: 18px; height: 2px; border-radius: 2px; background: var(--accent); }
+
+/* Accent-gradient icon chips */
+html[data-theme="dark"] :is(.condition-card__ic, .trust-mark__ic, .lng-card .k, .cond-card .ic, .simple-card .ic, .related-card .ic):not(#_) {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 22%, transparent), color-mix(in srgb, var(--accent) 5%, transparent));
+  border-color: color-mix(in srgb, var(--accent-2) 38%, transparent);
+  color: var(--accent-2);
+}
+html[data-theme="dark"] .condition-card:hover .condition-card__ic { border-color: color-mix(in srgb, var(--accent-2) 60%, transparent); }
+
+/* Approach-step numbers match the accent icon chips */
+html[data-theme="dark"] .approach-step__n {
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  border-color: color-mix(in srgb, var(--accent-2) 32%, transparent);
+  color: var(--accent-2);
+}
+
+/* Media placeholders share the elevated surface + accent label */
+html[data-theme="dark"] .featured__media {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--accent) 11%, transparent), transparent 52%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 12px),
+    var(--d-card);
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 20px 46px -24px rgba(0,0,0,0.82);
+}
+html[data-theme="dark"] .featured__media::after {
+  background: color-mix(in srgb, var(--accent) 18%, var(--d-card));
+  color: var(--accent-2);
+  border-color: color-mix(in srgb, var(--accent-2) 30%, transparent);
+}
+
+/* Hero headline lift + footer accent keyline */
+html[data-theme="dark"] .hero h1.h1 { text-shadow: 0 2px 48px rgba(3,9,15,0.6); }
+html[data-theme="dark"] .site-footer { position: relative; }
+html[data-theme="dark"] .site-footer::before {
+  content: ''; position: absolute; top: -1px; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent) 55%, transparent), transparent);
+}
+
+
+/* ============================================================
+   Service-page hero cell (BMAC / mFAT)
+   The orange cell image, screen-blended like the homepage cell so
+   only its glow reads on the dark hero. Radially masked so the
+   rectangular JPG edges feather out; a soft scrim keeps the
+   left-hand headline legible.
+   ============================================================ */
+html[data-theme="dark"] .svc-hero { position: relative; overflow: hidden; }
+html[data-theme="dark"] .svc-hero__cell {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url(../assets/cell-orange.jpg) no-repeat;
+  background-position: 12% 22%; background-size: 52% auto;
+  mix-blend-mode: screen; opacity: 0.55;
+  /* Whole cell visible (like the homepage). The radial mask feathers
+     away the JPG's dark field/corners INSIDE the image bounds, so the
+     rectangular edges never show. */
+  -webkit-mask-image: radial-gradient(27% 31% at 33% 39%, #000 0%, rgba(0,0,0,0.62) 40%, rgba(0,0,0,0.22) 70%, transparent 92%);
+          mask-image: radial-gradient(27% 31% at 33% 39%, #000 0%, rgba(0,0,0,0.62) 40%, rgba(0,0,0,0.22) 70%, transparent 92%);
+}
+html[data-theme="dark"] .svc-hero__scrim {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(100deg, rgba(7,17,38,0.66) 0%, rgba(7,17,38,0.34) 30%, rgba(7,17,38,0) 56%);
+}
+html[data-theme="dark"] .svc-hero__grid { position: relative; z-index: 1; }
+
+
+/* ============================================================
+   Services card 01 cell (homepage) — the orange cell glowing in
+   the open lower area of the first pillar card, screen-blended +
+   masked like the hero cells. Content rides above via z-index.
+   ============================================================ */
+html[data-theme="dark"] .pillar-card.has-cell { position: relative; overflow: hidden; }
+html[data-theme="dark"] .pillar-card.has-cell > * { position: relative; z-index: 1; }
+html[data-theme="dark"] .pillar-card.has-cell .pillar-card__cell {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: url(../assets/cell-orange.jpg) no-repeat;
+  background-position: 50% 50%; background-size: 118% auto;
+  mix-blend-mode: screen; opacity: 0.66;
+  /* Centered, contained cell. Image is wider than the card (left/right
+     edges clipped); the radial mask feathers the top/bottom away inside
+     the image bounds so no JPG edge shows. */
+  -webkit-mask-image: radial-gradient(52% 36% at 50% 50%, #000 0%, rgba(0,0,0,0.6) 50%, transparent 90%);
+          mask-image: radial-gradient(52% 36% at 50% 50%, #000 0%, rgba(0,0,0,0.6) 50%, transparent 90%);
+}
+
+
+/* ── PRP family: blue platelet cell variant (hero + services card) ──
+   Reuses the orange-cell positioning/mask/blend; only the image swaps. */
+html[data-theme="dark"] .svc-hero__cell--prp { background-image: url(../assets/cell-platelet.jpg); opacity: 0.72; bottom: auto; height: 640px; }
+html[data-theme="dark"] .pillar-card.has-cell--prp .pillar-card__cell { background-image: url(../assets/cell-platelet.jpg); }
+
+
+/* ── Additional Treatments: blue network/plexus variant (hero + card) ──
+   cell-network variant. Same masked, screen-blended treatment; the
+   plexus is busier so opacity sits a touch lower. */
+html[data-theme="dark"] .svc-hero__cell--net { background-image: url(../assets/cell-network.jpg); opacity: 0.5; bottom: auto; height: 640px; }
+html[data-theme="dark"] .pillar-card.has-cell--net .pillar-card__cell { background-image: url(../assets/cell-network.jpg); opacity: 0.6; }
