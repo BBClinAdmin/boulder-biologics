@@ -153,42 +153,37 @@
   to = "/longevity"
   status = 301
 
-# ── Intake-form pages → most relevant content page (VERIFY: see note — the new
-#    site has no intake forms; if patients still need these, they must be rebuilt) ──
+# ── Intake-form pages → /patients (the patients page is being added in an
+#    upcoming handoff; do not go live until /patients exists or these 301 to 404) ──
 [[redirects]]
   from = "/knee-form"
-  to = "/knee-pain-arthritis"             # VERIFY
+  to = "/patients"
   status = 301
 [[redirects]]
   from = "/shoulder-form"
-  to = "/shoulder-rotator-cuff"           # VERIFY
+  to = "/patients"
   status = 301
 [[redirects]]
   from = "/pelvis-form"
-  to = "/hip-back-si-pain"                # VERIFY
+  to = "/patients"
   status = 301
 
-# ── Pages with no clear 1:1 equivalent — best guesses, please confirm ──
+# ── Other mappings ──
 [[redirects]]
-  from = "/stem-cell-therapy-2"          # VERIFY which indication this was
-  to = "/cellular-therapy"
+  from = "/stem-cell-therapy-2"          # → services overview (homepage section)
+  to = "/#services"
   status = 301
 [[redirects]]
-  from = "/orthobiologics"               # VERIFY (overview → homepage?)
-  to = "/"
-  status = 301
-[[redirects]]
-  from = "/patients"                     # VERIFY (patient hub → education hub?)
-  to = "/learn"
-  status = 301
-[[redirects]]
-  from = "/comprehensive-bodywork-1"     # VERIFY (discontinued service?)
-  to = "/"
+  from = "/comprehensive-bodywork-1"
+  to = "/prp-hydrodissection"
   status = 301
 [[redirects]]
   from = "/home-alt-bedford"             # Squarespace template artifact
   to = "/"
   status = 301
+
+# NOTE: /patients and /orthobiologics are intentionally NOT redirected — Rob is
+# adding real pages at those slugs in an upcoming handoff, so they resolve natively.
 
 # ── Safety redirects for the two files renamed to their canonical slugs ──
 [[redirects]]
