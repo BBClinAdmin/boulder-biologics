@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Clinical MSC Enumeration by Flow Cytometry | Boulder Biologics</title>
+<meta name="description" content="How Boulder Biologics harvests bone marrow, processes BMAC, and quantifies nucleated cells, viability, and MSC-enriched populations by flow cytometry on the Sysmex XF-1600. By Jason Glowney, MD." />
+<meta name="keywords" content="BMAC flow cytometry, MSC enumeration, Sysmex XF-1600, bone marrow aspirate concentrate, CD271 LNGFR, TNAP MSCA-1, autologous orthobiologics, cell viability, CFU-F" />
+<link rel="canonical" href="https://boulderbiologics.com/orthobiologics" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#04979d" />
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://boulderbiologics.com/orthobiologics" />
+<meta property="og:site_name" content="Boulder Biologics" />
+<meta property="og:title" content="Clinical MSC Enumeration by Flow Cytometry | Boulder Biologics" />
+<meta property="og:description" content="Our end-to-end workflow: bone marrow aspirate harvest, BMAC concentration, and objective MSC enumeration by flow cytometry." />
+<meta property="og:image" content="https://boulderbiologics.com/assets/logo-stacked.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/png" href="assets/logo-stacked.png" />
+<link rel="apple-touch-icon" href="assets/logo-stacked.png" />
+<link rel="stylesheet" href="assets/image-loader.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalScholarlyArticle",
+      "@id": "https://boulderbiologics.com/orthobiologics#article",
+      "headline": "Autologous BMA Harvest, BMAC Processing, and MSC Enumeration by Flow Cytometry",
+      "about": ["Bone marrow aspirate concentrate", "Mesenchymal stromal cells", "Flow cytometry", "Cell viability", "Autologous orthobiologics"],
+      "author": {
+        "@type": "Physician",
+        "name": "Jason Glowney, MD",
+        "affiliation": { "@type": "MedicalBusiness", "name": "Boulder Biologics" }
+      },
+      "publisher": { "@type": "MedicalBusiness", "name": "Boulder Biologics" },
+      "description": "Boulder Biologics' end-to-end workflow for autologous bone marrow harvest, BMAC concentration, and objective MSC enumeration by flow cytometry on the Sysmex XF-1600.",
+      "isAccessibleForFree": true,
+      "educationalUse": "Patient and clinician education"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://boulderbiologics.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Learn", "item": "https://boulderbiologics.com/learn" },
+        { "@type": "ListItem", "position": 3, "name": "Clinical MSC Enumeration by Flow Cytometry", "item": "https://boulderbiologics.com/orthobiologics" }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="_v2-service.css" />
+<link rel="stylesheet" href="_learn-explainer.css" />
+
+<style>
+  /* Process-step ribbon under hero */
+  .flow-ribbon {
+    max-width: var(--max); margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    border: 1px solid var(--rule); border-radius: var(--r-lg);
+    overflow: hidden; background: var(--white);
+  }
+  .flow-ribbon__step { padding: 22px 24px; border-left: 1px solid var(--rule-soft); position: relative; }
+  .flow-ribbon__step:first-child { border-left: 0; }
+  .flow-ribbon__n { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.1em; color: var(--brand-accent-dim); text-transform: uppercase; }
+  .flow-ribbon__t { font-family: var(--font-display); font-weight: 700; font-size: 16px; letter-spacing: -0.01em; color: var(--ink); margin: 8px 0 4px; }
+  .flow-ribbon__d { font-family: var(--font-body); font-size: 13px; line-height: 1.45; color: var(--muted); margin: 0; }
+
+  /* Marker panel */
+  .marker-panel { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 24px 0; }
+  .marker-row {
+    display: grid; grid-template-columns: 170px 1fr; gap: 22px; align-items: baseline;
+    background: var(--white); border: 1px solid var(--rule); border-radius: var(--r-md);
+    padding: 16px 22px;
+  }
+  .marker-row.is-exclude { border-left: 3px solid var(--bb-stone-300); }
+  .marker-row.is-include { border-left: 3px solid var(--brand-accent); }
+  .marker-row.is-note { border-left: 3px solid #f0d76a; background: #fefcf4; }
+  .marker-row .mk {
+    font-family: var(--font-mono); font-size: 13px; font-weight: 500; color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+  .marker-row .mk small { display: block; font-size: 10.5px; color: var(--muted); letter-spacing: 0.04em; margin-top: 3px; text-transform: uppercase; }
+  .marker-row .mk-desc { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: var(--ink-2); margin: 0; }
+
+  /* Figures */
+  .fig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 26px 0 10px; }
+  figure.fig { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  figure.fig .img-slot { aspect-ratio: 1 / 1; }
+  figure.fig.is-wide { grid-column: 1 / -1; }
+  figure.fig.is-wide .img-slot { aspect-ratio: 16 / 6; }
+  figure.fig figcaption {
+    font-family: var(--font-body); font-size: 12.5px; line-height: 1.5; color: var(--muted); margin: 0;
+  }
+  figure.fig figcaption strong { font-style: italic; color: var(--ink); font-weight: 600; }
+  .fig-note {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.04em;
+    color: var(--muted); margin: 6px 0 0;
+  }
+
+  /* Platform callout */
+  .platform-card {
+    background: var(--bb-navy-500); color: var(--white);
+    border-radius: var(--r-lg); padding: 28px 32px; margin: 24px 0;
+    display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center;
+  }
+  .platform-card .lbl { font-family: var(--font-display); font-weight: 600; font-size: 12.5px; color: var(--bb-teal-300); margin: 0 0 8px; }
+  .platform-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 21px; letter-spacing: -0.01em; color: var(--white); margin: 0 0 8px; }
+  .platform-card p { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: rgba(255,255,255,0.78); margin: 0; max-width: 52ch; }
+  .platform-card__metrics { display: flex; gap: 14px; flex-wrap: wrap; }
+  .platform-card__metrics span {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em;
+    color: var(--bb-teal-200); border: 1px solid rgba(116,205,209,0.32);
+    border-radius: 999px; padding: 7px 13px; white-space: nowrap;
+  }
+
+  /* Two-column regulatory split */
+  .reg-split { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+  .reg-col {
+    background: var(--white); border: 1px solid var(--rule); border-radius: var(--r-md); padding: 24px 26px;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .reg-col.is-clinical { border-top: 3px solid var(--brand-accent); }
+  .reg-col.is-research { border-top: 3px solid var(--bb-blue-400); }
+  .reg-col .tag { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .reg-col h3 { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -0.01em; margin: 0; }
+  .reg-col p { font-family: var(--font-body); font-size: 14px; line-height: 1.55; color: var(--ink-2); margin: 0; }
+  .reg-col ul { margin: 0; padding-left: 18px; }
+  .reg-col ul li { font-family: var(--font-body); font-size: 13.5px; line-height: 1.5; color: var(--ink-2); margin: 0 0 6px; }
+
+  @media (max-width: 880px) {
+    .flow-ribbon { grid-template-columns: 1fr 1fr; }
+    .flow-ribbon__step:nth-child(3) { border-left: 0; }
+    .fig-grid { grid-template-columns: 1fr; }
+    .marker-row { grid-template-columns: 1fr; gap: 8px; }
+    .platform-card { grid-template-columns: 1fr; }
+    .reg-split { grid-template-columns: 1fr; }
+  }
+
+  /* ── Dark-theme surface flips for this page's custom blocks ──── */
+  html[data-theme="dark"] .flow-ribbon { background: var(--d-card); }
+  html[data-theme="dark"] .marker-row { background: var(--d-card); }
+  html[data-theme="dark"] .marker-row.is-note { background: rgba(240,215,106,0.08); }
+  html[data-theme="dark"] .reg-col { background: var(--d-card); }
+</style>
+  <link rel="stylesheet" href="_nav.css" />
+  <link rel="stylesheet" href="_theme-dark.css" />
+</head>
+<body data-screen-label="Learn · Clinical MSC enumeration by flow cytometry">
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="index.html" aria-label="Boulder Biologics home">
+      <img src="assets/logo-stacked-light.webp" alt="Boulder Biologics" />
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav aria-label="Primary">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#conditions">Conditions</a>
+      <a href="index.html#about">Our Team</a>
+      <a href="our-clinic.html">Facilities</a>
+      <a href="fda-guidelines.html">FDA Guidelines</a>
+      <a href="learn.html" aria-current="page">Learn</a>
+      <a href="faq.html">FAQ</a>
+      <a href="patients.html">For Patients</a>
+    </nav>
+    <div class="site-header__cta">
+      <a class="call-link" href="tel:+17205506175">720-550-6175</a>
+      <a class="btn btn-primary btn-sm" href="contact.html">Contact</a>
+    </div>
+  </div>
+</header>
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="sep">›</span>
+  <a href="learn.html">Learn</a>
+  <span class="sep">›</span>
+  <span class="cur">Clinical MSC enumeration by flow cytometry</span>
+</nav>
+
+<main id="main">
+
+  <!-- HERO ─────────────────────────────────────────────────────── -->
+  <section class="svc-hero">
+    <div class="svc-hero__grid">
+      <div>
+        <p class="eyebrow">The science behind our services</p>
+        <h1 class="h1">Clinical MSC enumeration by flow cytometry.</h1>
+        <p class="lede">Autologous bone marrow harvest, BMAC concentration, and objective cellular characterization, the full workflow, and how each step is measured rather than assumed.</p>
+        <p class="byline"><a href="jason-glowney-md.html" style="color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor;">Jason Glowney, MD</a> · Autologous Orthobiologics</p>
+      </div>
+      <aside class="toc-card" aria-label="Sections on this page">
+        <p class="lbl">On this page</p>
+        <ol>
+          <li><a href="#rationale">Clinical &amp; scientific rationale</a></li>
+          <li><a href="#harvest">Bone marrow aspirate harvest</a></li>
+          <li><a href="#processing">BMAC processing &amp; concentration</a></li>
+          <li><a href="#flow">Flow cytometric enumeration</a></li>
+          <li><a href="#figures">Figures &amp; comparison</a></li>
+          <li><a href="#implications">Clinical implications</a></li>
+          <li><a href="#regulatory">Regulatory framework</a></li>
+          <li><a href="#refs">References</a></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FLOW RIBBON ───────────────────────────────────────────────── -->
+  <section style="padding: 0 var(--gutter) 8px;">
+    <div class="flow-ribbon">
+      <div class="flow-ribbon__step">
+        <p class="flow-ribbon__n">Step 01</p>
+        <p class="flow-ribbon__t">Harvest</p>
+        <p class="flow-ribbon__d">Multi-site, low-volume aspiration from the posterior iliac crest.</p>
+      </div>
+      <div class="flow-ribbon__step">
+        <p class="flow-ribbon__n">Step 02</p>
+        <p class="flow-ribbon__t">Concentrate</p>
+        <p class="flow-ribbon__d">Controlled centrifugation that protects viability.</p>
+      </div>
+      <div class="flow-ribbon__step">
+        <p class="flow-ribbon__n">Step 03</p>
+        <p class="flow-ribbon__t">Enumerate</p>
+        <p class="flow-ribbon__d">Count, viability, and MSC-enriched populations by flow cytometry.</p>
+      </div>
+      <div class="flow-ribbon__step">
+        <p class="flow-ribbon__n">Step 04</p>
+        <p class="flow-ribbon__t">Deliver</p>
+        <p class="flow-ribbon__d">Same-day, same-visit, with the data behind it.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="sci">
+
+    <!-- RATIONALE ─────────────────────────────────────────────── -->
+    <section id="rationale">
+      <div class="inner">
+        <div class="direct">
+          <p class="lbl">In short</p>
+          <p>Outcomes depend not on any single step, but on the cumulative effect of <strong>aspiration technique, processing forces, and objective cellular validation.</strong> We measure each one.</p>
+        </div>
+
+        <p class="eyebrow">01 · Clinical &amp; scientific rationale</p>
+        <h2 class="h2">Why we measure, rather than assume.</h2>
+        <div class="body-lg">
+          <p>Autologous bone marrow–derived orthobiologic therapies rely on careful attention to harvest technique, processing methodology, and objective cellular characterization. Mesenchymal stromal cell (MSC)–containing populations are present at very low frequencies within native bone marrow, typically on the order of <strong>0.001–0.01% of total nucleated cells</strong>, and their yield is highly sensitive to aspiration technique, processing forces, and operator-dependent variables.<span class="cite-inline">1,2,3</span></p>
+          <p>Our approach integrates optimized bone marrow aspiration, controlled preparation of bone marrow aspirate concentrate (BMAC), and quantitative flow cytometric analysis using the <strong>Sysmex XF-1600</strong> platform to characterize total nucleated cells, viability, and MSC-enriched subpopulations in live, freshly processed samples.</p>
+          <p>This page outlines our end-to-end workflow, from BMA harvest to BMAC concentration and MSC enumeration, and illustrates how these steps combine to support evidence-informed autologous orthobiologic procedures.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HARVEST ────────────────────────────────────────────────── -->
+    <section id="harvest" class="alt">
+      <div class="inner">
+        <p class="eyebrow">02 · Harvest technique</p>
+        <h2 class="h2">How we harvest bone marrow.</h2>
+        <div class="body-lg">
+          <p>Bone marrow aspirate is obtained from the <strong>posterior superior iliac spine (PSIS)</strong> using a multi-site, low-volume aspiration strategy. Rather than drawing large volumes from a single marrow cavity, the needle is redirected between small-volume pulls (approximately 5 mL per draw) to reduce peripheral blood dilution and enrich mononuclear cell fractions with colony-forming unit–fibroblast (CFU-F) potential.</p>
+          <p>This technique is supported by foundational work demonstrating significantly higher progenitor cell yields with small-volume, multi-pocket aspiration methods than with large-volume single-site draws.<span class="cite-inline">3</span></p>
+          <p>Following aspiration, the marrow is passed through a micron-scale filter to remove bone fragments and clots while preserving cellular integrity. A defined portion of the filtered aspirate may be retained unprocessed, while the majority proceeds to controlled concentration.</p>
+        </div>
+        <div class="defn">
+          <p class="lbl">Why small-volume, multi-site</p>
+          <p>Large single-site draws pull in more peripheral blood and dilute the progenitor fraction. Many small pulls, repositioned between draws, recover more of what matters.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESSING ─────────────────────────────────────────────── -->
+    <section id="processing">
+      <div class="inner">
+        <p class="eyebrow">03 · Concentration</p>
+        <h2 class="h2">How we concentrate it.</h2>
+        <div class="body-lg">
+          <p>Bone marrow aspirate concentrate is generated using centrifugation parameters selected to balance effective mononuclear cell enrichment with cell-viability preservation. Excessively high g-forces, while capable of increasing apparent nucleated-cell density, have been shown to compromise cell-membrane integrity and reduce functional viability.</p>
+          <p>Our processing protocols emphasize:</p>
+          <ul>
+            <li><strong>Moderate centrifugal forces</strong></li>
+            <li>Preservation of mononuclear cell populations</li>
+            <li>Minimization of mechanical stress</li>
+            <li>Maintenance of sterility throughout processing</li>
+          </ul>
+          <p>The result is a BMAC product enriched for mononuclear cells while maintaining high overall viability, consistent with published observations that processing technique is a significant determinant of final cellular quality.<span class="cite-inline">4</span></p>
+          <p>A residual (RES) fraction, the post-collection material remaining in sterile tubes following buffy-coat recovery, is also evaluated. It tells us how efficiently cells were distributed and confirms that clinically meaningful populations were retained in the final BMAC product.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOW CYTOMETRY ─────────────────────────────────────────── -->
+    <section id="flow" class="alt">
+      <div class="inner">
+        <p class="eyebrow">04 · Enumeration</p>
+        <h2 class="h2">How we count and characterize cells.</h2>
+
+        <div class="platform-card">
+          <div>
+            <p class="lbl">Platform</p>
+            <h3>Sysmex XF-1600 flow cytometer</h3>
+            <p>Quantitative analysis of live bone marrow samples before and after concentration, objective, sample-by-sample, no reliance on kit specifications.</p>
+          </div>
+          <div class="platform-card__metrics">
+            <span>Nucleated cell count</span>
+            <span>Viability</span>
+            <span>MSC-enriched %</span>
+          </div>
+        </div>
+
+        <h3 style="font-family: var(--font-display); font-weight:700; font-size:18px; letter-spacing:-0.01em; margin: 28px 0 10px;">Nucleated-cell counting &amp; viability</h3>
+        <div class="body-lg">
+          <p>To quantify nucleated cells, aliquots of BMA, BMAC, and RES samples are diluted in buffered solution and treated with a lytic reagent that removes cytoplasmic membranes while preserving nuclei. Forward-scatter–based size gating isolates nuclei within a defined micrometer range, allowing accurate calculation of nucleated-cell concentrations.</p>
+          <p>Viability is assessed using DNA-binding viability dyes that selectively enter cells with compromised membranes. Viable and non-viable populations are distinguished by fluorescence intensity, enabling a percent-viability calculation for each sample fraction. Across representative cases, both BMA and BMAC samples demonstrate high viability, reflecting the use of controlled processing conditions.</p>
+        </div>
+
+        <h3 style="font-family: var(--font-display); font-weight:700; font-size:18px; letter-spacing:-0.01em; margin: 28px 0 10px;">Identifying MSC-enriched populations in fresh samples</h3>
+        <div class="body-lg">
+          <p>Unlike culture-expanded cells, freshly isolated bone marrow contains a heterogeneous mixture of hematopoietic, stromal, and progenitor populations. In this context, MSCs are best identified <strong>indirectly</strong>, using flow-cytometric marker combinations that correlate with CFU-F activity rather than relying on in-vitro expansion phenotypes.</p>
+        </div>
+
+        <div class="marker-panel" aria-label="Live-sample MSC marker strategy">
+          <div class="marker-row is-exclude">
+            <span class="mk">CD45 −<small>Lineage exclusion</small></span>
+            <p class="mk-desc">Negative selection removes hematopoietic-lineage cells, focusing the analysis on the non-hematopoietic stromal fraction.</p>
+          </div>
+          <div class="marker-row is-include">
+            <span class="mk">CD271 (LNGFR) +<small>Positive selection</small></span>
+            <p class="mk-desc">Correlates strongly with clonogenic MSC potential in ex-vivo marrow samples.<span class="cite-inline">5</span></p>
+          </div>
+          <div class="marker-row is-include">
+            <span class="mk">TNAP / MSCA-1 +<small>Positive selection</small></span>
+            <p class="mk-desc">Tissue non-specific alkaline phosphatase; a further marker associated with CFU-F–forming MSCs in fresh marrow.<span class="cite-inline">6</span></p>
+          </div>
+          <div class="marker-row is-note">
+            <span class="mk">CD73 · CD90 · CD105<small>Not used here</small></span>
+            <p class="mk-desc">Commonly associated with <em>culture-expanded</em> MSCs, but often downregulated or absent in freshly isolated marrow, so they are not relied upon for primary enumeration.</p>
+          </div>
+        </div>
+
+        <div class="body-lg">
+          <p>Using this approach, the Sysmex XF-1600 enables direct comparison of MSC-enriched fractions from native BMA, processed BMAC, and residual layers, providing an internal quality-control metric for concentration efficiency.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIGURES ────────────────────────────────────────────────── -->
+    <section id="figures">
+      <div class="inner">
+        <p class="eyebrow">05 · Representative analysis</p>
+        <h2 class="h2">Figures &amp; comparison.</h2>
+        <div class="body-lg">
+          <p>The figures below show representative flow-cytometric analyses of an example patient sample on the Sysmex XF-1600. They demonstrate methodology and comparative enrichment, <em>not</em> fixed dosing thresholds.</p>
+        </div>
+
+        <div class="fig-grid">
+          <figure class="fig">
+            <div class="img-slot" data-img-id="ortho-fig1-bma" data-img-fit="contain" data-label="Figure 1 · BMA dot plot · 1:1"></div>
+            <figcaption><strong>Figure 1.</strong> Native bone marrow aspirate (BMA). CD73 on the vertical (FITC) axis, CD271 on the horizontal (APC) axis; the upper-right gate marks lineage-negative, CD73⁺/CD271⁺ events consistent with MSC-enriched populations in fresh marrow.</figcaption>
+          </figure>
+          <figure class="fig">
+            <div class="img-slot" data-img-id="ortho-fig2-bmac" data-img-fit="contain" data-label="Figure 2 · BMAC dot plot · 1:1"></div>
+            <figcaption><strong>Figure 2.</strong> Bone marrow aspirate concentrate (BMAC) after controlled centrifugation. The gated CD73⁺/CD271⁺ region shows relative enrichment versus native BMA, with high viability maintained.</figcaption>
+          </figure>
+          <figure class="fig">
+            <div class="img-slot" data-img-id="ortho-fig3-res" data-img-fit="contain" data-label="Figure 3 · RES dot plot · 1:1"></div>
+            <figcaption><strong>Figure 3.</strong> Residual (RES) fraction remaining in sterile tubes after buffy-coat collection. Markedly fewer CD73⁺/CD271⁺ events than BMAC, confirming effective recovery into the final concentrate.</figcaption>
+          </figure>
+          <figure class="fig is-wide">
+            <div class="img-slot" data-img-id="ortho-fig4-table" data-img-fit="contain" data-label="Figure 4 · Quantitative comparison table (BMA / BMAC / RES) · drop Sysmex export"></div>
+            <figcaption><strong>Figure 4.</strong> Quantitative comparison of BMA, BMAC, and RES from live-sample analysis on the Sysmex XF-1600, reflecting nucleated-cell concentration, viability, and MSC-enriched population metrics.</figcaption>
+          </figure>
+        </div>
+        <p class="fig-note">Figures are representative case data. Drop the corresponding Sysmex exports into each slot.</p>
+
+        <div class="body-lg" style="margin-top: 28px;">
+          <p>Read together, the figures illustrate several well-described principles from the orthobiologic literature:</p>
+          <ul>
+            <li>MSCs are a <strong>very small fraction</strong> of total nucleated cells in native marrow, typically well below 1%, consistent with prior CFU-F and flow-cytometry studies.</li>
+            <li>Controlled BMAC processing <strong>increases the relative frequency</strong> of MSC-enriched populations despite modest changes in absolute nucleated-cell concentration.</li>
+            <li>The residual fraction contains substantially fewer MSC-associated events, <strong>confirming effective recovery</strong> into the final BMAC product, an internal process-control metric.</li>
+            <li><strong>High viability is preserved across all fractions</strong>, underscoring the role of aspiration technique and moderate centrifugation in maintaining cellular integrity.</li>
+          </ul>
+          <p>The takeaway: meaningful biological enrichment can be achieved without excessive mechanical stress or reliance on unverified assumptions about cellular dose.<span class="cite-inline">2</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPLICATIONS ───────────────────────────────────────────── -->
+    <section id="implications" class="alt">
+      <div class="inner">
+        <p class="eyebrow">06 · What it means clinically</p>
+        <h2 class="h2">Clinical implications.</h2>
+        <div class="body-lg">
+          <p>Objective enumeration of nucleated cells and MSC-enriched populations brings transparency and rigor to autologous orthobiologic procedures. By integrating aspiration technique, controlled processing, and validated flow-cytometric analysis, we are able to:</p>
+          <ul>
+            <li>Confirm cell viability and concentration</li>
+            <li>Quantify the enrichment achieved through BMAC processing</li>
+            <li>Avoid unsupported assumptions about cellular dose</li>
+            <li>Align clinical practice with contemporary translational research</li>
+          </ul>
+          <p>This reflects the growing consensus that orthobiologic therapies should be characterized and reported using <strong>measurable cellular parameters</strong> rather than relying solely on kit specifications or procedural assumptions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGULATORY ─────────────────────────────────────────────── -->
+    <section id="regulatory">
+      <div class="inner">
+        <p class="eyebrow">07 · Regulatory framework</p>
+        <h2 class="h2">Same-day BMAC vs. culture-expanded workflows.</h2>
+        <div class="body-lg">
+          <p>Our procedures clearly differentiate same-day bone marrow aspirate concentrate (BMAC) workflows from culture-expanded cellular workflows, consistent with current FDA guidance and established regulatory distinctions.</p>
+        </div>
+
+        <div class="reg-split">
+          <article class="reg-col is-clinical">
+            <span class="tag">Clinical use</span>
+            <h3>Same-day BMA / BMAC</h3>
+            <p>Autologous bone marrow aspirate, processed and administered within a single procedural encounter. Designed to align with <strong>Section 361 of the Public Health Service Act</strong> and <strong>21 CFR Part 1271</strong>, including:</p>
+            <ul>
+              <li>Autologous use</li>
+              <li>Minimal manipulation (centrifugation and filtration only)</li>
+              <li>Homologous use within musculoskeletal tissues</li>
+              <li>No cell expansion, genetic modification, or prolonged ex-vivo culture</li>
+            </ul>
+            <p>BMAC is a concentrated, heterogeneous, cell-containing biologic, mononuclear cells, hematopoietic progenitors, stromal cells, platelets, and signaling molecules, intended to support endogenous repair through biological signaling rather than tissue replacement.</p>
+          </article>
+          <article class="reg-col is-research">
+            <span class="tag">Research &amp; characterization</span>
+            <h3>Culture-expanded workflows</h3>
+            <p>Short-term culture and cell expansion are conducted <strong>outside same-day clinical care</strong>, used exclusively for research, characterization, and quality evaluation under controlled laboratory conditions.</p>
+            <p>Expanded populations may meet internationally recognized immunophenotypic criteria for MSCs (e.g. CD73⁺/CD90⁺/CD105⁺), but differ fundamentally from fresh marrow in:</p>
+            <ul>
+              <li>Cellular homogeneity</li>
+              <li>Surface-marker expression</li>
+              <li>Proliferative capacity</li>
+              <li>Regulatory classification</li>
+            </ul>
+            <p>Culture-expanded cells are <strong>not administered clinically</strong> under same-day protocols and are clearly segregated from patient treatment pathways.</p>
+          </article>
+        </div>
+
+        <div class="reg-verbatim">
+          <p class="lbl">Regulatory note</p>
+          <p>Surface markers commonly associated with culture-expanded MSCs are often downregulated or absent in native marrow populations and should not be used to infer cell identity or dose in same-day BMAC procedures.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUMMARY ────────────────────────────────────────────────── -->
+    <section id="summary" class="alt">
+      <div class="inner">
+        <p class="eyebrow">Summary</p>
+        <h2 class="h2">One interconnected workflow.</h2>
+        <div class="body-lg">
+          <p>Autologous BMA harvest, BMAC concentration, and MSC enumeration are not independent steps, they are one connected workflow. Outcomes depend on the cumulative effect of aspiration technique, processing forces, and objective cellular validation.</p>
+          <p>Using the Sysmex XF-1600 and evidence-based protocols, Boulder Biologics applies a quantitative, transparent framework for autologous orthobiologic care that reflects current scientific understanding and regulatory requirements.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERENCES ─────────────────────────────────────────────── -->
+    <section id="refs" class="refs">
+      <div class="inner">
+        <p class="eyebrow">References</p>
+        <h2 class="h2">Sources cited.</h2>
+        <ol>
+          <li>Jones EA, et al. Enumeration and phenotypic characterization of mesenchymal stromal cells in bone marrow. <em>2002.</em></li>
+          <li>Kraeutler MJ, et al. Bone marrow aspirate concentrate and the yield and frequency of mesenchymal stromal cells. <em>2021.</em></li>
+          <li>Hernigou P, et al. Percentage of progenitor cells with concentration of bone marrow: small-volume, multi-site aspiration. <em>J Bone Joint Surg Am.</em> 2005. (See also Hernigou et al., 2025.)</li>
+          <li>Bansal H, et al. Processing technique as a determinant of cellular quality in bone marrow concentrate. <em>Scientific Reports.</em> 2021.</li>
+          <li>Quirici N, et al. Isolation of bone marrow mesenchymal stem cells by anti–nerve growth factor receptor (CD271) antibodies. <em>Experimental Hematology.</em> 2002.</li>
+          <li>Sobiesiak M, et al. The mesenchymal stem cell antigen MSCA-1 is identical to tissue non-specific alkaline phosphatase. <em>Stem Cells and Development.</em> 2010.</li>
+        </ol>
+      </div>
+    </section>
+  </div>
+
+  <!-- RELATED ────────────────────────────────────────────────── -->
+  <section>
+    <div class="inner">
+      <p class="eyebrow">Related reading</p>
+      <h2 class="h2">Keep going.</h2>
+      <div class="related-grid" style="margin-top: 24px;">
+        <a class="related-card" href="cellular-therapy.html">
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="1.6"/><circle cx="19" cy="6" r="1.6"/><circle cx="19" cy="18" r="1.6"/><circle cx="5" cy="18" r="1.6"/></svg></span>
+          <h3>Bone Marrow Therapy (BMAC)</h3>
+          <p>The clinical procedure this lab work supports, what it is, who it's for, and what to expect.</p>
+          <span class="more">See the service →</span>
+        </a>
+        <a class="related-card" href="mesenchymal-stem-cells-mscs.html">
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 12h4M9 12h6M17 12h4"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <h3>Mesenchymal Stromal Cells, the science</h3>
+          <p>Deep explainer on MSC biology: definitions, markers, immunogenicity, and what the cells actually do.</p>
+          <span class="more">Read the science →</span>
+        </a>
+        <a class="related-card" href="our-clinic.html">
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5"/></svg></span>
+          <h3>Our facilities &amp; lab</h3>
+          <p>The on-site biologics lab where harvest, processing, and characterization happen, under one roof.</p>
+          <span class="more">Tour the lab →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__cols">
+    <div>
+      <img src="assets/logo-stacked-light.webp" alt="Boulder Biologics" />
+      <p class="site-footer__tag">Autologous orthobiologics in Boulder, Colorado. Patient-derived, physician-led, evidence-informed care.</p>
+    </div>
+    <div>
+      <h4>Learn</h4>
+      <ul>
+        <li><a href="orthobiologics.html">Clinical MSC enumeration</a></li>
+        <li><a href="is-stem-cell-therapy-fda-approved.html">Is stem cell therapy FDA-approved?</a></li>
+        <li><a href="autologous-vs-donor-derived-stem-cells.html">Autologous vs. donor-derived</a></li>
+        <li><a href="mesenchymal-stem-cells-mscs.html">Mesenchymal Stromal Cells (the science)</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Clinic</h4>
+      <ul>
+        <li><a href="index.html#about">Our Team</a></li>
+        <li><a href="our-clinic.html">Facilities</a></li>
+        <li><a href="contact.html">Location &amp; Contact</a></li>
+        <li><a href="fda-guidelines.html">FDA Guidelines</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>4745 Arapahoe Ave, Ste 300 · Boulder, CO</li>
+        <li><a href="tel:+17205506175">720-550-6175</a></li>
+        <li><a href="mailto:info@boulderbiologics.com">info@boulderbiologics.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <aside class="footer-disclaimer" aria-label="Regulatory disclaimer">
+    <p class="footer-disclaimer__label">Important regulatory information</p>
+    <p class="footer-disclaimer__body">Autologous bone marrow– and adipose-derived cellular therapy is not approved by the U.S. Food and Drug Administration (FDA) as a drug or biologic for the treatment of specific musculoskeletal or systemic conditions. Same-day BMA/BMAC procedures are performed as autologous, minimally manipulated, homologous-use procedures consistent with Section 361 of the Public Health Service Act and 21 CFR Part 1271. Culture-expanded workflows are used only for research and characterization and are not administered clinically. See our <a href="fda-guidelines.html">FDA Guidelines page</a> for full regulatory context.</p>
+  </aside>
+  <div class="site-footer__legal">
+    <span>© 2026 Boulder Biologics. All rights reserved.</span>
+    <span>Privacy · HIPAA · Terms</span>
+  </div>
+</footer>
+
+  <script defer src="assets/image-loader.js"></script>
+  <script src="_nav.js" defer></script>
+</body>
+</html>

@@ -205,6 +205,13 @@ html[data-theme="dark"] .candidacy__col.warn { background: rgba(214,168,42,0.10)
 html[data-theme="dark"] .footer-disclaimer__body a { color: var(--color-link); }
 html[data-theme="dark"] .footer-disclaimer__body a:hover { color: var(--color-link-hover); }
 
+/* ── Regulatory verbatim callout (.reg-verbatim) ──────────────
+   Its amber sticky-note surface stays light in dark mode (it marks
+   verbatim regulatory passages), but the body copy uses --ink, which
+   flips to near-white → illegible on cream. Force dark ink back. */
+html[data-theme="dark"] .reg-verbatim p,
+html[data-theme="dark"] .reg-verbatim strong { color: #3a2c00; }
+
 
 /* ============================================================
    Bespoke white-surface sweep (auto-collected from production
