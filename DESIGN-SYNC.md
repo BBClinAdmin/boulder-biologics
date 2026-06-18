@@ -65,6 +65,10 @@ These MUST be encoded in the Claude.ai Project so exports match the repo's shape
   `patients` (label/value rows stack — fixed-width label column + unbreakable email token were
   overflowing). **Result: 0 horizontal overflow on all 35 pages at 375px (verified).** New pages
   from Design will likely reintroduce this — any inline multi-column grid needs a mobile collapse.
+- **Homepage hero cell glow** re-anchored on mobile in `_theme-dark.css` (`@media max-width:960px`).
+  The desktop `.hero__cell` uses `background-position: 14% 42%`; on the tall stacked mobile hero
+  that 42%-down glow drifted below the headline (landing by the trust marks), so it's re-anchored
+  to `50% 4%` / `150% auto` to sit behind the H1. Desktop unchanged.
 - **Service-template mobile responsiveness** added to `_v2-service.css` (960px + 600px
   breakpoints). The export ships `_v2-service.css` with responsive rules for the header ONLY —
   the hero (`.svc-hero__grid`, defined inline per page) and every content grid (`.two-col`,
