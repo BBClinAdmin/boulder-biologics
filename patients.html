@@ -172,6 +172,11 @@
   @media (max-width: 720px) {
     .res-grid { grid-template-columns: 1fr; }
   }
+  @media (max-width: 600px) {
+    /* Stack the contact rows so the long email token can't overflow the card */
+    .pat-help__row { grid-template-columns: 1fr; gap: 4px; }
+    .pat-help dd { overflow-wrap: anywhere; }
+  }
 
   /* ── Dark-theme surface flips for this page's custom blocks ──── */
   html[data-theme="dark"] .pat-hero__quick a { background: var(--d-card); }

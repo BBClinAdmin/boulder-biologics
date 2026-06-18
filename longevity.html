@@ -153,6 +153,15 @@
   .related-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin: 4px 0 0; }
   .related-card p { font-size: 13.5px; color: var(--muted); margin: 0; line-height: 1.5; }
   .related-card .more { font-family: var(--font-display); font-weight: 600; font-size: 13.5px; color: var(--brand-primary); margin-top: auto; padding-top: 8px; }
+
+  /* Mobile: collapse the 4-up stat / journey strips and 3-up grids */
+  @media (max-width: 900px) {
+    .glance-strip, .journey { grid-template-columns: repeat(2, 1fr); }
+    .domains-grid, .related-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .glance-strip, .journey, .domains-grid, .related-grid { grid-template-columns: 1fr; }
+  }
 </style>
   <link rel="stylesheet" href="_nav.css" />
   <link rel="stylesheet" href="_theme-dark.css" />

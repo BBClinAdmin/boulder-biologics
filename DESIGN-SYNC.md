@@ -54,6 +54,17 @@ These MUST be encoded in the Claude.ai Project so exports match the repo's shape
   - (Remaining `/s/…` links — intake/financial/responsibility forms — were **removed**, see §2.)
 - **SEO head tags added repo-side** that older exports omit: `og:url` on all indexable pages,
   `apple-touch-icon` sitewide, `og:image` on `fda-guidelines`.
+- **Sitewide mobile-overflow audit (2026-06-18).** Every page was loaded in a 375px viewport
+  and checked for horizontal overflow; 14 pages had it. Root cause across the board: page-specific
+  grids/components defined inline with **no mobile breakpoint** (the design exports ship desktop
+  grids only). Fixed per page — collapse breakpoints added to: `index` (team-card header stacks so
+  the fixed 180px photo stops squeezing the specialty chips; `.faq__head--ruled`), the 4 condition
+  pages (hide the wide "Schedule" header button on mobile), `epat` (cadence strip + `.tech-specs`
+  220px rows stack), `longevity` (4-up stat/journey strips), `plasma-eyedrops`/`prp-eyedrops`
+  (compare grid), `prp-ha`/`prp-protein` (component + evidence-row grids), `contact` &
+  `patients` (label/value rows stack — fixed-width label column + unbreakable email token were
+  overflowing). **Result: 0 horizontal overflow on all 35 pages at 375px (verified).** New pages
+  from Design will likely reintroduce this — any inline multi-column grid needs a mobile collapse.
 - **Service-template mobile responsiveness** added to `_v2-service.css` (960px + 600px
   breakpoints). The export ships `_v2-service.css` with responsive rules for the header ONLY —
   the hero (`.svc-hero__grid`, defined inline per page) and every content grid (`.two-col`,

@@ -148,6 +148,16 @@
   .related-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 16px; margin: 4px 0 0; }
   .related-card p { font-size: 13.5px; color: var(--muted); margin: 0; line-height: 1.5; }
   .related-card .more { font-family: var(--font-display); font-weight: 600; font-size: 13.5px; color: var(--brand-primary); margin-top: auto; padding-top: 8px; }
+
+  /* Mobile: collapse the 6-week cadence strip + related cards */
+  @media (max-width: 700px) {
+    .cadence { grid-template-columns: 1fr; gap: 20px; padding: 24px 22px; }
+    .cadence__weeks { grid-template-columns: repeat(3, 1fr); }
+    .related-grid { grid-template-columns: 1fr; }
+    /* Stack the spec rows — the fixed 220px label column was forcing the
+       collapsed two-col wider than the viewport */
+    .tech-specs .row { grid-template-columns: 1fr; gap: 2px; }
+  }
 </style>
   <link rel="stylesheet" href="_nav.css" />
   <link rel="stylesheet" href="_theme-dark.css" />

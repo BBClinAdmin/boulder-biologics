@@ -1008,6 +1008,17 @@
     .pillars__grid { gap: 14px; }
     .site-footer__cols { grid-template-columns: 1fr 1fr; gap: 32px; }
     .final-cta__panel { padding: 40px; }
+    /* .faq__head--ruled (auto minmax) has higher specificity than the .faq__head
+       rule above, so collapse it explicitly or its heading column overflows */
+    .faq__head.faq__head--ruled { grid-template-columns: 1fr; gap: 24px; }
+  }
+  @media (max-width: 600px) {
+    /* Stack the team-card header so the fixed-width photo doesn't squeeze the
+       intro column (specialty chips were overflowing the card on phones) */
+    .team-card__header { flex-direction: column; gap: 16px; }
+    .team-card__photo { flex: 0 0 auto; width: 140px; }
+    .doc__creds { grid-template-columns: 1fr 1fr; }
+    .site-footer__cols { grid-template-columns: 1fr; }
   }
 </style>
   <link rel="stylesheet" href="_nav.css" />

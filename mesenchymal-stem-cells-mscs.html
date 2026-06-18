@@ -225,6 +225,11 @@
     .disease-grid, .related-grid { grid-template-columns: 1fr; }
     .sci section { padding: 48px var(--gutter); }
   }
+  @media (max-width: 600px) {
+    /* Tighten the data tables so they fit a phone without horizontal scroll */
+    .data-table { font-size: 12.5px; }
+    .data-table th, .data-table td { padding: 8px 9px; }
+  }
 </style>
   <link rel="stylesheet" href="_nav.css" />
   <link rel="stylesheet" href="_theme-dark.css" />

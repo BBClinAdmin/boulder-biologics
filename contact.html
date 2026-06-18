@@ -169,6 +169,13 @@
       grid-template-columns: 1fr; gap: 32px;
     }
   }
+  @media (max-width: 600px) {
+    /* Stack the label/value rows (fixed 110px column + long email token + thick
+       card padding were overflowing the card on phones) and trim card padding */
+    .contact-card, .hours-card { padding: 28px 22px; }
+    .contact-card__row { grid-template-columns: 1fr; gap: 4px; }
+    .contact-card__row dd { overflow-wrap: anywhere; }
+  }
 
   /* ── Compact adjustments (Rob review) ─────────────────────── */
   section[data-comment-anchor="42428301f9-section"],
