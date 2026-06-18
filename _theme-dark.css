@@ -124,6 +124,15 @@ html[data-theme="dark"] .site-header__cta .call-link:hover { color: var(--brand-
 
 /* Mobile nav drawer (from _nav.css) sits on a light panel by default */
 html[data-theme="dark"] .site-header nav { background: transparent; }
+/* …but the OPEN mobile dropdown must be a SOLID dark surface — the transparent
+   rule above (meant for the desktop inline nav) let the page content show
+   through the drawer. Higher specificity (.nav--open) + later source wins. */
+@media (max-width: 1024px) {
+  html[data-theme="dark"] .site-header nav.nav--open {
+    background: #0a1726;
+    border-bottom-color: rgba(255,255,255,0.10);
+  }
+}
 
 /* ── Buttons ──────────────────────────────────────────────────
    .btn-primary / .btn-accent inherit the brightened tokens. Fix the

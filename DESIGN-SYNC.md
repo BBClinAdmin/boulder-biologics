@@ -65,6 +65,11 @@ These MUST be encoded in the Claude.ai Project so exports match the repo's shape
   `patients` (label/value rows stack — fixed-width label column + unbreakable email token were
   overflowing). **Result: 0 horizontal overflow on all 35 pages at 375px (verified).** New pages
   from Design will likely reintroduce this — any inline multi-column grid needs a mobile collapse.
+- **Mobile nav drawer transparency** fixed in `_theme-dark.css`. The dark-theme rule
+  `.site-header nav { background: transparent }` (meant for the desktop inline nav) also hit the
+  `_nav.css` mobile dropdown, so the open hamburger drawer was see-through and page content bled
+  through the links. Added a `@media max-width:1024px` rule giving `.site-header nav.nav--open` a
+  solid `#0a1726` surface.
 - **Homepage hero cell glow** re-anchored on mobile in `_theme-dark.css` (`@media max-width:960px`).
   The desktop `.hero__cell` uses `background-position: 14% 42%`; on the tall stacked mobile hero
   that 42%-down glow drifted below the headline (landing by the trust marks), so it's re-anchored
