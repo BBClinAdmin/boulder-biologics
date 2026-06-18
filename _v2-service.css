@@ -530,3 +530,34 @@ footer.site-footer { background: var(--paper-2); color: var(--ink-2); padding: 6
   max-width: 36ch;
 }
 .v-patient .body-lg { font-size: 19px; line-height: 1.75; }
+
+/* ── Responsive: collapse content grids on tablet/phone ───────────────
+   The service template previously only had responsive rules for the header,
+   so the hero and every multi-column section stayed wide on mobile (the hero
+   "At a glance" card — which has a fixed 130px label column — overflowed and
+   got cut off). These mirror the 960/600 breakpoints in _shared.css /
+   _learn-explainer.css. The hero grid and .related-grid are defined inline
+   per page (specificity 0,1,0), so the overrides below use a descendant
+   selector (0,2,0 / 0,1,1) to win the cascade regardless of source order. */
+@media (max-width: 960px) {
+  .svc-hero .svc-hero__grid { grid-template-columns: 1fr; gap: 32px; }
+  .two-col, .two-col.is-balanced,
+  .candidacy-grid,
+  .final-cta .inner,
+  .refs ol { grid-template-columns: 1fr; gap: 32px; }
+  .cond-strip, .cond-strip.is-7,
+  .steps-h.is-4, .steps-h.is-5,
+  .v-spec .stat-strip,
+  .site-footer__cols,
+  section .related-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .cond-strip, .cond-strip.is-7,
+  .steps-h.is-4, .steps-h.is-5,
+  .v-spec .stat-strip,
+  .site-footer__cols,
+  section .related-grid,
+  .cta-form .row,
+  .lab-box .row { grid-template-columns: 1fr; }
+  section { padding: 56px 20px; }
+}

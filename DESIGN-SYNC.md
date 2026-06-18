@@ -54,6 +54,15 @@ These MUST be encoded in the Claude.ai Project so exports match the repo's shape
   - (Remaining `/s/…` links — intake/financial/responsibility forms — were **removed**, see §2.)
 - **SEO head tags added repo-side** that older exports omit: `og:url` on all indexable pages,
   `apple-touch-icon` sitewide, `og:image` on `fda-guidelines`.
+- **Service-template mobile responsiveness** added to `_v2-service.css` (960px + 600px
+  breakpoints). The export ships `_v2-service.css` with responsive rules for the header ONLY —
+  the hero (`.svc-hero__grid`, defined inline per page) and every content grid (`.two-col`,
+  `.candidacy-grid`, `.cond-strip`, `.steps-h`, `.v-spec .stat-strip`, `.related-grid`,
+  `.refs ol`, `.final-cta .inner`, `.cta-form .row`, `.site-footer__cols`) never collapse, so on
+  phones the hero "At a glance" card (fixed 130px label column) overflows and is cut off. The
+  repo adds the collapse block; the inline hero/related grids are overridden via descendant
+  selectors to win the cascade. **Any new service page must carry the same hero collapse** (or the
+  Project's service template must bake the breakpoints into `_v2-service.css`).
 
 ## 2. Content / copy — will auto-sync once Netlify is LIVE; stale until then
 
@@ -106,3 +115,4 @@ Encode these in the Project too, so an export generated *before* go-live doesn't
 | 2026-06-18 | `1010586` | patients: post-PRP PDF hosted in-repo |
 | 2026-06-18 | `31e86aa` | patients: remove EPAT card |
 | 2026-06-18 | `87d6cfd` | patients: remove "Before your first visit" forms section |
+| 2026-06-18 | _this commit_ | `_v2-service.css`: add mobile breakpoints (960/600) — fixes hero card cut off on phones + collapses all service-page content grids |
