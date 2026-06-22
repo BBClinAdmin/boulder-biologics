@@ -90,3 +90,12 @@
   .sci section { padding: 48px var(--gutter); }
   .def-row { grid-template-columns: 1fr; gap: 6px; }
 }
+/* Mobile readability: enlarge prose text blocks on phones */
+@media (max-width: 640px) {
+  .def-row .desc { font-size: 15.5px; }
+  .reg-verbatim p { font-size: 15.5px; }
+  .faq-list .a { font-size: 15.5px; }
+  .related-card p { font-size: 15.5px; }
+  .toc-card ol li { font-size: 15px; }
+  .refs ol { font-size: 14.5px; }
+}

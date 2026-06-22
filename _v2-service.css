@@ -561,3 +561,11 @@ footer.site-footer { background: var(--paper-2); color: var(--ink-2); padding: 6
   .lab-box .row { grid-template-columns: 1fr; }
   section { padding: 56px 20px; }
 }
+/* Mobile readability: enlarge prose text blocks on phones */
+@media (max-width: 640px) {
+  .facts__v { font-size: 15.5px; }
+  .cond-card p { font-size: 15.5px; }
+  .callout p { font-size: 15.5px; }
+  .step p { font-size: 15.5px; }
+  .refs li { font-size: 15px; }
+}

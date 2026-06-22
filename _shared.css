@@ -226,3 +226,11 @@ img { max-width: 100%; display: block; }
   .card-grid--3, .card-grid--4, .steps--4, .related__grid, .site-footer__cols { grid-template-columns: 1fr; }
   .h1 { font-size: 38px; }
 }
+/* Mobile readability: enlarge prose text blocks on phones */
+@media (max-width: 640px) {
+  .simple-card p { font-size: 15.5px; }
+  .step p { font-size: 15.5px; }
+  .candidacy__col li { font-size: 15.5px; }
+  .related-card p { font-size: 15.5px; }
+  .svc-hero__quick .qrow { font-size: 15px; }
+}
