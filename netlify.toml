@@ -9,19 +9,6 @@
 [build.processing.html]
   pretty_urls = true
 
-# ═══════════════════════════════════════════════════════════════════════════
-# ⚠️  PRE-LAUNCH — KEEP STAGING SITE OUT OF SEARCH ENGINES.
-# Sends "X-Robots-Tag: noindex, nofollow" on every page so Google/Bing won't
-# index courageous-lebkuchen-682d53.netlify.app while we're pre-launch.
-# 🚨 REMOVE THIS ENTIRE [[headers]] BLOCK AT GO-LIVE (when boulderbiologics.com
-#    points at this site) — otherwise the real site will NOT be indexed.
-# (robots.txt deliberately still allows crawling so this noindex header is seen.)
-# ═══════════════════════════════════════════════════════════════════════════
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"
-
 # ── Canonical host: force apex (boulderbiologics.com), redirect www → apex ──
 [[redirects]]
   from = "https://www.boulderbiologics.com/*"
