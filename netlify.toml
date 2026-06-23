@@ -20,8 +20,15 @@
 # 301s from the OLD live site's URLs (www.boulderbiologics.com sitemap, 45
 # URLs) to the redesigned slugs, to preserve SEO equity / backlinks.
 # Slugs unchanged between old and new (no redirect needed, they just resolve):
-#   /prp  /prolotherapy  /epat  /contact  /our-clinic  /mesenchymal-stem-cells-mscs
+#   /prp  /prolotherapy  /contact  /our-clinic  /mesenchymal-stem-cells-mscs
 # ─────────────────────────────────────────────────────────────────────────
+
+# ── EPAT page removed 2026-06-23. /epat carried SEO equity from the old site,
+#    so 301 it to the closest active offering (tendon & ligament injuries). ──
+[[redirects]]
+  from = "/epat"
+  to = "/tendon-ligament-injuries"
+  status = 301
 
 # ── Core service / condition slug changes ──
 [[redirects]]
