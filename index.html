@@ -23,16 +23,27 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "MedicalBusiness",
+      "@type": "MedicalClinic",
       "@id": "https://boulderbiologics.com/#business",
       "name": "Boulder Biologics",
       "url": "https://boulderbiologics.com/",
+      "image": "https://boulderbiologics.com/assets/logo-stacked.png",
       "telephone": "+1-720-550-6175",
       "email": "info@boulderbiologics.com",
       "description": "Autologous orthobiologics in Boulder, Colorado — bone marrow cellular therapy, PRP, and regenerative medicine. Patient-derived, physician-led, evidence-informed.",
       "medicalSpecialty": ["SportsMedicine", "PhysicalMedicineAndRehabilitation"],
-      "address": { "@type": "PostalAddress", "addressLocality": "Boulder", "addressRegion": "CO", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4745 Arapahoe Ave, Suite 300",
+        "addressLocality": "Boulder",
+        "addressRegion": "CO",
+        "postalCode": "80303",
+        "addressCountry": "US"
+      },
       "areaServed": ["Boulder", "Denver", "Colorado"],
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00" }
+      ],
       "sameAs": ["https://www.facebook.com/boulderbiologics", "https://www.instagram.com/boulderbiologics/"]
     },
     {
