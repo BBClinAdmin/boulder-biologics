@@ -446,3 +446,16 @@ html[data-theme="dark"] .pillar-card.has-cell--prp .pillar-card__cell { backgrou
    plexus is busier so opacity sits a touch lower. */
 html[data-theme="dark"] .svc-hero__cell--net { background-image: url(assets/cell-network.jpg); opacity: 0.5; bottom: auto; height: 640px; }
 html[data-theme="dark"] .pillar-card.has-cell--net .pillar-card__cell { background-image: url(assets/cell-network.jpg); opacity: 0.6; }
+
+
+/* ── Iron Infusions: red-blood-cell hero variant (cluster of RBCs) ──
+   Larger, left-anchored cell art with its own mask; image lives at
+   assets/cell-rbc.png. Same screen-blended, masked treatment as above. */
+html[data-theme="dark"] .svc-hero__cell--rbc {
+  background-image: url(assets/cell-rbc.png);
+  left: 0; right: auto; width: 56%;
+  background-position: 50% 45%; background-size: 84% auto; background-repeat: no-repeat;
+  opacity: 0.82; bottom: auto; height: 700px;
+  -webkit-mask-image: radial-gradient(62% 58% at 50% 48%, #000 0%, rgba(0,0,0,0.76) 52%, rgba(0,0,0,0.28) 78%, transparent 96%);
+          mask-image: radial-gradient(62% 58% at 50% 48%, #000 0%, rgba(0,0,0,0.76) 52%, rgba(0,0,0,0.28) 78%, transparent 96%);
+}
