@@ -325,14 +325,14 @@ html[data-theme="dark"] {
   --brand-accent-hover: #3fb0e4;
 }
 
-html[data-theme="dark"] :is(.pillar-card, .condition-card, .review-card, .qc-card, .qc-pipe, .lng-card, .team-card, .facts-card, .therapy-card, .compare-card, .formulation-card, .component, .sys-card, .mech-card, .toc-card, .related-card, .def, .equip-card, .room-card, .tour-stop, .hours-card, .loc-card, .contact-card, .directions-card, .std-card, .article-card, .visit-card, .cred-table, .tech-specs, .glance-strip, .journey, .cadence, .svc-hero__quick, .cost-card, .simple-card, .step, .domain):not(.is-cta):not(.theme-light):not(.no-elev) {
+html[data-theme="dark"] :is(.pillar-card, .condition-card, .review-card, .qc-card, .qc-pipe, .lng-card, .team-card, .facts-card, .therapy-card, .compare-card, .formulation-card, .sx-card, .component, .sys-card, .mech-card, .toc-card, .related-card, .def, .equip-card, .room-card, .tour-stop, .hours-card, .loc-card, .contact-card, .directions-card, .std-card, .article-card, .visit-card, .cred-table, .tech-specs, .glance-strip, .journey, .cadence, .svc-hero__quick, .cost-card, .simple-card, .step, .domain):not(.is-cta):not(.theme-light):not(.no-elev) {
   background:
     linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), transparent 58%),
     var(--d-card);
   border-color: rgba(255,255,255,0.11);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 16px 36px -22px rgba(0,0,0,0.8);
 }
-html[data-theme="dark"] :is(.pillar-card, .condition-card, .review-card, .qc-card, .qc-pipe, .lng-card, .team-card, .facts-card, .therapy-card, .compare-card, .formulation-card, .component, .sys-card, .mech-card, .toc-card, .related-card, .def, .equip-card, .room-card, .tour-stop, .hours-card, .loc-card, .contact-card, .directions-card, .std-card, .article-card, .visit-card, .cred-table, .tech-specs, .glance-strip, .journey, .cadence, .svc-hero__quick, .cost-card, .simple-card, .step, .domain):not(.is-cta):not(.theme-light):not(.no-elev):hover {
+html[data-theme="dark"] :is(.pillar-card, .condition-card, .review-card, .qc-card, .qc-pipe, .lng-card, .team-card, .facts-card, .therapy-card, .compare-card, .formulation-card, .sx-card, .component, .sys-card, .mech-card, .toc-card, .related-card, .def, .equip-card, .room-card, .tour-stop, .hours-card, .loc-card, .contact-card, .directions-card, .std-card, .article-card, .visit-card, .cred-table, .tech-specs, .glance-strip, .journey, .cadence, .svc-hero__quick, .cost-card, .simple-card, .step, .domain):not(.is-cta):not(.theme-light):not(.no-elev):hover {
   border-color: var(--accent);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.09), 0 24px 50px -20px color-mix(in srgb, var(--accent) 45%, transparent);
 }
