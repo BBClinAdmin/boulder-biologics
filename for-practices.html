@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Autologous Biologics for Your Practice — Boulder Biologics Partners</title>
+<meta name="description" content="Boulder Biologics Partners helps established medical practices build a high-quality autologous biologics program from the ground up — no franchise, no protocol lock-in, no brand dependency. Built by the team behind Boulder Biologics, Boulder, Colorado." />
+<link rel="canonical" href="https://boulderbiologics.com/for-practices" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#04979d" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="For Practices — Boulder Biologics Partners" />
+<meta property="og:description" content="Build a high-quality autologous biologics program you fully own. No franchise, no protocol lock-in, no brand dependency." />
+<meta property="og:image" content="https://boulderbiologics.com/assets/for-practices-share.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Boulder Biologics Partners — Add autologous biologics to your practice, and own every part of it." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://boulderbiologics.com/assets/for-practices-share.png" />
+
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="_v2-service.css" />
+
+<style>
+  /* ── Hero (centered, spec) ─────────────────────────────── */
+  .spec-hero { padding: 56px var(--gutter) 72px; text-align: center; }
+  .spec-hero .inner { max-width: 920px; }
+  .spec-hero .eyebrow { display: inline-flex; align-items: center; gap: 8px; }
+  .spec-hero .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--brand-accent); }
+  .spec-hero .lede { margin-left: auto; margin-right: auto; }
+  .spec-hero .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+  .spec-hero .builtline { margin-top: 22px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.02em; color: var(--muted); }
+  .spec-hero .builtline a { color: var(--brand-accent-dim); text-decoration: none; }
+  .spec-hero .builtline a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  /* Stat strip below hero */
+  .stat-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: var(--r-md); overflow: hidden; max-width: var(--max); margin: 48px auto 0; }
+  .stat-strip > div { background: var(--white); padding: 24px 26px; text-align: left; }
+  html[data-theme="dark"] .stat-strip > div { background: var(--d-card); }
+  .stat-strip .k { font-family: var(--font-display); font-weight: 600; font-size: 12px; color: var(--brand-accent-dim); margin-bottom: 8px; }
+  .stat-strip .v { font-family: var(--font-mono); font-size: 26px; color: var(--ink); font-weight: 500; letter-spacing: -0.01em; line-height: 1; }
+  .stat-strip .vsub { font-family: var(--font-body); font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+
+  /* ── Treatments (mono spec grid) ───────────────────────── */
+  .tx-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 32px; }
+  .tx-card { background: var(--white); border: 1px solid var(--rule); border-radius: var(--r-lg); padding: 24px; display: flex; flex-direction: column; gap: 10px; }
+  html[data-theme="dark"] .tx-card { background: var(--d-card); border-color: var(--d-border); }
+  .tx-card .abbr { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-accent-dim); border: 1px solid var(--rule); border-radius: 999px; padding: 4px 11px; align-self: flex-start; }
+  html[data-theme="dark"] .tx-card .abbr { border-color: color-mix(in srgb, var(--brand-accent-dim) 32%, transparent); }
+  .tx-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 16px; letter-spacing: -0.008em; margin: 4px 0 0; color: var(--ink); }
+  .tx-card p { font-size: 13.5px; line-height: 1.55; color: var(--muted); margin: 0; }
+
+  /* ── Challenge (numbered rows) ─────────────────────────── */
+  .barriers { margin-top: 32px; border-top: 1px solid var(--rule); }
+  .barrier { display: grid; grid-template-columns: 56px 1fr 1.4fr; gap: 28px; align-items: start; padding: 24px 4px; border-bottom: 1px solid var(--rule); }
+  .barrier__n { font-family: var(--font-mono); font-size: 13px; color: var(--brand-accent-dim); padding-top: 3px; }
+  .barrier h3 { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: -0.01em; margin: 0; color: var(--ink); }
+  .barrier p { font-size: 15px; line-height: 1.55; color: var(--ink-2); margin: 0; }
+
+  /* ── Engagement (horizontal phases) ────────────────────── */
+  .phase-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 32px; position: relative; }
+  .phase-block { background: var(--white); border: 1px solid var(--rule); border-radius: var(--r-lg); padding: 30px 32px; }
+  html[data-theme="dark"] .phase-block { background: var(--d-card); border-color: var(--d-border); }
+  .phase-block__hd { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+  .phase-block__tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-accent-dim); }
+  .phase-block__dur { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+  .phase-block h3 { font-family: var(--font-display); font-weight: 700; font-size: 21px; letter-spacing: -0.012em; margin: 0 0 10px; color: var(--ink); }
+  .phase-block > p { font-size: 14.5px; line-height: 1.6; color: var(--ink-2); margin: 0 0 16px; }
+  .phase-block ul { list-style: none; margin: 0; padding: 16px 0 0; border-top: 1px solid var(--rule-soft); display: flex; flex-direction: column; gap: 9px; }
+  .phase-block li { font-family: var(--font-mono); font-size: 12.5px; color: var(--ink-2); line-height: 1.45; padding-left: 20px; position: relative; }
+  .phase-block li::before { content: "→"; position: absolute; left: 0; color: var(--brand-accent-dim); }
+
+  /* ── Comparison TABLE ──────────────────────────────────── */
+  .cmp-wrap { margin-top: 36px; border: 1px solid var(--rule); border-radius: var(--r-lg); overflow: hidden; }
+  .cmp { width: 100%; border-collapse: collapse; font-family: var(--font-body); }
+  .cmp th, .cmp td { text-align: left; padding: 16px 18px; border-bottom: 1px solid var(--rule-soft); font-size: 14px; vertical-align: top; }
+  .cmp thead th { font-family: var(--font-display); font-weight: 700; font-size: 14px; color: var(--ink); letter-spacing: -0.01em; background: var(--paper-2); border-bottom: 1px solid var(--rule); }
+  html[data-theme="dark"] .cmp thead th { background: var(--d-card); }
+  .cmp thead th .ex { display: block; font-family: var(--font-mono); font-weight: 400; font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+  .cmp tbody th { font-family: var(--font-display); font-weight: 600; font-size: 13.5px; color: var(--muted); }
+  .cmp td { color: var(--ink-2); }
+  .cmp col.is-ours, .cmp .ours { background: color-mix(in srgb, var(--brand-accent) 7%, transparent); }
+  .cmp thead th.ours { color: var(--brand-accent-dim); background: color-mix(in srgb, var(--brand-accent) 12%, var(--paper-2)); }
+  html[data-theme="dark"] .cmp thead th.ours { background: color-mix(in srgb, var(--brand-accent) 16%, var(--d-card)); }
+  .cmp td.ours { font-weight: 600; color: var(--ink); }
+  .cmp .yes { color: var(--brand-accent-dim); font-weight: 700; }
+  .cmp .no { color: var(--subtle); }
+  .cmp tr:last-child th, .cmp tr:last-child td { border-bottom: none; }
+
+  /* ── Founders (compact) ────────────────────────────────── */
+  .founders { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 32px; }
+  .team-card { background: var(--white); border: 1px solid var(--rule); border-radius: var(--r-lg); padding: 24px; display: grid; grid-template-columns: 84px 1fr; gap: 20px; align-items: center; }
+  html[data-theme="dark"] .team-card { background: var(--d-card); border-color: var(--d-border); }
+  .team-card__photo { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; border: 1px solid var(--rule); }
+  .team-card__photo.is-slot { background: var(--paper-2); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); text-align: center; line-height: 1.3; padding: 8px; }
+  .team-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: -0.01em; margin: 0 0 3px; color: var(--ink); }
+  .team-card .role { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--brand-accent-dim); margin: 0 0 9px; }
+  .team-card p { font-size: 13.5px; line-height: 1.5; color: var(--ink-2); margin: 0; }
+
+  /* ── Closing CTA ───────────────────────────────────────── */
+  .partners-cta { background: var(--dark); color: rgba(255,255,255,0.86); padding: 84px var(--gutter); }
+  .partners-cta .inner { max-width: var(--max); display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; }
+  .partners-cta h2 { color: var(--white); font-size: clamp(28px, 3.4vw, 40px); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 14px; }
+  .partners-cta p { color: rgba(255,255,255,0.78); font-size: 16.5px; line-height: 1.6; margin: 0; max-width: 50ch; }
+  .partners-cta__actions { display: flex; flex-direction: column; gap: 12px; }
+  .partners-cta__actions .btn { justify-content: center; }
+  .partners-cta__note { font-family: var(--font-body); font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 4px; line-height: 1.5; }
+
+  /* Accent highlight for the word "partner" in running copy */
+  .hl-partner { color: var(--brand-accent-dim); font-weight: 600; }
+
+  @media (max-width: 980px) {
+    .stat-strip { grid-template-columns: 1fr 1fr; }
+    .tx-grid { grid-template-columns: 1fr 1fr; }
+    .phase-row, .founders, .partners-cta .inner { grid-template-columns: 1fr; }
+    .barrier { grid-template-columns: 40px 1fr; }
+    .barrier p { grid-column: 2; }
+    .cmp-wrap { overflow-x: auto; }
+    .cmp { min-width: 720px; }
+  }
+  @media (max-width: 560px) {
+    .stat-strip, .tx-grid { grid-template-columns: 1fr; }
+  }
+</style>
+  <link rel="stylesheet" href="_nav.css" />
+  <link rel="stylesheet" href="_theme-dark.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.boulderbiologics.net/#partners",
+      "name": "Boulder Biologics Partners",
+      "url": "https://www.boulderbiologics.net",
+      "description": "Implementation partner that helps established medical practices build a high-quality, fully owned autologous biologics program — no franchise, no protocol lock-in, no brand dependency.",
+      "areaServed": "US",
+      "founder": [
+        { "@type": "Person", "name": "Jason Glowney, MD" },
+        { "@type": "Person", "name": "Rob Pickels, MS" }
+      ],
+      "parentOrganization": { "@id": "https://boulderbiologics.com/#business" },
+      "sameAs": ["https://www.boulderbiologics.net"]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://boulderbiologics.com/for-practices#service",
+      "name": "Autologous Biologics Program Implementation",
+      "serviceType": "Autologous biologics program implementation and clinical training",
+      "url": "https://boulderbiologics.com/for-practices",
+      "description": "A two-phase engagement that helps an existing practice add autologous biologics treatments — bone marrow cellular therapy (BMAC), microfragmented adipose (mFAT), PRP, PRP + hyaluronic acid, prolotherapy, and EPAT — covering training, lab and procedure infrastructure, and go-live support.",
+      "provider": { "@id": "https://www.boulderbiologics.net/#partners" },
+      "areaServed": "US",
+      "audience": { "@type": "Audience", "audienceType": "Established medical practices and physicians" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://boulderbiologics.com/for-practices#webpage",
+      "url": "https://boulderbiologics.com/for-practices",
+      "name": "For Practices — Boulder Biologics Partners",
+      "about": { "@id": "https://boulderbiologics.com/for-practices#service" },
+      "isPartOf": { "@id": "https://boulderbiologics.com/#website" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://boulderbiologics.com/" },
+        { "@type": "ListItem", "position": 2, "name": "For Practices", "item": "https://boulderbiologics.com/for-practices" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="v-spec" data-screen-label="For Practices · Boulder Biologics Partners">
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="index.html" aria-label="Boulder Biologics home">
+      <img src="assets/logo-stacked-light.webp" alt="Boulder Biologics" />
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav aria-label="Primary">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#conditions">Conditions</a>
+      <a href="index.html#about">Our Team</a>
+      <a href="our-clinic.html">Facilities</a>
+      <a href="fda-guidelines.html">FDA Guidelines</a>
+      <a href="learn.html">Learn</a>
+      <a href="faq.html">FAQ</a>
+      <a href="patients.html">For Patients</a>
+      <a href="for-practices.html" aria-current="page">For Practices</a>
+    </nav>
+    <div class="site-header__cta">
+      <a class="call-link" href="tel:+17205506175">720-550-6175</a>
+      <a class="btn btn-primary btn-sm" href="contact.html">Contact</a>
+    </div>
+  </div>
+</header>
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="sep">›</span>
+  <span class="cur">For Practices</span>
+</nav>
+
+<main id="main">
+
+  <!-- HERO ─────────────────────────────────────────────────────── -->
+  <section class="spec-hero">
+    <div class="inner" style="margin: 0 auto;">
+      <p class="eyebrow">Boulder Biologics <span class="hl-partner">Partners</span> · Autologous biologics implementation</p>
+      <h1 class="h1">Add autologous biologics to your practice — and own every part of it.</h1>
+      <p class="lede">We <span class="hl-partner">partner</span> with established practices to build a high-quality autologous biologics program from the ground up. No franchise, no protocol lock-in, no brand dependency.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://calendar.app.google/BLScJ9n2y4whGwgHA" target="_blank" rel="noopener">Book a discovery call →</a>
+        <a class="btn btn-outline" href="#engagement">See the engagement</a>
+      </div>
+      <p class="builtline">Built by the team behind <a href="index.html">Boulder Biologics</a> — an active, nationally recognized autologous biologics clinic.</p>
+    </div>
+  </section>
+
+  <!-- TREATMENTS ───────────────────────────────────────────────── -->
+  <section id="treatments">
+    <div class="inner">
+      <p class="eyebrow">What you can offer your patients</p>
+      <h2 class="h2">Four treatments. Your choice of any or all.</h2>
+      <p class="lede">A small set of point-of-care procedures, each using the patient's own biology. A practice can offer any combination — the mix is always yours.</p>
+      <div class="tx-grid">
+        <div class="tx-card">
+          <span class="abbr">PRP</span>
+          <h3>Platelet-rich plasma</h3>
+          <p>The patient's own platelets, concentrated in a centrifuge and injected to support healing in tendons, ligaments, and joints.</p>
+        </div>
+        <div class="tx-card">
+          <span class="abbr">Prolo</span>
+          <h3>Prolotherapy</h3>
+          <p>Targeted injections that prompt the body's own repair response in worn or lax ligaments and tendons.</p>
+        </div>
+        <div class="tx-card">
+          <span class="abbr">BMAC</span>
+          <h3>Bone marrow aspirate concentrate</h3>
+          <p>Cells drawn from the patient's own marrow and concentrated, then placed where more support is needed.</p>
+        </div>
+        <div class="tx-card">
+          <span class="abbr">mFAT</span>
+          <h3>Microfragmented adipose</h3>
+          <p>The patient's own fat tissue, micro-fragmented and rinsed within the same procedure and delivered as autologous structural support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE CHALLENGE ────────────────────────────────────────────── -->
+  <section class="alt" id="challenge">
+    <div class="inner">
+      <p class="eyebrow">Why building it alone is hard</p>
+      <h2 class="h2">Your patients want this. Building it right is the hard part.</h2>
+      <p class="lede">Autologous biologics is one of the most attractive cash-pay service lines in musculoskeletal care. But most practices have no clear, reliable path — the barriers are real, and hard to clear piece by piece.</p>
+      <div class="barriers">
+        <div class="barrier">
+          <span class="barrier__n">01</span>
+          <h3>The right equipment</h3>
+          <p>Centrifuges, kits, and lab instrumentation take specialized knowledge to spec and size correctly.</p>
+        </div>
+        <div class="barrier">
+          <span class="barrier__n">02</span>
+          <h3>A protocol library</h3>
+          <p>Building clinical SOPs, consent, and safety frameworks from scratch is time-intensive and easy to get wrong.</p>
+        </div>
+        <div class="barrier">
+          <span class="barrier__n">03</span>
+          <h3>A compliant space</h3>
+          <p>Designing a sterile procedure room and lab to environmental standards requires real, hands-on experience.</p>
+        </div>
+        <div class="barrier">
+          <span class="barrier__n">04</span>
+          <h3>Physician technique</h3>
+          <p>Learning to perform these procedures takes the case volume and mentorship a single practice can't self-generate.</p>
+        </div>
+      </div>
+      <p style="margin-top: 22px; font-family: var(--font-display); font-weight: 600; color: var(--ink);">We <span class="hl-partner">partner</span> with you to walk through all of it — start to finish.</p>
+    </div>
+  </section>
+
+  <!-- ENGAGEMENT ───────────────────────────────────────────────── -->
+  <section id="engagement">
+    <div class="inner">
+      <p class="eyebrow">Our engagement</p>
+      <h2 class="h2">Two phases, one continuous path to go-live.</h2>
+      <p class="lede">Start with a standalone assessment. If it makes sense for both of us, continue into a coordinated implementation — or stop after Phase 1. The choice stays yours throughout.</p>
+      <div class="phase-row">
+        <div class="phase-block">
+          <div class="phase-block__hd">
+            <span class="phase-block__tag">Phase 1</span>
+            <span class="phase-block__dur">~1 month</span>
+          </div>
+          <h3>Autologous Biologics Readiness Assessment</h3>
+          <p>An on-site evaluation and a written Playbook — where you stand, your revenue potential, and the path to launch — then a Decision Meeting on whether to proceed.</p>
+          <ul>
+            <li>A written Readiness Playbook</li>
+            <li>Opportunity &amp; revenue assessment</li>
+            <li>A Decision Meeting, no obligation to continue</li>
+          </ul>
+        </div>
+        <div class="phase-block">
+          <div class="phase-block__hd">
+            <span class="phase-block__tag">Phase 2</span>
+            <span class="phase-block__dur">~3 months</span>
+          </div>
+          <h3>Full Implementation</h3>
+          <p>We coordinate every workstream — equipment, space, protocols, technique, and operations — and stay with you through your first live cases. You own all of it.</p>
+          <ul>
+            <li>Equipment, lab &amp; protocol library you own</li>
+            <li>Procedure space designed to standard</li>
+            <li>Physicians trained through first live cases</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE COMPARE (table) ───────────────────────────────────── -->
+  <section class="alt" id="compare">
+    <div class="inner">
+      <p class="eyebrow">How we compare</p>
+      <h2 class="h2">Training, infrastructure — or both?</h2>
+      <p class="lede">Courses give training without infrastructure. Networks give infrastructure with constraints. We give both, with none of the strings.</p>
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <colgroup>
+            <col /><col /><col /><col /><col class="is-ours" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Group courses</th>
+              <th scope="col">Licensed network</th>
+              <th scope="col">Franchise</th>
+              <th scope="col" class="ours">Boulder Biologics <span class="hl-partner">Partners</span><span class="ex">Independent</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Technique training</th>
+              <td><span class="yes">Yes</span></td>
+              <td><span class="yes">Yes</span></td>
+              <td><span class="yes">Yes</span></td>
+              <td class="ours"><span class="yes">Yes</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Facility &amp; lab design</th>
+              <td><span class="no">No</span></td>
+              <td>Partial</td>
+              <td><span class="yes">Yes</span></td>
+              <td class="ours"><span class="yes">Yes</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Personalized equipment &amp; custom SOPs</th>
+              <td><span class="no">No</span></td>
+              <td><span class="no">No</span></td>
+              <td>Standardized</td>
+              <td class="ours"><span class="yes">Yes</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Live-practice mentorship</th>
+              <td><span class="no">No</span></td>
+              <td>Limited</td>
+              <td>Limited</td>
+              <td class="ours"><span class="yes">Through first cases</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Ongoing fees</th>
+              <td>None</td>
+              <td>Recurring license</td>
+              <td>High six-figure buy-in</td>
+              <td class="ours"><span class="yes">None</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Whose brand</th>
+              <td>Yours</td>
+              <td>Theirs</td>
+              <td>Theirs</td>
+              <td class="ours"><span class="yes">Yours, fully owned</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 20px;"><a class="call-link" href="https://www.boulderbiologics.net/how-we-compare" target="_blank" rel="noopener" style="color: var(--brand-accent-dim);">See the full comparison →</a></p>
+    </div>
+  </section>
+
+  <!-- FOUNDERS ─────────────────────────────────────────────────── -->
+  <section id="founders">
+    <div class="inner">
+      <p class="eyebrow">Who you'll work with</p>
+      <h2 class="h2">Built by people who do this every day.</h2>
+      <p class="lede">We run an active, high-quality autologous biologics clinic and teach from direct, current experience — the source of both our credibility and our standard.</p>
+      <div class="founders">
+        <div class="team-card">
+          <img class="team-card__photo" src="assets/images/jason-glowney-portrait.jpg" alt="Dr. Jason Glowney" />
+          <div>
+            <h3>Dr. Jason Glowney</h3>
+            <p class="role">Clinical authority &amp; lead trainer</p>
+            <p>Board-certified in Internal Medicine and Sports Medicine, with thousands of his own patients treated across PRP, prolotherapy, and BMAC. Founder of Boulder Biologics.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <img class="team-card__photo" src="assets/images/rob-pickels-portrait.jpg" alt="Rob Pickels, MS" />
+          <div>
+            <h3>Rob Pickels, MS</h3>
+            <p class="role">Operations &amp; engagement lead</p>
+            <p>Director of Operations at Boulder Biologics. Author of hundreds of SOPs and builder of the QMS, inventory, and lab information systems that keep a regulated lab running.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA ──────────────────────────────────────────────── -->
+  <section class="partners-cta" id="contact">
+    <div class="inner">
+      <div>
+        <p class="eyebrow on-dark">The first step</p>
+        <h2>Let's talk about whether this fits your practice.</h2>
+        <p>A short discovery call — no obligation. We'll be honest about what your practice realistically needs, and whether autologous biologics is the right move at all.</p>
+      </div>
+      <div class="partners-cta__actions">
+        <a class="btn btn-accent" href="https://calendar.app.google/BLScJ9n2y4whGwgHA" target="_blank" rel="noopener">Book a discovery call →</a>
+        <a class="btn btn-ghost-light" href="https://www.boulderbiologics.net" target="_blank" rel="noopener">Visit the Partners site</a>
+        <span class="partners-cta__note">Boulder Biologics Partners provides practice-implementation guidance and builds operational systems. It is not a regulatory authority and does not certify or guarantee compliance with federal or state law.</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__cols">
+    <div>
+      <img src="assets/logo-stacked-light.webp" alt="Boulder Biologics" />
+      <p class="site-footer__tag">Autologous orthobiologics in Boulder, Colorado. Patient-derived, physician-led, evidence-informed care.</p>
+    </div>
+    <div>
+      <h4>Orthopedics</h4>
+      <ul>
+        <li><a href="cellular-therapy.html">Bone Marrow Therapy (BMAC)</a></li>
+        <li><a href="mfat.html">Microfragmented Adipose (mFAT)</a></li>
+        <li><a href="prp.html">PRP</a></li>
+        <li><a href="prp-ha.html">PRP + Hyaluronic Acid</a></li>
+        <li><a href="prp-protein.html">PRP + Protein-Rich Plasma</a></li>
+        <li><a href="prp-eyedrops.html">PRP Eyedrops</a></li>
+        <li><a href="plasma-eyedrops.html">Plasma Eye Drops</a></li>
+        <li><a href="prolotherapy.html">Prolotherapy</a></li>
+        <li><a href="prp-hydrodissection.html">LD-PRP Hydrodissection</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Clinic</h4>
+      <ul>
+        <li><a href="index.html#about">Our Team</a></li>
+        <li><a href="our-clinic.html">Facilities</a></li>
+        <li><a href="contact.html">Location &amp; Contact</a></li>
+        <li><a href="fda-guidelines.html">FDA Guidelines</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>4745 Arapahoe Ave, Suite 300 · Boulder, CO</li>
+        <li><a href="tel:+17205506175">720-550-6175</a></li>
+        <li><a href="mailto:info@boulderbiologics.com">info@boulderbiologics.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer__legal">
+    <span>© 2026 Boulder Biologics. All rights reserved.</span>
+    <span>Privacy · HIPAA · Terms</span>
+  </div>
+</footer>
+
+  <script src="_nav.js" defer></script>
+</body>
+</html>
