@@ -55,8 +55,24 @@
       var img = document.createElement('img');
       img.src = url;
       img.alt = el.getAttribute('data-label') || id;
-      img.loading = 'lazy';
+      // Above-the-fold slots (heroes) can opt out of lazy for faster LCP:
+      //   <div data-img-id="prp-hero" data-img-eager> … </div>
+      if (el.hasAttribute('data-img-eager')) {
+        img.loading = 'eager';
+        img.setAttribute('fetchpriority', 'high');
+      } else {
+        img.loading = 'lazy';
+      }
       img.decoding = 'async';
+      // Responsive srcset: AVIF resolves with a 960px variant alongside the
+      // full (≤1920px) file, so phones download the small one. Default sizes
+      // is 100vw (always sharp); narrower slots can override with
+      // data-img-sizes (e.g. "(max-width:700px) 100vw, 50vw") for more savings.
+      if (/\.avif$/.test(url)) {
+        var small = url.replace(/\.avif$/, '-960.avif');
+        img.srcset = small + ' 960w, ' + url + ' 1920w';
+        img.sizes = el.getAttribute('data-img-sizes') || '100vw';
+      }
       var fit = el.getAttribute('data-img-fit') || 'cover';
       var pos = el.getAttribute('data-img-position') || 'center';
       img.style.cssText =

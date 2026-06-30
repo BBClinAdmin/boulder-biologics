@@ -9,6 +9,20 @@
 [build.processing.html]
   pretty_urls = true
 
+# ─────────────────────────────────────────────────────────────────────────
+# Caching: static assets (images, video, fonts, JS/CSS) rarely change, so let
+# browsers reuse them instead of re-downloading on every visit / page nav.
+# Filenames are NOT fingerprinted, so we use a 1-day fresh window plus a 7-day
+# stale-while-revalidate tail: an updated asset reaches new visitors within a
+# day, while repeat visitors serve from cache (zero Netlify bandwidth).
+# HTML is intentionally left on Netlify's default (revalidated each request)
+# so content edits go live immediately.
+# ─────────────────────────────────────────────────────────────────────────
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
 # ── Canonical host: force apex (boulderbiologics.com), redirect www → apex ──
 [[redirects]]
   from = "https://www.boulderbiologics.com/*"
