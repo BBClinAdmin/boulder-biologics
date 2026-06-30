@@ -88,6 +88,55 @@
     return { wrap: w, field: inp };
   }
 
+  // A labelled group of checkboxes (multi-select). Returns helpers to read the
+  // checked values and show/clear a group-level validation message, since the
+  // native `required` attribute can't express "at least one of the group".
+  function makeCheckboxGroup(refWrapper, labelText, values) {
+    var w = makeWrapper(refWrapper);
+    var lbl = document.createElement('label');
+    lbl.id = 'bb-f' + (++uid) + '-l';
+    lbl.textContent = labelText;
+    w.appendChild(lbl);
+
+    var box = document.createElement('div');
+    box.setAttribute('role', 'group');
+    box.setAttribute('aria-labelledby', lbl.id);
+    box.style.cssText = 'display:flex;flex-wrap:wrap;gap:9px 18px;margin-top:6px;';
+
+    var inputs = [];
+    values.forEach(function (v) {
+      var item = document.createElement('label');
+      item.style.cssText =
+        'display:inline-flex;align-items:center;gap:7px;margin:0;padding:0;' +
+        'font-weight:500;font-size:14px;text-transform:none;letter-spacing:normal;' +
+        'color:inherit;cursor:pointer;white-space:nowrap;';
+      var cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.value = v;
+      cb.dataset.bbDay = '1'; // marks it for special handling in the submit loop
+      cb.style.cssText = 'width:16px;height:16px;margin:0;accent-color:var(--accent,#2bb3a3);cursor:pointer;';
+      item.appendChild(cb);
+      item.appendChild(document.createTextNode(v));
+      box.appendChild(item);
+      inputs.push(cb);
+    });
+    w.appendChild(box);
+
+    var err = document.createElement('p');
+    err.setAttribute('role', 'alert');
+    err.style.cssText = 'color:#c0392b;font-size:13px;line-height:1.4;margin:8px 0 0;display:none;';
+    w.appendChild(err);
+
+    return {
+      wrap: w,
+      inputs: inputs,
+      checkedValues: function () {
+        return inputs.filter(function (c) { return c.checked; }).map(function (c) { return c.value; });
+      },
+      setError: function (m) { err.textContent = m || ''; err.style.display = m ? '' : 'none'; }
+    };
+  }
+
   function wrapperOf(input) {
     return input.closest('.intake-field') || input.parentElement;
   }
@@ -110,11 +159,10 @@
     var method = makeSelect(emailWrapper, 'What’s the best way to reach you?', ['Email', 'Phone']);
     emailWrapper.parentNode.insertBefore(method.wrap, emailWrapper);
 
-    /* Preferred day / time — placed after the phone field. */
-    var day = makeSelect(phoneWrapper, 'Best day to reach you', [
-      { value: '', text: 'Select a day', disabled: true, selected: true },
-      'Monday', 'Tuesday', 'Thursday', 'Friday'
-    ]);
+    /* Preferred day(s) / time — placed after the phone field. Days are a
+       multi-select (checkboxes); time stays a single select. */
+    var day = makeCheckboxGroup(phoneWrapper, 'Best day(s) to reach you',
+      ['Monday', 'Tuesday', 'Thursday', 'Friday']);
     var time = makeSelect(phoneWrapper, 'Preferred time of day', [
       { value: '', text: 'Select a time', disabled: true, selected: true },
       'Morning', 'Afternoon'
@@ -135,13 +183,13 @@
       toggle(day.wrap, byPhone);
       toggle(time.wrap, byPhone);
       if (phoneInput) phoneInput.required = byPhone;
-      day.field.required = byPhone;
       time.field.required = byPhone;
+      if (!byPhone) day.setError(''); // clear any stale "pick a day" message
     }
     method.field.addEventListener('change', update);
     update();
 
-    return { method: method.field };
+    return { method: method.field, days: day };
   }
 
   // Light text (e.g. on a dark CTA card) → true; dark text → false.
@@ -201,9 +249,21 @@
       var label = btn ? btn.textContent : '';
       var prior = form.querySelector('.form-error');
       if (prior) prior.textContent = '';
-      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
 
       var byPhone = !!(ctx && ctx.method && ctx.method.value === 'Phone');
+
+      // The day group is a multi-select, so enforce "at least one" ourselves.
+      if (byPhone && ctx && ctx.days) {
+        if (ctx.days.checkedValues().length === 0) {
+          ctx.days.setError('Please choose at least one day.');
+          if (ctx.days.inputs[0]) ctx.days.inputs[0].focus();
+          return;
+        }
+        ctx.days.setError('');
+      }
+
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
       var page = (location.pathname.split('/').pop() || 'index.html');
       var data = {
         _subject: 'Website inquiry — ' + page,
@@ -213,6 +273,7 @@
         form.querySelectorAll('input, select, textarea'),
         function (el) {
           if (el.type === 'submit' || el.type === 'button' || el.type === 'hidden') return;
+          if (el.dataset && el.dataset.bbDay) return; // day checkboxes aggregated below
           if (el.closest('[hidden]')) return; // skip fields hidden by the method toggle
           var val = (el.value || '').trim();
           data[keyFor(el, form)] = val;
@@ -220,6 +281,9 @@
           if (el.type === 'email' && val) data.email = val;
         }
       );
+      if (byPhone && ctx && ctx.days) {
+        data['Best day(s) to reach you'] = ctx.days.checkedValues().join(', ');
+      }
 
       fetch(ENDPOINT, {
         method: 'POST',
