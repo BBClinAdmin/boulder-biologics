@@ -65,7 +65,9 @@ img { max-width: 100%; display: block; }
 .site-header__cta .btn-primary:hover { background: var(--brand-accent-hover); }
 
 /* Responsive — match _v2-service.css behavior */
-@media (max-width: 1180px) {
+@media (max-width: 1240px) {
+  /* Hide the header phone number until the nav has full-width breathing room
+     (nav grew to 9 items; below ~1240px the phone crowds the last link). */
   .site-header .call-link[href^="tel:"] { display: none; }
 }
 @media (max-width: 1024px) {

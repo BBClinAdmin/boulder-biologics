@@ -6,9 +6,13 @@
    rows (_v2-service.css, _shared.css) on small screens.
 
    Behaviour:
-     • >1024px  → inline nav as designed; hamburger hidden.
-     • ≤1024px  → inline nav collapses; a hamburger button toggles it open as a
+     • >1100px  → inline nav as designed; hamburger hidden.
+     • ≤1100px  → inline nav collapses; a hamburger button toggles it open as a
                   dropdown panel anchored under the header.
+
+   Breakpoint is 1100px (raised from 1024px) because the primary nav grew to 9
+   items (+ For Patients / For Practices); below ~1100px the inline links crowd
+   into the Contact button, so we collapse to the hamburger sooner.
 
    Colors use design-system vars with hard fallbacks so this works on every page
    regardless of which stylesheet (or inline <style>) it loads.
@@ -47,7 +51,7 @@
 .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   /* keep the header on one row; anchor it for the absolute dropdown panel */
   .site-header__inner { flex-wrap: nowrap; row-gap: 0; position: relative; }
 

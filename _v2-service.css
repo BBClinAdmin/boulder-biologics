@@ -203,10 +203,11 @@ p { margin: 0 0 14px; color: var(--ink-2); }
 }
 .site-header__cta .btn-primary:hover { background: var(--brand-accent-hover); }
 
-/* Responsive — at <1180px drop the redundant header phone link (still in announce bar + CTA button).
-   The Contact link stays visible (separate from phone hide). At <1024px wrap the nav onto its
-   own row under the logo/CTA so it never overflows. */
-@media (max-width: 1180px) {
+/* Responsive — at <1240px drop the redundant header phone link (still in announce bar + CTA button)
+   so the longer 9-item nav keeps full-width breathing room before the phone returns.
+   The Contact link stays visible (separate from phone hide). At <1100px the hamburger (in _nav.css)
+   collapses the nav entirely. */
+@media (max-width: 1240px) {
   .call-link[href^="tel:"] { display: none; }
 }
 @media (max-width: 1024px) {
