@@ -303,6 +303,11 @@ section.tight { padding: 56px var(--gutter); }
 .cond-card .ic { width: 30px; height: 30px; border-radius: 7px; background: var(--bb-teal-100); color: var(--brand-accent-dim); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 6px; }
 .cond-card h3 { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: -0.005em; margin: 0; }
 .cond-card p { font-size: 13.5px; color: var(--muted); line-height: 1.5; margin: 0; }
+/* Condition-card headings link to the matching condition page. Inherit the
+   heading's own colour/weight so the cards look unchanged; underline on
+   hover is the only affordance. */
+.cond-card h3 a { color: inherit; text-decoration: none; }
+.cond-card h3 a:hover { text-decoration: underline; text-decoration-color: var(--brand-accent); }
 
 /* ── FDA / quiet callout ──────────────────────────────────────────── */
 .callout {
