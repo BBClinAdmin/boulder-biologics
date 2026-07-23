@@ -161,14 +161,20 @@
 
     /* Preferred day(s) / time — placed after the phone field. Days are a
        multi-select (checkboxes); time stays a single select. */
-    var day = makeCheckboxGroup(phoneWrapper, 'Best day(s) to reach you',
+    var day = makeCheckboxGroup(phoneWrapper, 'Best day(s) for our call',
       ['Monday', 'Tuesday', 'Thursday', 'Friday']);
-    var time = makeSelect(phoneWrapper, 'Preferred time of day', [
+    var time = makeSelect(phoneWrapper, 'Preferred time for our call', [
       { value: '', text: 'Select a time', disabled: true, selected: true },
       'Morning', 'Afternoon'
     ]);
     phoneWrapper.parentNode.insertBefore(day.wrap, phoneWrapper.nextSibling);
     phoneWrapper.parentNode.insertBefore(time.wrap, day.wrap.nextSibling);
+
+    /* Make explicit that day/time schedule a follow-up call, not an appointment. */
+    var callNote = document.createElement('p');
+    callNote.textContent = 'This just tells us when to call you back to talk through your options — it isn’t an appointment time.';
+    callNote.style.cssText = 'font-size:13px;line-height:1.5;opacity:.75;margin:2px 0 0;';
+    phoneWrapper.parentNode.insertBefore(callNote, day.wrap);
 
     // Some field wrappers (e.g. .intake-field) set `display` in CSS, which
     // overrides the `hidden` attribute — so toggle inline display too. The
@@ -182,6 +188,7 @@
       toggle(phoneWrapper, byPhone);
       toggle(day.wrap, byPhone);
       toggle(time.wrap, byPhone);
+      callNote.style.display = byPhone ? '' : 'none';
       if (phoneInput) phoneInput.required = byPhone;
       time.field.required = byPhone;
       if (!byPhone) day.setError(''); // clear any stale "pick a day" message
@@ -282,7 +289,7 @@
         }
       );
       if (byPhone && ctx && ctx.days) {
-        data['Best day(s) to reach you'] = ctx.days.checkedValues().join(', ');
+        data['Best day(s) for our call'] = ctx.days.checkedValues().join(', ');
       }
 
       fetch(ENDPOINT, {
