@@ -163,6 +163,7 @@ html[data-theme="dark"] .hero__grid { position: relative; z-index: 1; }
 html[data-theme="dark"] .hero__cell {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background: url(assets/cell-glow.png) no-repeat;
+  background-image: image-set(url(assets/cell-glow.avif) type("image/avif"), url(assets/cell-glow.png) type("image/png"));
   background-position: 14% 42%; background-size: 60% auto;
   mix-blend-mode: screen; opacity: 0.42;
 }
@@ -400,6 +401,7 @@ html[data-theme="dark"] .svc-hero { position: relative; overflow: hidden; }
 html[data-theme="dark"] .svc-hero__cell {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background: url(assets/cell-orange.jpg) no-repeat;
+  background-image: image-set(url(assets/cell-orange.avif) type("image/avif"), url(assets/cell-orange.jpg) type("image/jpeg"));
   background-position: 12% 22%; background-size: 52% auto;
   mix-blend-mode: screen; opacity: 0.55;
   /* Whole cell visible (like the homepage). The radial mask feathers
@@ -425,6 +427,7 @@ html[data-theme="dark"] .pillar-card.has-cell > * { position: relative; z-index:
 html[data-theme="dark"] .pillar-card.has-cell .pillar-card__cell {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background: url(assets/cell-orange.jpg) no-repeat;
+  background-image: image-set(url(assets/cell-orange.avif) type("image/avif"), url(assets/cell-orange.jpg) type("image/jpeg"));
   background-position: 50% 50%; background-size: 118% auto;
   mix-blend-mode: screen; opacity: 0.66;
   /* Centered, contained cell. Image is wider than the card (left/right
@@ -437,15 +440,15 @@ html[data-theme="dark"] .pillar-card.has-cell .pillar-card__cell {
 
 /* ── PRP family: blue platelet cell variant (hero + services card) ──
    Reuses the orange-cell positioning/mask/blend; only the image swaps. */
-html[data-theme="dark"] .svc-hero__cell--prp { background-image: url(assets/cell-platelet.jpg); opacity: 0.72; bottom: auto; height: 640px; }
-html[data-theme="dark"] .pillar-card.has-cell--prp .pillar-card__cell { background-image: url(assets/cell-platelet.jpg); }
+html[data-theme="dark"] .svc-hero__cell--prp { background-image: url(assets/cell-platelet.jpg); background-image: image-set(url(assets/cell-platelet.avif) type("image/avif"), url(assets/cell-platelet.jpg) type("image/jpeg")); opacity: 0.72; bottom: auto; height: 640px; }
+html[data-theme="dark"] .pillar-card.has-cell--prp .pillar-card__cell { background-image: url(assets/cell-platelet.jpg); background-image: image-set(url(assets/cell-platelet.avif) type("image/avif"), url(assets/cell-platelet.jpg) type("image/jpeg")); }
 
 
 /* ── Additional Treatments: blue network/plexus variant (hero + card) ──
    cell-network variant. Same masked, screen-blended treatment; the
    plexus is busier so opacity sits a touch lower. */
-html[data-theme="dark"] .svc-hero__cell--net { background-image: url(assets/cell-network.jpg); opacity: 0.5; bottom: auto; height: 640px; }
-html[data-theme="dark"] .pillar-card.has-cell--net .pillar-card__cell { background-image: url(assets/cell-network.jpg); opacity: 0.6; }
+html[data-theme="dark"] .svc-hero__cell--net { background-image: url(assets/cell-network.jpg); background-image: image-set(url(assets/cell-network.avif) type("image/avif"), url(assets/cell-network.jpg) type("image/jpeg")); opacity: 0.5; bottom: auto; height: 640px; }
+html[data-theme="dark"] .pillar-card.has-cell--net .pillar-card__cell { background-image: url(assets/cell-network.jpg); background-image: image-set(url(assets/cell-network.avif) type("image/avif"), url(assets/cell-network.jpg) type("image/jpeg")); opacity: 0.6; }
 
 
 /* ── Iron Infusions: red-blood-cell hero variant (cluster of RBCs) ──
@@ -453,6 +456,7 @@ html[data-theme="dark"] .pillar-card.has-cell--net .pillar-card__cell { backgrou
    assets/cell-rbc.png. Same screen-blended, masked treatment as above. */
 html[data-theme="dark"] .svc-hero__cell--rbc {
   background-image: url(assets/cell-rbc.png);
+  background-image: image-set(url(assets/cell-rbc.avif) type("image/avif"), url(assets/cell-rbc.png) type("image/png"));
   left: 0; right: auto; width: 56%;
   background-position: 50% 45%; background-size: 84% auto; background-repeat: no-repeat;
   opacity: 0.82; bottom: auto; height: 700px;

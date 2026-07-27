@@ -23,13 +23,15 @@
   var base = new URL('./images/', me.src);
   var EXTS = ['avif', 'webp', 'jpg', 'jpeg', 'png'];
 
+  // Existence probe: a headers-only HEAD request (no image bytes). Using
+  // `new Image()` here would download the FULL-size file just to test that it
+  // exists — for every slot, eagerly on load — which defeats the per-<img>
+  // lazy-loading and responsive srcset below. HEAD is same-origin and served
+  // by both Netlify and the local dev server.
   function exists(url) {
-    return new Promise(function (res) {
-      var img = new Image();
-      img.onload = function () { res(true); };
-      img.onerror = function () { res(false); };
-      img.src = url;
-    });
+    return fetch(url, { method: 'HEAD' })
+      .then(function (r) { return r.ok; })
+      .catch(function () { return false; });
   }
 
   function resolve(id) {
