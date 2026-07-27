@@ -23,12 +23,21 @@
   var base = new URL('./images/', me.src);
   var EXTS = ['avif', 'webp', 'jpg', 'jpeg', 'png'];
 
+  // Probe format availability with a HEAD request so we DON'T download the
+  // full-size image just to test existence — that pre-fetch would defeat the
+  // responsive srcset below (the browser would already hold the full file).
+  // Same-origin static HEAD is served fine by Netlify. On any network error
+  // we fall back to an Image() probe so a slot never silently goes missing.
   function exists(url) {
-    return new Promise(function (res) {
-      var img = new Image();
-      img.onload = function () { res(true); };
-      img.onerror = function () { res(false); };
-      img.src = url;
+    return fetch(url, { method: 'HEAD' }).then(function (r) {
+      return r.ok;
+    }).catch(function () {
+      return new Promise(function (res) {
+        var img = new Image();
+        img.onload = function () { res(true); };
+        img.onerror = function () { res(false); };
+        img.src = url;
+      });
     });
   }
 
@@ -53,7 +62,6 @@
         return false;
       }
       var img = document.createElement('img');
-      img.src = url;
       img.alt = el.getAttribute('data-label') || id;
       // Above-the-fold slots (heroes) can opt out of lazy for faster LCP:
       //   <div data-img-id="prp-hero" data-img-eager> … </div>
@@ -68,11 +76,15 @@
       // full (≤1920px) file, so phones download the small one. Default sizes
       // is 100vw (always sharp); narrower slots can override with
       // data-img-sizes (e.g. "(max-width:700px) 100vw, 50vw") for more savings.
+      // IMPORTANT: srcset + sizes MUST be assigned BEFORE src. Setting src
+      // first makes the browser eagerly fetch the full-size file before it
+      // sees the candidate list, defeating the responsive downscale.
       if (/\.avif$/.test(url)) {
         var small = url.replace(/\.avif$/, '-960.avif');
         img.srcset = small + ' 960w, ' + url + ' 1920w';
         img.sizes = el.getAttribute('data-img-sizes') || '100vw';
       }
+      img.src = url; // fallback for browsers without srcset; assigned last
       var fit = el.getAttribute('data-img-fit') || 'cover';
       var pos = el.getAttribute('data-img-position') || 'center';
       img.style.cssText =
