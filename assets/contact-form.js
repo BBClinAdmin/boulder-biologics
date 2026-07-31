@@ -311,11 +311,49 @@
     });
   }
 
+  /* Reason-for-contacting branch. Activates on any form that carries the
+     standardized #reason dropdown. The first three reasons (a consult of
+     some kind) reveal the "Area of interest" select; the last two (records /
+     other) reveal a free-text box instead. Only the visible branch is
+     required, and the submit loop already skips [hidden] wrappers, so the
+     inactive branch is never sent. */
+  var CONSULT_REASONS = [
+    'New Patient Consult',
+    'Existing Patient: Follow Up',
+    'Existing Patient: New Issue'
+  ];
+  function wireReason(form) {
+    var reason = form.querySelector('select#reason');
+    if (!reason) return;
+    var areaWrap = form.querySelector('#area-wrap');
+    var areaField = form.querySelector('#area');
+    var detailWrap = form.querySelector('#detail-wrap');
+    var detailField = form.querySelector('#detail');
+
+    function toggle(wrap, show) {
+      if (!wrap) return;
+      wrap.hidden = !show;
+      wrap.style.display = show ? '' : 'none';
+    }
+    function update() {
+      var isConsult = CONSULT_REASONS.indexOf(reason.value) !== -1;
+      var isDetail = reason.value === 'Records or Referral' || reason.value === 'Other';
+      toggle(areaWrap, isConsult);
+      toggle(detailWrap, isDetail);
+      if (areaField) areaField.required = isConsult;
+      // Free-text stays optional so records/other requests aren't blocked.
+      if (detailField) detailField.required = false;
+    }
+    reason.addEventListener('change', update);
+    update();
+  }
+
   function init() {
     Array.prototype.forEach.call(
       document.querySelectorAll('form.cta-form, form.intake-form'),
       function (form) {
         var ctx = enhance(form);
+        wireReason(form);
         handle(form, ctx);
       }
     );

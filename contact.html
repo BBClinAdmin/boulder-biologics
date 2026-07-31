@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="icon" type="image/png" href="assets/favicon.png" />
-<link rel="apple-touch-icon" href="assets/logo-stacked.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 <link rel="stylesheet" href="assets/image-loader.css" />
 
 <link rel="preload" href="assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin />
@@ -405,12 +405,37 @@
         <div><label for="em">Email</label><input id="em" type="email" required placeholder="you@example.com" /></div>
         <div><label for="ph">Phone</label><input id="ph" required placeholder="720-550-6175" /></div>
         <div><label for="reason">Reason for contacting</label>
-          <select id="reason">
-            <option>New patient consultation</option>
-            <option>Existing patient, follow-up</option>
-            <option>Records or referral question</option>
+          <select id="reason" required>
+            <option value="" disabled selected>Select one…</option>
+            <option>New Patient Consult</option>
+            <option>Existing Patient: Follow Up</option>
+            <option>Existing Patient: New Issue</option>
+            <option>Records or Referral</option>
             <option>Other</option>
           </select>
+        </div>
+        <div id="area-wrap" hidden><label for="area">Area of interest</label>
+          <select id="area">
+            <option value="" disabled selected>Select one…</option>
+            <option>Knee — osteoarthritis or injury</option>
+            <option>Hip / SI joint</option>
+            <option>Shoulder / rotator cuff</option>
+            <option>Elbow, wrist or hand</option>
+            <option>Foot or ankle</option>
+            <option>Spine / back</option>
+            <option>Tendon or ligament injury</option>
+            <option>Nerve entrapment or pain</option>
+            <option>Eye — dry eye or corneal</option>
+            <option>Concussion / TBI / CTE</option>
+            <option>Long COVID / post-viral</option>
+            <option>Longevity medicine</option>
+            <option>Iron infusions / IV therapy</option>
+            <option>Other medical condition</option>
+            <option>Not sure — exploring options</option>
+          </select>
+        </div>
+        <div id="detail-wrap" hidden><label for="detail">How can we help?</label>
+          <textarea id="detail" rows="3" placeholder="A sentence or two about what you need."></textarea>
         </div>
         <button class="btn btn-accent" type="submit">Send</button>
         <span class="micro">Submitting this form does not establish a patient–physician relationship.</span>
